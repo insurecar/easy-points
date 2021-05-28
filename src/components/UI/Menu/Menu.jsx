@@ -4,9 +4,9 @@ import "./Menu.scss"
 
 const Menu = () => {
   const [currentItem, setCurrentItem] = useState("integration1")
-  const className = classnames("menu")
 
   const handleClick = value => {
+    console.log(value)
     setCurrentItem(value)
   }
 
@@ -20,7 +20,7 @@ const Menu = () => {
       value: "integration2",
     },
     {
-      title: "Integration",
+      title: "Compatibility and Limitations",
       value: "integration3",
     },
     {
@@ -32,14 +32,25 @@ const Menu = () => {
       value: "integration5",
     },
   ]
+
+  const getButtonClass = value =>
+    classnames("menu-list__button", {
+      "menu-list__button--active": currentItem === value,
+    })
+
+  const getListItemClass = value =>
+    classnames("menu-list__item", {
+      "menu-list__item--active": currentItem === value,
+    })
+
   return (
     <div className="menu">
-      <ul className="menu-desktop menu-mobile">
+      <ul className="menu-list">
         {arr.map(({ title, value }, index) => (
-          <li key={index}>
+          <li key={index} className={getListItemClass(value)}>
             <button
-              className={currentItem === value ? "active" : ""}
-              onClick={() => handleClick(value)}
+              className={getButtonClass(value)}
+              onClick={() => handleClick(value, index)}
             >
               {title}
             </button>

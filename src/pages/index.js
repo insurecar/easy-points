@@ -6,13 +6,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Button from "../components/UI/Button/Button"
 import Menu from "../components/UI/Menu/Menu"
+import Accordion from "../components/UI/Accordion/Accordion"
 
 const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
       <h1>Hi people</h1>
-      <Menu />
+      <Accordion />
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <StaticImage
