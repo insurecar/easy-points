@@ -1,0 +1,44 @@
+@import "../../../assets/variables.scss";
+@import "../../../assets/mixins.scss";
+@import "../../../assets/typography.scss";
+
+.button {
+  padding: 0 25px;
+  @include fluid-size("padding-top", $min-vw, $max-vw, 8px, 12px);
+  @include fluid-size("padding-bottom", $min-vw, $max-vw, 8px, 12px);
+  @extend .button-text;
+  border-style: none;
+  font-family: $f-semibold;
+  border-radius: 10px;
+
+  &__primary-on-light {
+    background: $purple-gradient;
+    box-shadow: $box-shadow-purple;
+    color: $white;
+
+    &:hover {
+      background: $purple-gradient-hover;
+      box-shadow: $box-shadow-purple-hover;
+    }
+  }
+
+  &__primary-on-purple {
+    background: $white;
+    box-shadow: $box-shadow-white;
+    color: $color-text-button;
+
+    &:hover {
+      box-shadow: $box-shadow-white-hover;
+    }
+  }
+
+  &__secondary {
+    border: 2px solid $color-btn-secondary-border;
+    box-shadow: $box-shadow-demo;
+    background: $background-color-btn-secondary;
+    color: $color-text-button;
+    &:hover {
+      border: 2px solid $color-btn-secondary-border-hover;
+    }
+  }
+}

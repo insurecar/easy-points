@@ -1,0 +1,59 @@
+@import "../../../assets/variables.scss";
+@import "../../../assets/mixins.scss";
+@import "../../../assets/typography.scss";
+
+.menu {
+  //   overflow-x: auto;
+}
+
+.menu-desktop {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  background: $white;
+  box-shadow: -20px 20px 60px $box-shadow-menu;
+  border-radius: 10px;
+  cursor: pointer;
+
+  li {
+    margin: 0;
+    padding: 0;
+
+    button {
+      width: 100%;
+      height: 100%;
+      background: none;
+      border: none;
+      margin: 0px;
+      padding: 20px 30px;
+      display: flex;
+      box-sizing: border-box;
+      position: relative;
+      color: $darkgray05;
+      font-family: $f-black;
+      transition: all 0.35s;
+
+      &:hover {
+        color: $darkgray;
+      }
+
+      &.active {
+        background: red;
+      }
+    }
+
+    &:not(:last-child) button:after {
+      content: "";
+      width: calc(100% - 60px);
+      height: 1px;
+      background: $darkgray02;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
