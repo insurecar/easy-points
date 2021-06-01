@@ -18,11 +18,6 @@ const AccordionItem = ({ el, currentItem, handleOpen }) => {
     }
   }, [currentItem])
 
-  const handleShowContent = isOpen => {
-    setElemHeight(isOpen ? ref.current.offsetHeight : 0)
-    setShowContent(isOpen)
-  }
-
   return (
     <div className="accordion__item">
       <div className="accordion__item-text">

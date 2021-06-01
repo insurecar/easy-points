@@ -7,9 +7,11 @@
   @include fluid-size("padding-top", $min-vw, $max-vw, 8px, 12px);
   @include fluid-size("padding-bottom", $min-vw, $max-vw, 8px, 12px);
   @extend .button-text;
+  display: inline-block;
   border-style: none;
   font-family: $f-semibold;
   border-radius: 10px;
+  text-decoration: none;
 
   &__primary-on-light {
     background: $purple-gradient;
