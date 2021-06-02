@@ -1,0 +1,98 @@
+@import "../../assets/variables.scss";
+@import "../../assets/mixins.scss";
+@import "../../assets/typography.scss";
+
+.home {
+  //   background: coral;
+  &__button {
+    margin-top: 20px;
+  }
+
+  &__header {
+    max-width: 850px;
+    margin: 0 auto;
+    // background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header-title-h1 {
+    @extend h1;
+    text-align: center;
+
+    &-mark {
+      background: $black-08;
+      color: $white;
+      border-radius: 10px;
+      padding-left: 2px;
+    }
+  }
+
+  &__header-title-secondary-text {
+    @extend .text-main;
+    color: $darkgray05;
+
+    max-width: 630px;
+    text-align: center;
+  }
+
+  &__brand {
+    width: 100%;
+    // background: violet;
+    // margin-top: 80px;
+    @include fluid-size("margin-top", $min-vw, $max-vw, 35px, 80px);
+
+    @include tab() {
+      max-width: 400px;
+      //   margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__brand--list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+
+  &__brand--list-item {
+    box-sizing: border-box;
+    // background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 16.66666666%;
+    padding: 10px;
+
+    @include tab() {
+      flex: 0 0 33.333%;
+      box-sizing: border-box;
+    }
+  }
+
+  .item-image {
+    max-width: 100%;
+    height: auto;
+
+    @include mob() {
+      max-width: 75%;
+    }
+  }
+
+  &__video {
+    background: $darkgray;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    @include fluid-size("margin-top", $min-vw, $max-vw, 10px, 80px);
+    @include fluid-size("padding-top", $min-vw, $max-vw, 20px, 90px);
+    @include fluid-size("padding-right", $min-vw, $max-vw, 10px, 60px);
+    @include fluid-size("padding-bottom", $min-vw, $max-vw, 20px, 90px);
+    @include fluid-size("padding-left", $min-vw, $max-vw, 10px, 60px);
+  }
+}
