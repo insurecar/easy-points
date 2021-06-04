@@ -1,91 +1,91 @@
-@import "../../../assets/variables.scss";
-@import "../../../assets/mixins.scss";
-@import "../../../assets/typography.scss";
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
 
 .menu {
-  border-radius: 10px;
-  box-shadow: -20px 20px 60px $box-shadow-menu;
-  @include tab() {
-    overflow-x: auto;
-  }
-  //   overflow-x: auto;
+	border-radius: 10px;
+	box-shadow: -20px 20px 60px $box-shadow-menu;
+	@include tab() {
+		overflow-x: auto;
+	}
+	//   overflow-x: auto;
 }
 
 .menu-list {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
-  white-space: nowrap;
-  background: $white;
-  border-radius: 10px;
-  cursor: pointer;
+	background: $white;
+	border-radius: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
 
-  @include tab() {
-    flex-direction: row;
-  }
+	@include tab() {
+		flex-direction: row;
+	}
 
-  &__item {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    @extend .text-secondary;
-    font-family: serif;
-    color: red;
+	&__item {
+		@extend .text-secondary;
+		color: red;
+		font-family: serif;
+		margin: 0;
+		padding: 0;
+		position: relative;
 
-    @include tab() {
-      display: inline-block;
-    }
+		@include tab() {
+			display: inline-block;
+		}
 
-    &:not(:last-child):after {
-      content: "";
-      width: calc(100% - 60px);
-      height: 1px;
-      background: $darkgray02;
-      position: absolute;
-      left: 30px;
-      bottom: -1px;
+		&:not(:last-child)::after {
+			background: $darkgray02;
+			bottom: -1px;
+			content: '';
+			height: 1px;
+			left: 30px;
+			position: absolute;
+			width: calc(100% - 60px);
 
-      @include tab() {
-        content: "";
-        height: calc(100% - 40px);
-        width: 1px;
-        left: unset;
-        right: -1px;
-        bottom: unset;
-        top: 20px;
-      }
-    }
+			@include tab() {
+				bottom: unset;
+				content: '';
+				height: calc(100% - 40px);
+				left: unset;
+				right: -1px;
+				top: 20px;
+				width: 1px;
+			}
+		}
 
-    &--active:not(:last-child):after {
-      content: none;
-    }
-  }
+		&--active:not(:last-child)::after {
+			content: none;
+		}
+	}
 
-  &__button {
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: none;
-    margin: 0px;
-    padding: 20px 30px;
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
-    color: $darkgray05;
-    font-family: $f-black;
-    transition: all 0.35s;
+	&__button {
+		background: none;
+		border: none;
+		box-sizing: border-box;
+		color: $darkgray05;
+		display: flex;
+		font-family: $f-black;
+		height: 100%;
+		margin: 0;
+		padding: 20px 30px;
+		position: relative;
+		transition: all 0.35s;
+		width: 100%;
 
-    &:not(&--active):hover {
-      color: $darkgray;
-    }
+		&:not(&--active):hover {
+			color: $darkgray;
+		}
 
-    &--active {
-      background: $purple-main;
-      border-radius: 10px;
-      color: $white;
-    }
-  }
+		&--active {
+			background: $purple-main;
+			border-radius: 10px;
+			color: $white;
+		}
+	}
 }

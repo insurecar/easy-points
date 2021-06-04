@@ -1,47 +1,48 @@
-@import "../../assets/variables.scss";
-@import "../../assets/mixins.scss";
-@import "../../assets/typography.scss";
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
 
 .how-it-works {
-  position: relative;
-  margin-top: -400px;
-  padding-top: 400px;
+	margin-top: -400px;
+	padding-top: 400px;
+	position: relative;
 
-  &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+	&__background {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
 
-    img {
-      object-position: top;
-    }
-  }
+		img {
+			object-position: top;
+		}
+	}
 
-  &__header {
-    max-width: 850px;
-    color: $white;
-    text-align: center;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	&__header {
+		align-items: center;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 850px;
+		text-align: center;
 
-    &-anchor {
-      @extend .label-primary;
-      background: $dark01;
-      border-radius: 2px;
-      padding: 4px 10px;
-    }
+		&-anchor {
+			@extend .label-primary;
+			background: $dark01;
+			border-radius: 2px;
+			padding: 4px 10px;
+		}
 
-    &-title {
-      @extend h2;
-    }
+		&-title {
+			@extend h2;
+		}
 
-    &-secondary-text {
-      @extend .text-main;
-    }
-  }
+		&-secondary-text {
+			@extend .text-main;
+			margin: 0;
+		}
+	}
 }

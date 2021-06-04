@@ -1,0 +1,41 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.how-it-works-graph {
+	display: flex;
+	justify-content: center;
+
+	&__image {
+		margin: auto;
+		margin-top: 60px;
+		position: relative;
+		width: calc(100% - 120px);
+
+		&::before {
+			background: $black-elements;
+			border-radius: 10px;
+			box-shadow: -20px 20px 60px #101112;
+			content: '';
+			height: 100%;
+			left: -30px;
+			position: absolute;
+			top: -30px;
+			width: calc(100% + 60px);
+
+		}
+
+		&::after {
+			background: green;
+			content: '';
+			height: 100%;
+			left: -60px;
+			position: absolute;
+			top: -60px;
+			width: calc(100% + 120px);
+			z-index: -1;
+		}
+	}
+    
+    
+}

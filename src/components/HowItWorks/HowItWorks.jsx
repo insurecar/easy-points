@@ -1,9 +1,9 @@
-import React from "react"
-import bg from "../../images/BG.png"
-import "./HowItWorks.scss"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import HowItWorksSlider from "../HowItWorksSlider/HowItWorksSlider"
+import React from 'react';
+import './HowItWorks.scss';
+import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import HowItWorksSlider from '../HowItWorksSlider/HowItWorksSlider';
+import HowItWorksGraph from '../HowItWorksGraph/HowItWorksGraph';
 
 const HowItWorks = () => {
   const data = useStaticQuery(graphql`
@@ -12,10 +12,9 @@ const HowItWorks = () => {
         gatsbyImageData
       }
     }
-  `)
+  `);
 
-  const image = getImage(data.imageSharp.gatsbyImageData)
-  console.log(image)
+  const image = getImage(data.imageSharp.gatsbyImageData);
   return (
     <div className="how-it-works">
       <GatsbyImage
@@ -34,9 +33,11 @@ const HowItWorks = () => {
             allowing you to grow your ecommerce business.
           </p>
         </div>
+        <HowItWorksSlider />
+        <HowItWorksGraph />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HowItWorks
+export default HowItWorks;

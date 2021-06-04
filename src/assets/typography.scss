@@ -3,61 +3,61 @@ h2,
 h3,
 h4,
 h5 {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 h1 {
-  font-family: $f-black;
-  font-weight: 900;
-  @include fluid-type($min-vw, $max-vw, 40px, 80px);
-  line-height: 110%;
+	@include fluid-type($min-vw, $max-vw, 40px, 80px);
+	font-family: $f-black;
+	font-weight: 900;
+	line-height: 110%;
 }
 
 h2 {
-  font-family: $f-bold;
-  @include fluid-type($min-vw, $max-vw, 25px, 56px);
-  line-height: 120%;
+	@include fluid-type($min-vw, $max-vw, 25px, 56px);
+	font-family: $f-bold;
+	line-height: 120%;
 }
 
 h3 {
-  font-family: $f-bold;
 
-  @include fluid-type($min-vw, $max-vw, 20px, 40px);
-  @include fluid-size("line-height", $min-vw, $max-vw, 130%, 110%);
+	@include fluid-type($min-vw, $max-vw, 20px, 40px);
+	@include fluid-size('line-height', $min-vw, $max-vw, 130%, 110%);
+	font-family: $f-bold;
 }
 
 h4 {
-  font-family: $f-bold;
-  @include fluid-type($min-vw, $max-vw, 18px, 30px);
-  line-height: 130%;
+	@include fluid-type($min-vw, $max-vw, 18px, 30px);
+	font-family: $f-bold;
+	line-height: 130%;
 }
 
 .text-main {
-  font-family: $f-regular;
-  @include fluid-type($min-vw, $max-vw, 16px, 25px);
-  line-height: 150%;
+	@include fluid-type($min-vw, $max-vw, 16px, 25px);
+	font-family: $f-regular;
+	line-height: 150%;
 }
 
 .text-secondary {
-  font-family: $f-regular;
-  @include fluid-type($min-vw, $max-vw, 14px, 20px);
-  line-height: 150%;
+	@include fluid-type($min-vw, $max-vw, 14px, 20px);
+	font-family: $f-regular;
+	line-height: 150%;
 }
 
 .button-text {
-  font-family: $f-semibold;
-  @include fluid-type($min-vw, $max-vw, 14px, 20px);
-  line-height: 150%;
+	@include fluid-type($min-vw, $max-vw, 14px, 20px);
+	font-family: $f-semibold;
+	line-height: 150%;
 }
 
 .label-primary {
-  font-family: $f-black;
-  @include fluid-type($min-vw, $max-vw, 14px, 18px);
-  line-height: 120%;
+	@include fluid-type($min-vw, $max-vw, 14px, 18px);
+	font-family: $f-black;
+	line-height: 120%;
 }
 
 .label-secondary {
-  font-family: $f-bold;
-  @include fluid-type($min-vw, $max-vw, 12px, 14px);
-  line-height: 150%;
+	@include fluid-type($min-vw, $max-vw, 12px, 14px);
+	font-family: $f-bold;
+	line-height: 150%;
 }

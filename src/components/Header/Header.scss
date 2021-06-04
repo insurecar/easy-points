@@ -1,173 +1,175 @@
-@import "../../assets/variables.scss";
-@import "../../assets/mixins.scss";
-@import "../../assets/typography.scss";
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  z-index: 1;
-  position: fixed;
-  @include fluid-size("padding-left", $tab-des-vw, $max-vw, 35px, 80px);
-  @include fluid-size("padding-right", $tab-des-vw, $max-vw, 35px, 80px);
-  @include fluid-size("padding-top", $tab-des-vw, $max-vw, 15px, 35px);
-  @include fluid-size("padding-bottom", $tab-des-vw, $max-vw, 15px, 35px);
+	@include fluid-size('padding-left', $tab-des-vw, $max-vw, 35px, 80px);
+	@include fluid-size('padding-right', $tab-des-vw, $max-vw, 35px, 80px);
+	@include fluid-size('padding-top', $tab-des-vw, $max-vw, 15px, 35px);
+	@include fluid-size('padding-bottom', $tab-des-vw, $max-vw, 15px, 35px);
+	align-items: center;
 
-  @include des() {
-    // @include fluid-size("padding-right", $tab-des-vw, $max-vw, 35px, 80px);
-    padding-right: 15px;
-  }
+	background: #e5e5e5;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 
-  background: #e5e5e5;
-  width: 100%;
+	@include des() {
+		// @include fluid-size("padding-right", $tab-des-vw, $max-vw, 35px, 80px);
+		padding-right: 15px;
+	}
 
-  &__logo-height {
-    height: 50px;
-  }
+	&__logo-height {
+		height: 50px;
+	}
 
-  &__navigation-wrapper {
-    display: flex;
-    align-items: center;
-    background: #e5e5e5;
+	&__navigation-wrapper {
+		align-items: center;
+		background: #e5e5e5;
+		display: flex;
 
-    @include mob() {
-      padding: 20px;
-      box-sizing: border-box;
-      overflow: auto;
-      height: calc(100vh - 80px);
-    }
-    @include des() {
-      overflow: auto;
-      height: calc(100vh - 80px);
-    }
-    .button {
-      display: none;
+		@include mob() {
+			box-sizing: border-box;
+			height: calc(100vh - 80px);
+			overflow: auto;
+			padding: 20px;
+		}
+		@include des() {
+			height: calc(100vh - 80px);
+			overflow: auto;
+		}
 
-      @include mob() {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
+		@include des() {
+			display: flex;
+			flex-direction: column;
+			left: 0;
+			overflow: auto;
+			position: fixed;
+			top: 0;
+			transform: translateY(-100%);
+			transition: transform 0.3s;
+			width: 100%;
+			z-index: -1;
 
-        &:first-of-type {
-          margin-bottom: 15px;
-        }
-      }
-    }
+			.header__navigation-list {
+				align-items: center;
 
-    @include des() {
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      top: 0;
-      left: 0;
-      width: 100%;
-      transform: translateY(-100%);
-      transition: transform 0.3s;
-      z-index: -1;
-      overflow: auto;
+				display: flex;
+				flex-direction: column;
+				margin: 0;
+				padding: 0;
+				padding-top: 70px;
+				@include mob() {
+					margin-left: 0;
+					padding-top: 30px;
+				}
 
-      .header__navigation-list {
-        @include mob() {
-          margin-left: 0;
-          padding-top: 30px;
-        }
+				&-item {
+					margin-bottom: 25px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        padding-top: 70px;
+					@include des() {
+						margin-left: 0;
+					}
 
-        &-item {
-          margin-bottom: 25px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
 
-          @include des() {
-            margin-left: 0;
-          }
+			.header__navigation-link {
+				@include fluid-type($min-vw, $des-vw, 15px, 36px);
+			}
 
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
+			.language-selector {
+				margin-left: 50px;
+				margin-top: 40px;
 
-      .header__navigation-link {
-        @include fluid-type($min-vw, $des-vw, 15px, 36px);
-      }
+				@include mob() {
+					margin-bottom: 50px;
+					margin-left: 25px;
+					margin-top: 10px;
+				}
+			}
 
-      .language-selector {
-        margin-left: 50px;
-        margin-top: 40px;
+			&--active {
+				transform: translateY(80px);
+			}
+		}
 
-        @include mob() {
-          margin-left: 25px;
-          margin-top: 10px;
-          margin-bottom: 50px;
-        }
-      }
+		.button {
+			display: none;
 
-      &--active {
-        transform: translateY(80px);
-      }
-    }
-  }
+			@include mob() {
+				box-sizing: border-box;
+				display: block;
+				text-align: center;
+				width: 100%;
 
-  &__navigation {
-    display: flex;
-    justify-content: space-between;
-  }
+				&:first-of-type {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
 
-  &__navigation-list {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-  }
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+	}
 
-  &__navigation-list-item {
-    @include fluid-size("margin-left", $des-vw, $max-vw, 25px, 40px);
+	&__navigation-list {
+		display: flex;
+		justify-content: space-around;
+		list-style: none;
+	}
 
-    &:first-of-type {
-      margin-left: 0;
-    }
-    &:last-of-type {
-      @include fluid-size("margin-right", $des-vw, $max-vw, 25px, 40px);
-    }
-  }
+	&__navigation-list-item {
+		@include fluid-size('margin-left', $des-vw, $max-vw, 25px, 40px);
 
-  &__navigation-link {
-    text-decoration: none;
-    @extend .text-secondary;
-    font-family: $f-semibold;
-    color: $black-08;
-  }
+		&:first-of-type {
+			margin-left: 0;
+		}
 
-  &-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+		&:last-of-type {
+			@include fluid-size('margin-right', $des-vw, $max-vw, 25px, 40px);
+		}
+	}
 
-    @include mob() {
-      .button {
-        display: none;
-      }
-    }
-  }
+	&__navigation-link {
+		@extend .text-secondary;
+		color: $black-08;
+		font-family: $f-semibold;
+		text-decoration: none;
+	}
 
-  .button {
-    &:first-child {
-      @include fluid-size("margin-right", $des-vw, $max-vw, 15px, 25px);
-    }
-  }
+	&-link {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
 
-  .burger-button {
-    display: none;
-    @include des() {
-      display: block;
-      display: flex;
-      margin-left: 30px;
-    }
-  }
+		@include mob() {
+			.button {
+				display: none;
+			}
+		}
+	}
+
+	.button {
+		&:first-child {
+			@include fluid-size('margin-right', $des-vw, $max-vw, 15px, 25px);
+		}
+	}
+
+	.burger-button {
+		display: none;
+		@include des() {
+			display: block;
+			display: flex;
+			margin-left: 30px;
+		}
+	}
 }

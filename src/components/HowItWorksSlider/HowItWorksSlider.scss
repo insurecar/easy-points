@@ -1,55 +1,90 @@
-@import "../../assets/variables.scss";
-@import "../../assets/mixins.scss";
-@import "../../assets/typography.scss";
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
 
 .container {
-  .swiper-wrapper .swiper-slide {
-    height: auto;
-  }
+	.swiper-wrapper .swiper-slide {
+		height: auto;
+	}
 
-  .slide {
-    height: 100%;
-  }
+	.slide {
+		height: 100%;
+	}
+}
+
+.how-it-works__slider {
+	@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 40px, 60px);
+
+
 }
 
 .slide {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-  background: $purple-main;
-  box-shadow: -20px 20px 60px #101112;
-  border-radius: 10px;
 
-  @include fluid-size("padding-top", $min-vw, $max-vw, 20px, 30px);
-  @include fluid-size("padding-bottom", $min-vw, $max-vw, 20px, 40px);
-  @include fluid-size("padding-right", $min-vw, $max-vw, 25px, 40px);
-  @include fluid-size("padding-left", $min-vw, $max-vw, 25px, 40px);
+	@include fluid-size('padding-top', $min-vw, $max-vw, 20px, 30px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 20px, 40px);
+	@include fluid-size('padding-right', $min-vw, $max-vw, 25px, 40px);
+	@include fluid-size('padding-left', $min-vw, $max-vw, 25px, 40px);
+	align-items: flex-start;
+	background: $purple-main;
+	border-radius: 10px;
+	box-shadow: -20px 20px 60px #101112;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
 
-  &__image {
-    background: $dark01;
-    border-radius: 50%;
-    @include fluid-size("padding-top", $min-vw, $max-vw, 12px, 22px);
-    @include fluid-size("padding-bottom", $min-vw, $max-vw, 12px, 22px);
-    @include fluid-size("padding-right", $min-vw, $max-vw, 12px, 20px);
-    @include fluid-size("padding-left", $min-vw, $max-vw, 12px, 20px);
+	@include mob() {
+		flex-direction: row;
+	}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	&__image {
+		@include fluid-size('padding-top', $min-vw, $max-vw, 12px, 22px);
+		@include fluid-size('padding-bottom', $min-vw, $max-vw, 12px, 22px);
+		@include fluid-size('padding-right', $min-vw, $max-vw, 12px, 20px);
+		@include fluid-size('padding-left', $min-vw, $max-vw, 12px, 20px);
+		align-items: center;
+		background: $dark01;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
 
-  &__title {
-    @extend h4;
-    color: $white;
-    @include fluid-size("margin-top", $tab-des-vw, $max-vw, 15px, 20px);
-    margin: 0;
-  }
+		@include mob() {
+			margin-right: 15px;
+		}
+	}
 
-  &__text {
-    margin: 0;
-    margin-top: 10px;
-    @extend .text-secondary;
-    color: $white08;
-  }
+	&__title {
+		@extend h4;
+		@include fluid-size('margin-top', $tab-des-vw, $max-vw, 15px, 20px);
+		color: $white;
+		margin: 0;
+
+		@include mob() {
+			margin-top: 5px;
+		}
+	}
+
+	&__text {
+		@extend .text-secondary;
+		color: $white08;
+		margin: 0;
+		margin-top: 10px;
+	}
+}
+
+
+.swiper-pagination-bullet {
+	background: rgba(0, 0, 0, 0.2);
+	color: yellow;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	opacity: 1;
+	text-align: center;
+	width: 20px;
+}
+
+.swiper-pagination-bullet-active {
+	background: green;
+	color: red;
 }

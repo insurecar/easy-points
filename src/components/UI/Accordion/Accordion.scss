@@ -1,46 +1,46 @@
-@import "../../../assets/variables.scss";
-@import "../../../assets/mixins.scss";
-@import "../../../assets/typography.scss";
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
 
 .accordion {
-  background: $white;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  border-radius: 10px;
-  box-shadow: -20px 20px 60px $box-shadow-menu;
+	background: $white;
+	border-radius: 10px;
+	box-shadow: -20px 20px 60px $box-shadow-menu;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
 
-  &__item {
-    padding-top: 30px;
-    padding-bottom: 15px;
-    position: relative;
-    @extend .text-main;
-    font-family: $f-regular;
+	&__item {
+		@extend .text-main;
+		font-family: $f-regular;
+		padding-bottom: 15px;
+		padding-top: 30px;
+		position: relative;
 
-    &:not(:last-child) {
-      border-bottom: 1px solid $darkgray02;
-    }
+		&:not(:last-child) {
+			border-bottom: 1px solid $darkgray02;
+		}
 
-    &-text {
-      display: flex;
-      justify-content: space-between;
+		&-text {
+			display: flex;
+			justify-content: space-between;
 
-      &-icon {
-        display: flex;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        margin: 0 0 0 20px;
-      }
-    }
+			&-icon {
+				background: none;
+				border: none;
+				cursor: pointer;
+				display: flex;
+				margin: 0 0 0 20px;
+				padding: 0;
+			}
+		}
 
-    &-wrapper {
-      overflow: hidden;
-      @extend .text-secondary;
-      color: $darkgray05;
-      max-height: 0;
-      transition: max-height 0.2s linear;
-    }
-  }
+		&-wrapper {
+			@extend .text-secondary;
+			color: $darkgray05;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s linear;
+		}
+	}
 }
