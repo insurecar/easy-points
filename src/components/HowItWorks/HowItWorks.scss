@@ -19,4 +19,29 @@
       object-position: top;
     }
   }
+
+  &__header {
+    max-width: 850px;
+    color: $white;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-anchor {
+      @extend .label-primary;
+      background: $dark01;
+      border-radius: 2px;
+      padding: 4px 10px;
+    }
+
+    &-title {
+      @extend h2;
+    }
+
+    &-secondary-text {
+      @extend .text-main;
+    }
+  }
 }

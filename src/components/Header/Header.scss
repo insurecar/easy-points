@@ -8,6 +8,7 @@
   align-items: center;
   box-sizing: border-box;
   z-index: 1;
+  position: fixed;
   @include fluid-size("padding-left", $tab-des-vw, $max-vw, 35px, 80px);
   @include fluid-size("padding-right", $tab-des-vw, $max-vw, 35px, 80px);
   @include fluid-size("padding-top", $tab-des-vw, $max-vw, 15px, 35px);
@@ -28,6 +29,8 @@
   &__navigation-wrapper {
     display: flex;
     align-items: center;
+    background: #e5e5e5;
+
     @include mob() {
       padding: 20px;
       box-sizing: border-box;

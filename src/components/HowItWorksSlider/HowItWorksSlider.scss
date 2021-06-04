@@ -1,0 +1,55 @@
+@import "../../assets/variables.scss";
+@import "../../assets/mixins.scss";
+@import "../../assets/typography.scss";
+
+.container {
+  .swiper-wrapper .swiper-slide {
+    height: auto;
+  }
+
+  .slide {
+    height: 100%;
+  }
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background: $purple-main;
+  box-shadow: -20px 20px 60px #101112;
+  border-radius: 10px;
+
+  @include fluid-size("padding-top", $min-vw, $max-vw, 20px, 30px);
+  @include fluid-size("padding-bottom", $min-vw, $max-vw, 20px, 40px);
+  @include fluid-size("padding-right", $min-vw, $max-vw, 25px, 40px);
+  @include fluid-size("padding-left", $min-vw, $max-vw, 25px, 40px);
+
+  &__image {
+    background: $dark01;
+    border-radius: 50%;
+    @include fluid-size("padding-top", $min-vw, $max-vw, 12px, 22px);
+    @include fluid-size("padding-bottom", $min-vw, $max-vw, 12px, 22px);
+    @include fluid-size("padding-right", $min-vw, $max-vw, 12px, 20px);
+    @include fluid-size("padding-left", $min-vw, $max-vw, 12px, 20px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    @extend h4;
+    color: $white;
+    @include fluid-size("margin-top", $tab-des-vw, $max-vw, 15px, 20px);
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 10px;
+    @extend .text-secondary;
+    color: $white08;
+  }
+}
