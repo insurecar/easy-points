@@ -22,6 +22,7 @@ const HowItWorks = () => {
         image={image}
         aria-hidden="true"
       />
+
       <div className="container">
         <div className="how-it-works__header">
           <p className="how-it-works__header-anchor">How it works</p>

@@ -8,25 +8,35 @@
 
 	&__image {
 		margin: auto;
-		margin-top: 60px;
+		margin-top: 80px;
+		@include fluid-size('margin-bottom', $min-vw, $max-vw, 80px, 140px);
+
 		position: relative;
 		width: calc(100% - 120px);
 
 		&::before {
+			content: '';
 			background: $black-elements;
+			position: absolute;
 			border-radius: 10px;
 			box-shadow: -20px 20px 60px #101112;
-			content: '';
 			height: 100%;
 			left: -30px;
-			position: absolute;
 			top: -30px;
 			width: calc(100% + 60px);
+
+			@include mob(){
+				width: calc(100% + 20px);
+				left: -10px;
+				top: -20px;
+			}
 
 		}
 
 		&::after {
-			background: green;
+			background: #1A1B1B;
+			box-shadow: -20px 20px 60px #101112;
+			border-radius: 10px;
 			content: '';
 			height: 100%;
 			left: -60px;
@@ -34,6 +44,10 @@
 			top: -60px;
 			width: calc(100% + 120px);
 			z-index: -1;
+
+			@include mob(){
+				display: none;
+			}
 		}
 	}
     

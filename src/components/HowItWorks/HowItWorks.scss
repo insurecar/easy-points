@@ -41,6 +41,7 @@
 		}
 
 		&-secondary-text {
+			max-width: 630px;
 			@extend .text-main;
 			margin: 0;
 		}
