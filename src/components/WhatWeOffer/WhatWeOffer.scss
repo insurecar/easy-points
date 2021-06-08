@@ -169,6 +169,9 @@
 			@include tab() {
 				width: 45%;
 			}
+            @include mob() {
+				width: 100%;
+			}
 
 			&-text {
 				@include fluid-size('margin-left', $min-vw, $max-vw, 10px, 15px);
