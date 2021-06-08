@@ -1,0 +1,56 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.features__content {
+	@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
+	// gap: 30px;
+	@include fluid-size('gap', $min-vw, $max-vw, 10px, 30px);
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: center;
+
+	&-block {
+		@include fluid-size('padding-top', $min-vw, $max-vw, 20px, 40px);
+		@include fluid-size('padding-left', $min-vw, $max-vw, 25px, 40px);
+		@include fluid-size('padding-right', $min-vw, $max-vw, 25px, 40px);
+		@include fluid-size('padding-bottom', $min-vw, $max-vw, 25px, 40px);
+		border-radius: 10px;
+		box-shadow: -20px 20px 60px #c8cfeb;
+		box-sizing: border-box;
+		width: 30%;
+
+		@include response(max, 750) {
+			box-sizing: border-box;
+			padding: 20px;
+			width: 48%;
+		}
+        
+		@include mob() {
+			width: 98%;
+		}
+
+		&-image {
+			@include fluid-size('max-width', $min-vw, $max-vw, 40px, 75px);
+			max-width: 40px;
+		}
+
+		&-title {
+			@extend h4;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 15px, 20px);
+			margin: 0;
+		}
+
+		&-text {
+			@extend .label-primary;
+			color: $darkgray05;
+			margin-top: 10px;
+		}
+	}
+
+	&-block-image {
+		height: auto;
+		width: 100%;
+	}
+}

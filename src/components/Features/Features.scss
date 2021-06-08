@@ -2,47 +2,29 @@
 @import '../../assets/mixins.scss';
 @import '../../assets/typography.scss';
 
-.how-it-works {
-	margin-top: -400px;
-	padding-top: 400px;
-	position: relative;
-
-	&__background {
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: -1;
-
-		img {
-			object-position: top;
-		}
-	}
-
-	&__header {
+.features{
+    &__header {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
 		margin: auto;
 		max-width: 850px;
-		color: $white;
-
 		text-align: center;
 
 		&-anchor {
 			@extend .label-primary;
-			background: $dark01;
+			background: $purple-main01;
+            color: $purple-main;
 			border-radius: 2px;
 			padding: 4px 10px;
-	
-
-
+            margin: 0;
 		}
 
 		&-title {
 			@extend h2;
-		color: $white;
+            margin: 0;
+            color: $darkgray;
+    		@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
 
 		}
 
@@ -50,6 +32,8 @@
 			max-width: 630px;
 			@extend .text-main;
 			margin: 0;
+            color: $darkgray05;
+    		@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
 		}
 	}
 }

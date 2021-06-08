@@ -1,6 +1,6 @@
 import * as React from 'react';
-import HowItWorks from '../components/HowItWorks/HowItWorks';
+import WhatWeOffer from '../components/WhatWeOffer/WhatWeOffer';
 
-const IndexPage = () => <HowItWorks />;
+const IndexPage = () => <WhatWeOffer />;
 
 export default IndexPage;
