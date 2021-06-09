@@ -7,7 +7,7 @@ const FeaturesContent = () => {
   const {
     allImageSharp: { nodes },
   } = useStaticQuery(graphql`
-        query HowItWorksSlider22 {
+        query HowItWorksSld22 {
           allImageSharp(
             filter: {
               fluid: { originalName: { regex: "/.*(features1|features2|features3|features4|features5|features6).*/" } }
