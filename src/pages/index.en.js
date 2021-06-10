@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Benefits from "../components/Benefits/Benefits"
+import Pricing from '../components/Pricing/Pricing';
 
-const IndexPage = () => <Benefits />;
+const IndexPage = () => <Pricing />;
 
 export default IndexPage;
