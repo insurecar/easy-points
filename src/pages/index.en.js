@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Pricing from '../components/Pricing/Pricing';
+import Feedback from '../components/Feedback/Feedback';
 
-const IndexPage = () => <Pricing />;
+const IndexPage = () => <Feedback />;
 
 export default IndexPage;
