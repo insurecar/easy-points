@@ -1,35 +1,35 @@
-import React, { useState } from "react"
-import "./Accordion.scss"
-import AccordionItem from "./AccordionItem"
+import React, { useState } from 'react';
+import './Accordion.scss';
+import AccordionItem from './AccordionItem';
 
 const Accordion = () => {
-  const [currentItem, setCurrentItem] = useState()
+  const [currentItem, setCurrentItem] = useState();
 
   const handleOpen = (title, close) => {
     if (close) {
-      setCurrentItem(null)
+      setCurrentItem(null);
     } else {
-      setCurrentItem(title)
+      setCurrentItem(title);
     }
-  }
+  };
 
   const arr = [
     {
-      title: "What is a mockup?",
+      title: 'What is a mockup?',
       content:
-        "Please contact us at team@lunaris.jp to request a cancellation for your account. ",
+        'Please contact us at team@lunaris.jp to request a cancellation for your account. ',
     },
     {
-      title: "Can I cancel EasyPoints after the mockup or integration?",
+      title: 'Can I cancel EasyPoints after the mockup or integration?',
       content:
-        "Please contact us at team@lunaris.jp to request a cancellation for your account. ",
+        'Please contact us at team@lunaris.jp to request a cancellation for your account. ',
     },
     {
-      title: "Can I cancel EasyPoints after the mockup or integration?1",
+      title: 'Can I cancel EasyPoints after the mockup or integration?1',
       content:
-        "Please contact us at team@lunaris.jp to request a cancellation for your account.  team@lunaris.jp to request a cancellation for your account. ",
+        'Please contact us at team@lunaris.jp to request a cancellation for your account.  team@lunaris.jp to request a cancellation for your account. ',
     },
-  ]
+  ];
 
   return (
     <div className="accordion">
@@ -42,7 +42,7 @@ const Accordion = () => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Accordion
+export default Accordion;

@@ -1,6 +1,7 @@
 import * as React from 'react';
-import Feedback from '../components/Feedback/Feedback';
+import Form from '../components/Form/Form';
+import Input from '../components/UI/Input/Input';
 
-const IndexPage = () => <Feedback />;
+const IndexPage = () => <Form />;
 
 export default IndexPage;

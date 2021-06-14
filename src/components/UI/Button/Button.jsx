@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import './Button.scss';
 
 const Button = ({
-  text, type, onClick, href, className,
+  text, type, onClick, href, className, typeOfButton = 'button',
 }) => {
   const types = {
     primaryViolet: 'primary-on-light',
@@ -18,7 +18,7 @@ const Button = ({
       {text}
     </a>
   ) : (
-    <button className={classNames} onClick={onClick}>
+    <button className={classNames} onClick={onClick} type={typeOfButton}>
       {text}
     </button>
   );

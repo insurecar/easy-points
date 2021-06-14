@@ -1,0 +1,42 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
+
+.select__label{
+    width: 100%;
+}
+.select{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	box-sizing: border-box;
+	color: $white05;
+	padding: 15px 20px;
+	width: 100%;
+	@extend .button-text;
+
+
+	&::placeholder {
+		color: $white05;
+		@extend .label-primary;
+	}
+
+	&:focus,
+	&:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border: 2px solid $white;
+		border-radius: 10px;
+		box-sizing: border-box;
+		color: $white;
+		outline: none;
+	} 
+
+	&__error {
+		background: $red01;
+
+		border: 2px solid rgba(211, 41, 72, 0.4);
+		border-radius: 10px;
+		box-sizing: border-box;
+	}
+}

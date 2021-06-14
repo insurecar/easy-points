@@ -1,22 +1,22 @@
-import React, { useState, useRef, useEffect } from "react"
-import Plus from "../../images/Plus"
-import Minus from "../../images/Minus"
+import React, { useState, useRef, useEffect } from 'react';
+import Plus from '../../images/Plus';
+import Minus from '../../images/Minus';
 
 const AccordionItem = ({ el, currentItem, handleOpen }) => {
-  const [showContent, setShowContent] = useState(false)
-  const [elemHeight, setElemHeight] = useState(0)
+  const [showContent, setShowContent] = useState(false);
+  const [elemHeight, setElemHeight] = useState(0);
 
-  const ref = useRef()
+  const ref = useRef();
 
   useEffect(() => {
     if (currentItem === el.title) {
-      setElemHeight(ref.current.offsetHeight)
-      setShowContent(true)
+      setElemHeight(ref.current.offsetHeight);
+      setShowContent(true);
     } else {
-      setElemHeight(0)
-      setShowContent(false)
+      setElemHeight(0);
+      setShowContent(false);
     }
-  }, [currentItem])
+  }, [currentItem]);
 
   return (
     <div className="accordion__item">
@@ -38,6 +38,6 @@ const AccordionItem = ({ el, currentItem, handleOpen }) => {
         </div>
       </div>
     </div>
-  )
-}
-export default AccordionItem
+  );
+};
+export default AccordionItem;
