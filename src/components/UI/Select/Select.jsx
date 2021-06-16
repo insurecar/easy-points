@@ -1,18 +1,35 @@
 import React, { useRef } from 'react';
 import './Select.scss';
 
-const Select = () => {
-  const ref = useRef();
+import Select from Sele
 
-  return (
-    <label className="label__select">
-      <select name="choose" className="select">
-        <option value="" hidden>default</option>
-        <option value="first">as</option>
-        <option value="second">asd</option>
-        <option value="third">asd</option>
-      </select>
-    </label>
-  );
-};
-export default Select;
+const Select = React.createClass({
+
+  getInitialState: function () {
+      return {
+          firstValue: ''
+      }
+  },
+
+  handleFirstLevelChange : function (event) {
+      this.setState({
+          firstValue: event.target.value
+      });
+  },
+  render : function(){
+
+      var options = [
+          { value: '', label: 'Select an option' },
+          { value: 'one', label: 'One' },
+          { value: 'two', label: 'Two' }
+      ];
+
+      return (<Select
+          value={this.state.firstValue}
+          options={options}
+          onChange={this.handleFirstLevelChange}
+          />)
+  }
+});
+
+import default Select;

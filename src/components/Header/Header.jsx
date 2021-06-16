@@ -1,61 +1,74 @@
-import React, { useState } from "react"
-import Logo from "../images/Logo"
-import LanguageSelector from "../LanguageSelector/LanguageSelector"
-import BurgerButton from "../UI/BurgerButton/BurgerButton"
-import Button from "../UI/Button/Button"
-import "./Header.scss"
-import classnames from "classnames"
+import React, { useState } from 'react';
+import Logo from '../images/Logo';
+import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import BurgerButton from '../UI/BurgerButton/BurgerButton';
+import Button from '../UI/Button/Button';
+import './Header.scss';
+import classnames from 'classnames';
+import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const Header = props => {
-  const [navigationIsActive, setNavigationIsActive] = useState(false)
+const Header = (props) => {
+  const [navigationIsActive, setNavigationIsActive] = useState(false);
 
-  const navigationWrapperClassName = classnames("header__navigation-wrapper", {
-    "header__navigation-wrapper--active": navigationIsActive,
-  })
+  const navigationWrapperClassName = classnames('header__navigation-wrapper', {
+    'header__navigation-wrapper--active': navigationIsActive,
+  });
 
   const navigationList = [
     {
-      title: "How it works",
-      href: "#how-it-work",
+      title: 'How it works',
+      href: '#how-it-work',
     },
     {
-      title: "Features",
-      href: "#features",
+      title: 'Features',
+      href: '#features',
     },
     {
-      title: "Benefits",
-      href: "#benefits",
+      title: 'Benefits',
+      href: '#benefits',
     },
     {
-      title: "Pricing",
-      href: "#pricing",
+      title: 'Pricing',
+      href: '#pricing',
     },
     {
-      title: "Feedback",
-      href: "#feedback",
+      title: 'Feedback',
+      href: '#feedback',
     },
     {
-      title: "FAQ",
-      href: "#faq",
+      title: 'FAQ',
+      href: '#faq',
     },
     {
-      title: "Contact",
-      href: "#contact",
+      title: 'Contact',
+      href: '#contact',
     },
-  ]
+  ];
 
-  const handleIsActive = isActive => {
-    setNavigationIsActive(isActive)
-  }
+  const data = useStaticQuery(graphql`
+    query HeaderLogo {
+      imageSharp(fluid: { originalName: { eq: "headerLogo.png" } }) {
+        gatsbyImageData
+      }
+    }
+  `);
+
+  const handleIsActive = (isActive) => {
+    setNavigationIsActive(isActive);
+  };
   return (
     <div className="header">
-      <Logo className="header__logo-height" />
+      {/* <Logo className="header__logo-height" /> */}
+      <div className="header__logo">
+        <GatsbyImage image={getImage(data.imageSharp.gatsbyImageData)} alt="brand" />
+      </div>
       <div className={navigationWrapperClassName}>
         <nav className="header__navigation">
           <ul className="header__navigation-list">
-            {navigationList.map(({ title, href }, index) => (
+            {navigationList.map(({ title, href }) => (
               <li
-                key={title + href + index}
+                key={title + href}
                 className="header__navigation-list-item"
               >
                 <a
@@ -82,7 +95,7 @@ const Header = props => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

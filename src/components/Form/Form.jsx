@@ -6,7 +6,6 @@ import validator from 'validator';
 import Input from '../UI/Input/Input';
 import Button from '../UI/Button/Button';
 import Textarea from '../UI/Textarea/Textarea';
-import Select from '../UI/Select/Select';
 
 const Form = () => {
   const data = {
@@ -25,13 +24,29 @@ const Form = () => {
   const [emailError, setEmailError] = useState('');
   const [subjectError, setSubjectError] = useState('');
 
-  const { imageSharp: { gatsbyImageData } } = useStaticQuery(graphql`
-    query Form {
-      imageSharp(fluid: { originalName: { eq: "formBackground.png" } }) {
-        gatsbyImageData
-      }
-    }
-  `);
+  // const { imageSharp: { gatsbyImageData } } = useStaticQuery(graphql`
+  //   query Form {
+  //     imageSharp(fluid: { originalName: { eq: "feedBackPhone.png" } }) {
+  //       gatsbyImageData
+  //     }
+  //   }
+  // `);
+
+  const {
+    allImageSharp: { nodes },
+  } = useStaticQuery(graphql`
+        query FormBackground {
+          allImageSharp(
+            filter: {
+              fluid: { originalName: { regex: "/.*(formBackground).*/" } }
+            }
+          ) {
+            nodes {
+              gatsbyImageData
+            }
+          }
+        }
+      `);
 
   const handleInput = (ref) => {
     const newState = {
@@ -77,8 +92,15 @@ const Form = () => {
 
   return (
     <div className="form">
-      <GatsbyImage className="form__background" image={getImage(gatsbyImageData)} alt="background" />
+      <GatsbyImage className="form__background" image={getImage(nodes[0].gatsbyImageData)} alt="background" />
       <div className="container">
+        <div className="form__header">
+          <p className="form__header-anchor">Pricing</p>
+          <h2 className="form__header-title">Four plans offered</h2>
+          <p className="form__header-text">
+            Every business is unique. No matter how big or small your business is, EasyPoints has a plan that suits your needs.
+          </p>
+        </div>
         <form onSubmit={hadleSubmit}>
           <div className="form__data-user">
             <Input
@@ -128,9 +150,9 @@ const Form = () => {
               id="shopify"
               type="text"
             />
-            <Select />
+            {/* <Select /> */}
           </div>
-          <div className= "form__button">
+          <div className="form__button">
             <Button type="primaryViolet" text="Submit" typeOfButton="submit" className="form__button" />
           </div>
         </form>

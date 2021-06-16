@@ -3,15 +3,17 @@
 @import '../../assets/typography.scss';
 
 .features {
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
+
 	&__header {
+		@include fluid-size('margin-top', $min-vw, $max-vw, 80px, 140px);
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		// margin: auto;
+		margin: auto;
+		
 		max-width: 850px;
 		text-align: center;
-		@include fluid-size('margin-top', $min-vw, $max-vw, 80px, 140px);
-
 
 		&-anchor {
 			@extend .label-primary;
@@ -30,7 +32,7 @@
 
 		}
 
-		&-secondary-text {
+		&-text {
 			@extend .text-main;
 			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
 			color: $darkgray05;

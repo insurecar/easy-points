@@ -2,7 +2,7 @@ import React from 'react';
 import './Benefits.scss';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
-import Button from '../UI/Button/Button'
+import Button from '../UI/Button/Button';
 
 const Benefits = () => {
   const {
@@ -25,7 +25,7 @@ const Benefits = () => {
     {
       title: 'Reward more than just purchases',
       text: 'With EasyPoints, you can reward customers for a number of actions outside of the cart, from liking your social media page to creating an account with your shop. Don’t just create loyal customers - create a loyal community!',
-      img: nodes[0].gatsbyImageData,
+      img: nodes[3].gatsbyImageData,
     },
     {
       title: 'Point redemption without the redirect',
@@ -54,9 +54,9 @@ const Benefits = () => {
         <div className="benefits__main">
           {content.map((elem) => (
 
-            <div className="benefits__main-block">
+            <div className="benefits__main-block" key={elem.title + elem.text}>
               <div className="benefits__main-block-image">
-                <GatsbyImage image={getImage(elem.img)} />
+                <GatsbyImage image={getImage(elem.img)} alt="graph" />
               </div>
               <div className="benefits__main-block-text">
                 <h3 className="benefits__main-block-text-title">{elem.title}</h3>
@@ -70,9 +70,10 @@ const Benefits = () => {
       </div>
       <div className="benefits__footer">
         <GatsbyImage
-          image={getImage(nodes[3].gatsbyImageData)}
+          image={getImage(nodes[0].gatsbyImageData)}
           aria-hidden="true"
           className="benefits__footer-background"
+          alt = 'background__footer'
         />
         <div className="container">
           <div className="benefits__footer-header">
@@ -82,7 +83,7 @@ const Benefits = () => {
             <p className="benefits__footer-header-text">
               Creating a loyalty program with EasyPoints is a simple but effective way to boost your customer retention strategy.
             </p>
-            <Button type ="secondary" text = 'Shopify App Store'/>
+            <Button type="secondary" text="Shopify App Store" />
           </div>
         </div>
       </div>

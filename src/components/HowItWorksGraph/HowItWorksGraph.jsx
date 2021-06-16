@@ -17,7 +17,7 @@ const HowItWorksGraph = () => {
   return (
     <div className="how-it-works-graph">
       <div className="how-it-works-graph__image">
-        <GatsbyImage image={image} />
+        <GatsbyImage image={image} alt="graph" />
       </div>
     </div>
   );

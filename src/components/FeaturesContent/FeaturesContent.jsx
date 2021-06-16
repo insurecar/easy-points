@@ -56,9 +56,9 @@ const FeaturesContent = () => {
   return (
     <div className="features__content">
       {content.map((el) => (
-        <div className="features__content-block">
+        <div className="features__content-block" key={el.text + el.title}>
           <div className="features__content-block-image">
-            <GatsbyImage image={getImage(el.img)} />
+            <GatsbyImage image={getImage(el.img)} alt="img" />
           </div>
           <h4 className="features__content-block-title">{el.title}</h4>
           <div className="features__content-block-text">{el.text}</div>

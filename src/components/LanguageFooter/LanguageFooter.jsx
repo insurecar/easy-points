@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import './LanguageSelector.scss';
+import './LanguageFooter.scss';
 import classnames from 'classnames';
-import Arrow from '../images/Arrow';
+import ArrowFooter from '../images/ArrowFooter';
 
-const LanguageSelector = () => {
+const LanguageFooter = () => {
   const languages = ['Eng', 'JP'];
   const [language, setLanguage] = useState(languages[0]);
   const [selectorIsVisible, setSelectorIsVisible] = useState(false);
 
-  const languageSelectorClassName = classnames('language-selector', {
-    'language-selector--active': selectorIsVisible,
+  const languageSelectorClassName = classnames('footer-language-selector', {
+    'footer-language-selector--active': selectorIsVisible,
   });
 
-  const buttonArrow = classnames('language-selector__button-arrow', {
-    'language-selector__button-arrow--active': !selectorIsVisible,
+  const buttonArrow = classnames('footer-language-selector__button-arrow', {
+    'footer-language-selector__button-arrow--active': !selectorIsVisible,
   });
 
-  const listClassName = classnames('language-selector__list', {
-    'language-selector__list--active': selectorIsVisible,
+  const listClassName = classnames('footer-language-selector__list', {
+    'footer-language-selector__list--active': selectorIsVisible,
   });
 
   const handleLanguage = () => {
@@ -33,16 +33,16 @@ const LanguageSelector = () => {
 
   return (
     <div className={languageSelectorClassName}>
-      <button onClick={handleLanguage} className="language-selector__button">
+      <button onClick={handleLanguage} className="footer-language-selector__button">
         {language}
-        <Arrow className={buttonArrow} />
+        <ArrowFooter className={buttonArrow} />
       </button>
       <ul className={listClassName}>
         {filteredLanguages.map((lang, index) => (
-          <li key={lang + index} className="language-selector__list-item">
+          <li key={lang + index} className="footer-language-selector__list-item">
             <button
               onClick={() => handleChooseLanguage(lang)}
-              className="language-selector__list-item-button"
+              className="footer-language-selector__list-item-button"
             >
               {lang}
             </button>
@@ -53,4 +53,4 @@ const LanguageSelector = () => {
   );
 };
 
-export default LanguageSelector;
+export default LanguageFooter;

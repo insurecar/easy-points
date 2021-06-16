@@ -16,6 +16,7 @@
 		padding-bottom: 15px;
 		padding-top: 30px;
 		position: relative;
+		cursor: pointer;
 
 		&:not(:last-child) {
 			border-bottom: 1px solid $darkgray02;

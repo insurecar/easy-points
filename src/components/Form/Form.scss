@@ -3,11 +3,9 @@
 @import '../../assets/typography.scss';
 
 .form {
-	position: relative;
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
 
-	&__button {
-		margin-top: 40px;
-	}
+	position: relative;
 
 	&__background {
 		height: 100%;
@@ -16,7 +14,56 @@
 		top: 0;
 		width: 100%;
 		z-index: -1;
+
+		img {
+			object-position: top;
+		}
 	}
+
+	&__header {
+	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+
+		align-items: center;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 850px;
+		text-align: center;
+
+
+		&-anchor {
+			@extend .label-primary;
+			background: $dark01;
+
+			border-radius: 2px;
+			margin: 0;
+			padding: 4px 10px;
+		}
+
+		&-title {
+			@extend h2;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
+			margin: 0;
+
+		}
+
+		&-text {
+			@extend .text-main;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
+			@include fluid-size('margin-bottom', $min-vw, $max-vw, 40px, 60px);
+			color: $white08;
+			margin: 0;
+			max-width: 630px;
+		}
+	}
+
+
+	&__button {
+		margin-top: 40px;
+	}
+
+	
 
 	&__data-user {
 		display: flex;
@@ -41,8 +88,8 @@
 		flex-direction: column;
 	}
 
-    &__button{
-        display: flex;
-        justify-content: center;
-    }
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
 }

@@ -21,6 +21,7 @@ const HowItWorks = () => {
         className="how-it-works__background"
         image={image}
         aria-hidden="true"
+        alt="background"
       />
 
       <div className="container">

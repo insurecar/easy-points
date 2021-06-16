@@ -19,11 +19,11 @@ const AccordionItem = ({ el, currentItem, handleOpen }) => {
   }, [currentItem]);
 
   return (
-    <div className="accordion__item">
-      <div className="accordion__item-text">
-        <div className="accordion__item-text-title">{el.title}</div>
+    <div className="accordion__item"  >
+      <div className="accordion__item-text" onClick = {()=> handleOpen(el.title, showContent)} >
+        <div  className="accordion__item-text-title"  >{el.title}</div>
         <button
-          onClick={() => handleOpen(el.title, showContent)}
+          // onClick={() => handleOpen(el.title, showContent)}
           className="accordion__item-text-icon"
         >
           {showContent ? <Minus /> : <Plus />}

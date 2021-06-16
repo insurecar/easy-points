@@ -7,10 +7,6 @@ const DoubleButton = () => {
   const refButton1 = useRef();
   const refButton2 = useRef();
   const [activeClass, setActiveClass] = useState(true);
-  const classNameOne = classnames('double-button', { 'double-button__active-one': activeClass });
-  const classNameTwo = classnames('double-button', { 'double-button__active-two': !activeClass });
-
-  console.log(classNameTwo);
 
   useEffect(() => {
     refSpan.current.style.width = `${refButton1.current.offsetWidth}px`;
@@ -18,7 +14,6 @@ const DoubleButton = () => {
   }, []);
 
   const handleOneButton = () => {
-    // ref.current.style.width = `${event.target.
     setActiveClass(true);
     refSpan.current.style.width = `${refButton1.current.offsetWidth}px`;
     refSpan.current.style.left = 0;

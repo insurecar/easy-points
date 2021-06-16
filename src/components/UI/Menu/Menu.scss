@@ -23,19 +23,18 @@
 	padding: 0;
 	white-space: nowrap;
 
-	@include tab() {
+	@include mob-tab() {
 		flex-direction: row;
 	}
 
 	&__item {
 		@extend .text-secondary;
-		color: red;
 		font-family: serif;
 		margin: 0;
 		padding: 0;
 		position: relative;
 
-		@include tab() {
+		@include mob-tab() {
 			display: inline-block;
 		}
 
@@ -48,7 +47,7 @@
 			position: absolute;
 			width: calc(100% - 60px);
 
-			@include tab() {
+			@include mob-tab() {
 				bottom: unset;
 				content: '';
 				height: calc(100% - 40px);
@@ -69,6 +68,7 @@
 		border: none;
 		box-sizing: border-box;
 		color: $darkgray05;
+		font-weight: 900;
 		display: flex;
 		font-family: $f-black;
 		height: 100%;

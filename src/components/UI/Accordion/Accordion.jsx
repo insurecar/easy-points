@@ -25,9 +25,21 @@ const Accordion = () => {
         'Please contact us at team@lunaris.jp to request a cancellation for your account. ',
     },
     {
-      title: 'Can I cancel EasyPoints after the mockup or integration?1',
+      title: 'Is there anything I should not touch after integration?',
       content:
         'Please contact us at team@lunaris.jp to request a cancellation for your account.  team@lunaris.jp to request a cancellation for your account. ',
+    },
+    {
+      title: 'What should I not touch during integration?',
+      content: 'Please contact us at team@lunaris.jp to request a cancellation for your account. ',
+    },
+    {
+      title: 'How long does a custom integration take?',
+      content: 'Please contact us at team@lunaris.jp to request a cancellation for your account. ',
+    },
+    {
+      title: 'How long does a custom integration take it?',
+      content: 'Please contact us at team@lunaris.jp to request a cancellation for your accountw. ',
     },
   ];
 

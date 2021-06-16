@@ -53,6 +53,7 @@ const WhatWeOffer = () => {
         image={getImage(data.background.gatsbyImageData)}
         aria-hidden="true"
         className="what-we-offer__background"
+        alt = 'background'
       />
       <div className="container">
         <div className="what-we-offer__header">
@@ -69,6 +70,7 @@ const WhatWeOffer = () => {
             <GatsbyImage
               image={getImage(data.image.gatsbyImageData)}
               aria-hidden="true"
+              alt = "icon"
             />
 
           </div>
@@ -78,7 +80,7 @@ const WhatWeOffer = () => {
 
             <ul className="what-we-offer__content-custom-list">
               {content.map((el) => (
-                <li className="what-we-offer__content-custom-list-item">
+                <li className="what-we-offer__content-custom-list-item" key = {el.cont}>
                   {el.status ? <Checkbox className='what-we-offer__checkbox' /> : <Uncheckbox />}
                   <span className="what-we-offer__content-custom-list-item-text">
                     {el.cont}

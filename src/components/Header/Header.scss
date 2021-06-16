@@ -3,33 +3,38 @@
 @import '../../assets/typography.scss';
 
 .header {
-	@include fluid-size('padding-left', $tab-des-vw, $max-vw, 35px, 80px);
-	@include fluid-size('padding-right', $tab-des-vw, $max-vw, 35px, 80px);
+	@include fluid-size('padding-left', $tab-des-vw, $max-vw, 35px, 65px);
+	@include fluid-size('padding-right', $tab-des-vw, $max-vw, 35px, 65px);
 	@include fluid-size('padding-top', $tab-des-vw, $max-vw, 15px, 35px);
 	@include fluid-size('padding-bottom', $tab-des-vw, $max-vw, 15px, 35px);
+	top: 0;
 	align-items: center;
-
-	background: #e5e5e5;
+	background: $main-background;
+	z-index: 9999;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	// z-index: 1;
 
 	@include des() {
 		// @include fluid-size("padding-right", $tab-des-vw, $max-vw, 35px, 80px);
 		padding-right: 15px;
 	}
 
-	&__logo-height {
-		height: 50px;
+	&__logo{
+		max-width: 25%;
+		
+		img{
+			width: 100%;
+		}
 	}
 
 	&__navigation-wrapper {
 		align-items: center;
-		background: #e5e5e5;
 		display: flex;
+		background: $main-background;
 
 		@include mob() {
 			box-sizing: border-box;
@@ -107,7 +112,7 @@
 				box-sizing: border-box;
 				display: block;
 				text-align: center;
-				width: 100%;
+				width: 85%;
 
 				&:first-of-type {
 					margin-bottom: 15px;
@@ -128,14 +133,14 @@
 	}
 
 	&__navigation-list-item {
-		@include fluid-size('margin-left', $des-vw, $max-vw, 25px, 40px);
+		@include fluid-size('margin-left', $des-vw, $max-vw, 25px, 25px);
 
 		&:first-of-type {
 			margin-left: 0;
 		}
 
 		&:last-of-type {
-			@include fluid-size('margin-right', $des-vw, $max-vw, 25px, 40px);
+			@include fluid-size('margin-right', $des-vw, $max-vw, 25px, 25px);
 		}
 	}
 

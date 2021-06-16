@@ -61,7 +61,7 @@ const HowItWorksSlider = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
-          pagination = {pagination}
+          pagination={pagination}
           // pagination={{
           //   clickable: true,
           // }}
@@ -82,11 +82,11 @@ const HowItWorksSlider = () => {
           className="mySwiper"
         >
           {content.map((slide) => (
-            <SwiperSlide>
+            <SwiperSlide key={slide.text + slide.title}>
               <div className="slide">
                 <div className="slide__image-wrapper">
                   <div className="slide__image">
-                    <GatsbyImage image={getImage(slide.img)} />
+                    <GatsbyImage image={getImage(slide.img)} alt="slide" />
                   </div>
                 </div>
                 <div className="slide__text-wrpper">

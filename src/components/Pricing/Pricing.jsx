@@ -70,6 +70,7 @@ const Pricing = () => {
         image={getImage(data.background.gatsbyImageData)}
         aria-hidden="true"
         className="pricing__background"
+        alt = 'background'
       />
       <div className="container">
         <div className="pricing__header">
@@ -81,7 +82,7 @@ const Pricing = () => {
         </div>
         <div className="pricing__content">
           {content.map((elem) => (
-            <div className={elem.active ? activeClass : blockClass}>
+            <div className={elem.active ? activeClass : blockClass} key = {elem.name + elem.cost + elem.period}>
               <div className="pricing__content-block-name">
                 {elem.name}
               </div>
@@ -104,7 +105,7 @@ const Pricing = () => {
               </div>
               <ul className="pricing__content-block-list">
                 {elem.benefits.map((benefit) => (
-                  <li className="pricing__content-block-list-item">
+                  <li className="pricing__content-block-list-item" key = {benefit}>
                     {elem.active ? <CheckboxReverse /> : <Checkbox />}
 
                     <span className="pricing__content-block-list-item-text">{benefit}</span>
@@ -121,6 +122,7 @@ const Pricing = () => {
               image={getImage(data.backgroundFooter.gatsbyImageData)}
               aria-hidden="true"
               className="pricing__offer-background"
+              alt = 'offer background'
             />
             <div className="pricing__offer-defenition">
               <h3 className="pricing__offer-defenition-title">

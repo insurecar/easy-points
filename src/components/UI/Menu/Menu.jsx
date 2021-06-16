@@ -1,47 +1,48 @@
-import React, { useState } from "react"
-import classnames from "classnames"
-import "./Menu.scss"
+import React, { useState } from 'react';
+import classnames from 'classnames';
+import './Menu.scss';
 
 const Menu = () => {
-  const [currentItem, setCurrentItem] = useState("integration1")
+  const [currentItem, setCurrentItem] = useState('integration1');
 
-  const handleClick = value => {
-    console.log(value)
-    setCurrentItem(value)
-  }
+  const handleClick = (value) => {
+    setCurrentItem(value);
+  };
 
   const arr = [
     {
-      title: "Integration",
-      value: "integration1",
+      title: 'Integration',
+      value: 'Integration1',
     },
     {
-      title: "Integration",
-      value: "integration2",
+      title: 'Pricing',
+      value: 'Pricing2',
     },
     {
-      title: "Compatibility and Limitations",
-      value: "integration3",
+      title: 'Settings',
+      value: 'Settings1',
     },
     {
-      title: "Integration",
-      value: "integration4",
+      title: 'Points and Purchases',
+      value: 'integration4',
     },
     {
-      title: "Integration",
-      value: "integration5",
+      title: 'Compatibility and Limitations',
+      value: 'integration5',
     },
-  ]
+    {
+      title: 'Additional featureasdasd',
+      value: 'integration7',
+    },
+  ];
 
-  const getButtonClass = value =>
-    classnames("menu-list__button", {
-      "menu-list__button--active": currentItem === value,
-    })
+  const getButtonClass = (value) => classnames('menu-list__button', {
+    'menu-list__button--active': currentItem === value,
+  });
 
-  const getListItemClass = value =>
-    classnames("menu-list__item", {
-      "menu-list__item--active": currentItem === value,
-    })
+  const getListItemClass = (value) => classnames('menu-list__item', {
+    'menu-list__item--active': currentItem === value,
+  });
 
   return (
     <div className="menu">
@@ -58,7 +59,7 @@ const Menu = () => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

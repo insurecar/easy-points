@@ -24,12 +24,12 @@ const AppleLink = () => {
   return (
     <a href="#" className="apple">
       <div className="apple__icon">
-        <GatsbyImage image={getImage(nodes[0].gatsbyImageData)} />
+        <GatsbyImage image={getImage(nodes[0].gatsbyImageData)} alt = 'android' />
       </div>
       <div className="apple__text">
         <div className="apple__text-download">GET IN ON</div>
         <div className="apple__text-name">
-          <GatsbyImage image={getImage(nodes[1].gatsbyImageData)} />
+          <GatsbyImage image={getImage(nodes[1].gatsbyImageData)} alt = 'andriod' />
 
         </div>
       </div>

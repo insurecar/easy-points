@@ -50,7 +50,7 @@ const Feedback = () => {
       rating: 5,
     },
     {
-      brand: nodes[1].gatsbyImageData,
+      brand: nodes[3].gatsbyImageData,
       type: 'Shoes',
       raiting: '',
       text: '上のリワードポイントアプリを使用していたのですが、日本式のような「●円で1ポイント」といった使い方を指定できず困っておりました。こちらのアプリをド乳したことで、他社ECモールと同 ...',
@@ -76,7 +76,7 @@ const Feedback = () => {
       rating: 1,
     },
     {
-      brand: nodes[1].gatsbyImageData,
+      brand: nodes[3].gatsbyImageData,
       type: 'Shoes',
       raiting: '',
       text: '上のリワードポイントアプリを使用していたのですが、日本式のような「●円で1ポイント」といった使い方を指定できず困っておりました。こちらのアプリをド乳したことで、他社ECモールと同 ...',
@@ -179,7 +179,7 @@ const Feedback = () => {
 
       </div>
       <div className="feedback__footer">
-        <GatsbyImage className="feedback__footer-background" image={getImage(nodes[3].gatsbyImageData)} />
+        <GatsbyImage className="feedback__footer-background" image={getImage(nodes[4].gatsbyImageData)} alt="background" />
         <div className="container">
           <div className="feedback__footer-content">
             <div className="feedback__footer-content-link">
@@ -194,10 +194,10 @@ const Feedback = () => {
                 EasyPoints introduces a foolproof point system that
                 turns points into discounts right from the checkout page. Earn points and spend points. It’s really that simple.
               </div>
-              <Button text="Read more" type = 'secondary' />
+              <Button text="Read more" type="secondary" />
             </div>
             <div className="feedback__footer-content-phone">
-              <GatsbyImage image={nodes[4].gatsbyImageData} />
+              <GatsbyImage image={nodes[1].gatsbyImageData} alt="phone" />
             </div>
           </div>
 
