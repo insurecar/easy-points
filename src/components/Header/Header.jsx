@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
-import Logo from '../images/Logo';
-import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import React, { useState, useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import classnames from 'classnames';
 import BurgerButton from '../UI/BurgerButton/BurgerButton';
 import Button from '../UI/Button/Button';
 import './Header.scss';
-import classnames from 'classnames';
-import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
-const Header = (props) => {
+const Header = () => {
   const [navigationIsActive, setNavigationIsActive] = useState(false);
+  const body = document.querySelector('body');
+
+
+  const [width, setWidth] = useState();
+
+  if (navigationIsActive) {
+    body.style.overflow = 'hidden';
+  } else {
+    body.style.overflow = 'visible';
+  }
 
   const navigationWrapperClassName = classnames('header__navigation-wrapper', {
     'header__navigation-wrapper--active': navigationIsActive,
@@ -42,7 +51,7 @@ const Header = (props) => {
     },
     {
       title: 'Contact',
-      href: '#contact',
+      href: '#footer',
     },
   ];
 
@@ -57,8 +66,26 @@ const Header = (props) => {
   const handleIsActive = (isActive) => {
     setNavigationIsActive(isActive);
   };
+
+  useEffect(() => {
+    const setWindowWidth = () => {
+      setWidth(window.innerWidth);
+    };
+
+    setWindowWidth();
+    window.addEventListener('resize', setWindowWidth);
+
+    body.style.overflow = navigationIsActive ? 'hidden' : 'visible';
+
+    return () => {
+      window.removeEventListener('resize', setWindowWidth);
+    };
+  }, []);
+
+  body.style.overflow = navigationIsActive && width < 1300 ? 'hidden' : 'visible';
+
   return (
-    <div className="header">
+    <div className="header" >
       {/* <Logo className="header__logo-height" /> */}
       <div className="header__logo">
         <GatsbyImage image={getImage(data.imageSharp.gatsbyImageData)} alt="brand" />
@@ -73,7 +100,7 @@ const Header = (props) => {
               >
                 <a
                   className="header__navigation-link"
-                  href={href}
+                  href={`${href}`}
                   onClick={() => setNavigationIsActive(!navigationIsActive)}
                 >
                   {title}

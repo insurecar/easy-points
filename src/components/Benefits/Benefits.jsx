@@ -40,7 +40,7 @@ const Benefits = () => {
   ];
 
   return (
-    <div className="benefits">
+    <div className="benefits" id = "benefits">
       <div className="container">
         <div className="benefits__header">
           <p className="benefits__header-anchor">Benefits</p>

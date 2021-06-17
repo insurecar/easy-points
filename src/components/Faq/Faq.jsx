@@ -5,7 +5,7 @@ import Button from '../UI/Button/Button';
 import Accordion from '../UI/Accordion/Accordion';
 
 const Faq = () => (
-  <div className="faq__wrapper">
+  <div className="faq__wrapper" id = 'faq'>
     <div className="container">
       <div className="faq">
         <h2 className="faq__title">FAQ</h2>

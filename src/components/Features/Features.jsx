@@ -3,7 +3,7 @@ import './Features.scss';
 import FeaturesContent from '../FeaturesContent/FeaturesContent';
 
 const Features = () => (
-  <div className="features">
+  <div className="features" id = "features">
     <div className="container">
       <div className="features__header">
         <p className="features__header-anchor">Features</p>

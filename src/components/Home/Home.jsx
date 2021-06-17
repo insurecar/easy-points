@@ -44,20 +44,20 @@ const Home = () => {
         </div>
         <div className="home__brand">
           <ul className="home__brand--list">
-            {nodes.map((brand) => {
-             return <li className="home__brand--list-item" key = {brand.gatsbyImageData.images.fallback.src} >
-                <GatsbyImage image={getImage(brand.gatsbyImageData)} alt = "brand" />
+            {nodes.map((brand) => (
+              <li className="home__brand--list-item" key={brand.gatsbyImageData.images.fallback.src}>
+                <GatsbyImage image={getImage(brand.gatsbyImageData)} alt="brand" />
               </li>
-})}
+            ))}
           </ul>
         </div>
         <div className="home__video">
           <ReactPlayer
             width="100%"
             min-height="100%"
-            url="https://youtu.be/t2QAzHZH-5s"
-            controls={false}
-            playIcon={false}
+            url="https://www.youtube.com/watch?v=AifIhzNvLq0"
+            controls={true}
+            playIcon={true}
             loop={false}
             onReady={() => console.log('onReady callback')}
             onStart={() => console.log('onStart callback')}

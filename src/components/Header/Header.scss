@@ -7,15 +7,15 @@
 	@include fluid-size('padding-right', $tab-des-vw, $max-vw, 35px, 65px);
 	@include fluid-size('padding-top', $tab-des-vw, $max-vw, 15px, 35px);
 	@include fluid-size('padding-bottom', $tab-des-vw, $max-vw, 15px, 35px);
-	top: 0;
 	align-items: center;
-	background: $main-background;
-	z-index: 9999;
+	background: #f8f4fc;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
+	top: 0;
 	width: 100%;
+	z-index: 9999;
 	// z-index: 1;
 
 	@include des() {
@@ -23,18 +23,18 @@
 		padding-right: 15px;
 	}
 
-	&__logo{
+	&__logo {
 		max-width: 30%;
 		
-		img{
+		img {
 			width: 100%;
 		}
 	}
 
 	&__navigation-wrapper {
 		align-items: center;
+		background: #f8f4fc;
 		display: flex;
-		background: $main-background;
 
 		@include mob() {
 			box-sizing: border-box;
@@ -53,7 +53,7 @@
 			left: 0;
 			overflow: auto;
 			position: fixed;
-			top: 0;
+			top: -5px;
 			transform: translateY(-100%);
 			transition: transform 0.3s;
 			width: 100%;
@@ -103,6 +103,7 @@
 			&--active {
 				transform: translateY(80px);
 			}
+
 		}
 
 		.button {

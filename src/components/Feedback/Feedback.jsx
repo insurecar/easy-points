@@ -96,7 +96,7 @@ const Feedback = () => {
   ];
 
   return (
-    <div className="feedback">
+    <div className="feedback" id="feedback">
       <div className="container">
         <div className="feedback__header">
           <p className="feedback__header-anchor">Feedback</p>

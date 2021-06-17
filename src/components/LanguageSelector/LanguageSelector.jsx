@@ -33,14 +33,15 @@ const LanguageSelector = () => {
 
   return (
     <div className={languageSelectorClassName}>
-      <button onClick={handleLanguage} className="language-selector__button">
+      <button type="button" onClick={handleLanguage} className="language-selector__button">
         {language}
         <Arrow className={buttonArrow} />
       </button>
       <ul className={listClassName}>
-        {filteredLanguages.map((lang, index) => (
-          <li key={lang + index} className="language-selector__list-item">
+        {filteredLanguages.map((lang) => (
+          <li key={Math.random()} className="language-selector__list-item">
             <button
+              type="button"
               onClick={() => handleChooseLanguage(lang)}
               className="language-selector__list-item-button"
             >

@@ -16,7 +16,7 @@ const HowItWorks = () => {
 
   const image = getImage(data.imageSharp.gatsbyImageData);
   return (
-    <div className="how-it-works">
+    <div className="how-it-works" id="how-it-work">
       <GatsbyImage
         className="how-it-works__background"
         image={image}

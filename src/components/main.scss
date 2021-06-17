@@ -4,6 +4,12 @@
 @import '../assets/typography.scss';
 @import '../assets/base.scss';
 
-body{
-    background:#f8f4fc;
+body {
+	background: #f8f4fc;
+}
+
+.choose-selector {
+	// background: #141516;
+	background: lightpink;
+	height: 30vh;
 }

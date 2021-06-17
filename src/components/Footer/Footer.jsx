@@ -20,7 +20,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="footer-wraper">
+    <footer className="footer-wraper" id = 'footer'>
       <div className="container">
         <div className="footer__top">
           <GatsbyImage className="footer__top-logo" image={getImage(logo.gatsbyImageData)} alt="logo" />
