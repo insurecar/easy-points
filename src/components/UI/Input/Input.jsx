@@ -13,9 +13,11 @@ const Input = ({
   return (
 
     <label className={classLabel}>
-      {label}
-      {' '}
-      {required && '*'}
+      <span className="span-label">
+        {label}
+        {' '}
+        {required && '*'}
+      </span>
 
       <input
         className={classInput}

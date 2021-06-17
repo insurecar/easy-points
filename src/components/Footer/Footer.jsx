@@ -17,7 +17,7 @@ const Footer = () => {
     }
   `);
 
-  console.log(logo);
+
 
   return (
     <footer className="footer-wraper">
@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="footer__bottom-descriptions-policy">Privacy policy</div>
           </div>
           <div className="footer__bottom-logo">
-            <GatsbyImage image={getImage(otakoyi.gatsbyImageData)} />
+            <GatsbyImage image={getImage(otakoyi.gatsbyImageData)} alt = "otakoyi" />
           </div>
         </div>
       </div>

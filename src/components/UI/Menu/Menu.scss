@@ -65,18 +65,19 @@
 
 	&__button {
 		background: none;
-		border: none;
+		border-style: none;
 		box-sizing: border-box;
 		color: $darkgray05;
-		font-weight: 900;
 		display: flex;
 		font-family: $f-black;
+		font-weight: 900;
 		height: 100%;
 		margin: 0;
 		padding: 20px 30px;
 		position: relative;
 		transition: all 0.35s;
 		width: 100%;
+		@extend .label-primary;
 
 		&:not(&--active):hover {
 			color: $darkgray;

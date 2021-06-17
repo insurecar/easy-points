@@ -45,9 +45,9 @@ const Accordion = () => {
 
   return (
     <div className="accordion">
-      {arr.map((el, index) => (
+      {arr.map((el) => (
         <AccordionItem
-          key={el + index}
+          key={Math.random()}
           el={el}
           currentItem={currentItem}
           handleOpen={handleOpen}

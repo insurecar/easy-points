@@ -2,8 +2,13 @@
 @import '../../../assets/mixins.scss';
 @import '../../../assets/typography.scss';
 
-.textarea {
 
+.label-textarea {
+	display: block;
+	padding-bottom: 5px;
+}
+
+.textarea {
 	background: rgba(255, 255, 255, 0.1);
 	border: 2px solid rgba(255, 255, 255, 0.2);
 	border-radius: 10px;

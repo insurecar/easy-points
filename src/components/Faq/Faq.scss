@@ -17,9 +17,9 @@
 		gap: 30px;
 		@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
 
-        @include mob-tab(){
-            flex-direction: column;
-        }
+		@include mob-tab() {
+			flex-direction: column;
+		}
 
 		&-menu-button-btn {
 			width: 100%;
@@ -37,12 +37,12 @@
 		}
 	}
 
-    &__navigation-accordion{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
+	&__navigation-accordion {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
 
 	&__navigation-accordion-button {
 		display: none;

@@ -88,7 +88,7 @@ const Form = () => {
     }
   };
 
-  console.log(value);
+
 
   return (
     <div className="form">

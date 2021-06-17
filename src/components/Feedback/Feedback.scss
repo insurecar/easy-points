@@ -112,7 +112,7 @@
 		&-background {
 			height: 100%;
 			left: 0;
-			position: absolute;
+			position: absolute !important;
 			top: 0;
 			width: 100%;
 			z-index: -1;
@@ -121,8 +121,23 @@
 		&-content {
 			display: flex;
 			justify-content: space-between;
+
+			@include mob-tab(){
+				flex-direction: column;
+				gap: 60px;
+				align-items: center;
+			}
 		}
 	
+		&-content-link{
+			@include mob-tab(){
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+		}
+
 		&-content-link-icons {
 			display: flex;
 			gap: 30px;

@@ -25,6 +25,8 @@
 		&-text {
 			display: flex;
 			justify-content: space-between;
+			@extend .text-main;
+			// font-family: sans-serif;
 
 			&-icon {
 				background: none;
