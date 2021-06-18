@@ -2,30 +2,32 @@
 @import '../../../assets/mixins.scss';
 @import '../../../assets/typography.scss';
 
-.faq-selector {
-	background-color: coral;
+.form-selector {
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.2);
 	border-radius: 10px;
 	box-sizing: border-box;
-	padding: 8px 20px;
+	box-sizing: border-box;
 	padding: 8px 20px;
 	position: relative;
-	
+
 	&:hover {
-		background: red;
+		background: rgba(255, 255, 255, 0.2);
+		border: 2px solid $white;
 	}
 
 	&--active {
-		// background-color: $darkgrayBtnLanguage;
-		// background-color: $black-08;
+		background-color: #434445;
+		border: 2px solid $white;
 
 		border-radius: 10px;
 		padding: 8px 20px;
 
-		.faq-selector__button {
+		.form-selector__button {
 			color: $white;
 		}
 
-		.faq-selector__list-item {
+		.form-selector__list-item {
 			border-radius: 10px;
 			width: 100%;
 		}
@@ -35,12 +37,21 @@
 		@extend .text-secondary;
 		background: none;
 		border: none;
-		// color: $black-08;
 		color: $white05;
+		// color: aqua;
+		display: flex;
 		display: flex;
 		font-family: $f-semibold;
 		justify-content: space-between;
 		width: 100%;
+
+		&:hover {
+			color: $white;
+		}
+
+		&:hover .form-selector__button-arrow path {
+			fill: $white;
+		}
 	}
 
 	&__button-arrow {
@@ -53,7 +64,9 @@
 	}
 
 	&__list {
-		border: 2px solid rgba(20, 21, 22, 0.2);
+		background: #434445;
+		// border: 2px solid rgba(20, 21, 22, 0.2);
+		border: 2px solid $white;
 		border-radius: 0 0 10px 10px;
 		border-style: solid;
 		border-width: 0 2px 2px;
@@ -66,8 +79,10 @@
 		padding: 0;
 		position: absolute;
 		right: 0;
+		top: 43px;
 		transition: all 0.3s;
 		visibility: hidden;
+		z-index: -1;
 
 		&--active {
 			opacity: 1;
@@ -76,15 +91,18 @@
 	}
 
 	&__list-item {
-		display: flex;
-		justify-content: center;
+		// display: flex;
+		// justify-content: center;
+		padding-left: 20px;
 	}
 
 	&__list-item-button {
 		@extend .text-secondary;
+
 		background: none;
-		border: none;
-		color: $black-08;
+		border-style: none;
+		// color: $black-08;
+		color: $white;
 		font-family: $f-semibold;
 		margin: 0 auto;
 		margin-top: 10px;

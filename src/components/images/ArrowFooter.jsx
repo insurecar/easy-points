@@ -1,7 +1,7 @@
 import React from "react"
 
 const ArrowFooter = ({ className = "" }) => {
-  const backGroundArrow = className.indexOf("active") === -1 ? "black": "white" 
+  const backGroundArrow = className.indexOf("active") === -1 ? "#fff": "#959595" 
 
   return (
     <svg

@@ -6,6 +6,7 @@ import validator from 'validator';
 import Input from '../UI/Input/Input';
 import Button from '../UI/Button/Button';
 import Textarea from '../UI/Textarea/Textarea';
+import Select from '../UI/Select/Select'
 
 const Form = () => {
   const data = {
@@ -150,10 +151,11 @@ const Form = () => {
               id="shopify"
               type="text"
             />
-            {/* <Select /> */}
+            <span className = 'form__data-user-select-description' >How did you find out about us? *</span>
+            <Select />
           </div>
           <div className="form__button">
-            <Button type="primaryViolet" text="Submit" typeOfButton="submit" className="form__button" />
+            <Button type="primaryViolet" text="Submit" typeOfButton="submit" />
           </div>
         </form>
 

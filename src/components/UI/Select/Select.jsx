@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import './Select.scss';
 import classnames from 'classnames';
-import Arrow from '../../images/Arrow';
+import ArrowFooter from "../../images/ArrowFooter"
 
 const Select = () => {
-  const languages = ['Google Search', 'Shopify Blog', 'Shopify App Store',  'Shopify Partner', 'News/Article', 'Other'];
+  const languages = ['Google Search', 'Shopify Blog', 'Shopify App Store', 'Shopify Partner', 'News/Article', 'Other'];
   const [language, setLanguage] = useState(languages[0]);
   const [selectorIsVisible, setSelectorIsVisible] = useState(false);
+  console.log(selectorIsVisible);
 
-  const languageSelectorClassName = classnames('faq-selector', {
-    'faq-selector--active': selectorIsVisible,
+  const languageSelectorClassName = classnames('form-selector', {
+    'form-selector--active': selectorIsVisible,
   });
 
-  const buttonArrow = classnames('faq-selector__button-arrow', {
-    'faq-selector__button-arrow--active': !selectorIsVisible,
+  const buttonArrow = classnames('form-selector__button-arrow', {
+    'form-selector__button-arrow--active': !selectorIsVisible,
   });
 
-  const listClassName = classnames('faq-selector__list', {
-    'faq-selector__list--active': selectorIsVisible,
+  const listClassName = classnames('form-selector__list', {
+    'form-selector__list--active': selectorIsVisible,
   });
 
   const handleLanguage = () => {
@@ -33,17 +34,17 @@ const Select = () => {
 
   return (
     <div className={languageSelectorClassName}>
-      <button type="button" onClick={handleLanguage} className="faq-selector__button">
+      <button type="button" onClick={handleLanguage} className="form-selector__button">
         {language}
-        <Arrow className={buttonArrow} />
+        <ArrowFooter className={buttonArrow} />
       </button>
       <ul className={listClassName}>
         {filteredLanguages.map((lang) => (
-          <li key={Math.random()} className="faq-selector__list-item">
+          <li key={Math.random()} className="form-selector__list-item">
             <button
               type="button"
               onClick={() => handleChooseLanguage(lang)}
-              className="faq-selector__list-item-button"
+              className="form-selector__list-item-button"
             >
               {lang}
             </button>
