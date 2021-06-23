@@ -2,56 +2,30 @@ import React, { useState } from 'react';
 import classnames from 'classnames';
 import './Menu.scss';
 
-const Menu = () => {
-  const [currentItem, setCurrentItem] = useState('integration1');
+const Menu = ({handleGetIndex, data}) => {
+  const [currentItem, setCurrentItem] = useState(0);
 
-  const handleClick = (value) => {
-    setCurrentItem(value);
+  const handleClick = (index) => {
+    setCurrentItem(index);
+    handleGetIndex(index)
   };
 
-  const arr = [
-    {
-      title: 'Integration',
-      value: 'Integration1',
-    },
-    {
-      title: 'Pricing',
-      value: 'Pricing2',
-    },
-    {
-      title: 'Settings',
-      value: 'Settings1',
-    },
-    {
-      title: 'Points and Purchases',
-      value: 'integration4',
-    },
-    {
-      title: 'Compatibility and Limitations',
-      value: 'integration5',
-    },
-    {
-      title: 'Additional featureasdasd',
-      value: 'integration7',
-    },
-  ];
-
-  const getButtonClass = (value) => classnames('menu-list__button', {
-    'menu-list__button--active': currentItem === value,
+  const getButtonClass = (index) => classnames('menu-list__button', {
+    'menu-list__button--active': currentItem === index,
   });
 
-  const getListItemClass = (value) => classnames('menu-list__item', {
-    'menu-list__item--active': currentItem === value,
+  const getListItemClass = (index) => classnames('menu-list__item', {
+    'menu-list__item--active': currentItem === index,
   });
 
   return (
     <div className="menu">
       <ul className="menu-list">
-        {arr.map(({ title, value }, index) => (
-          <li key={index} className={getListItemClass(value)}>
+        {data.map(({ title }, index) => (
+          <li key={index} className={getListItemClass(index)}>
             <button
-              className={getButtonClass(value)}
-              onClick={() => handleClick(value, index)}
+              className={getButtonClass(index)}
+              onClick={() => handleClick(index)}
             >
               {title}
             </button>

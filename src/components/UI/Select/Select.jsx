@@ -7,7 +7,6 @@ const Select = () => {
   const languages = ['Google Search', 'Shopify Blog', 'Shopify App Store', 'Shopify Partner', 'News/Article', 'Other'];
   const [language, setLanguage] = useState(languages[0]);
   const [selectorIsVisible, setSelectorIsVisible] = useState(false);
-  console.log(selectorIsVisible);
 
   const languageSelectorClassName = classnames('form-selector', {
     'form-selector--active': selectorIsVisible,

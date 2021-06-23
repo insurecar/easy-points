@@ -73,18 +73,21 @@
 }
 
 
-.swiper-pagination-bullet {
-	background: rgba(0, 0, 0, 0.2);
-	color: yellow;
+.how-it-works .swiper-pagination-bullet {
+	background: $white04;
 	font-size: 12px;
-	height: 20px;
+	height: 12px;
 	line-height: 20px;
 	opacity: 1;
 	text-align: center;
-	width: 20px;
+	width: 12px;
 }
 
-.swiper-pagination-bullet-active {
-	background: green;
-	color: red;
+.how-it-works .swiper-pagination-bullet-active {
+	background: $white;
 }
+
+.how-it-works .swiper-slide:not(.swiper-slide-visible) {
+	opacity: 1;
+}
+

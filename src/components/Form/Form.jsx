@@ -55,10 +55,6 @@ const Form = () => {
       [ref.current.id]: ref.current.value,
     };
     setValue(newState);
-
-    // console.log(ref.current.id);
-    // console.log(ref.current.value);
-    // console.log(data);
   };
 
   const hadleSubmit = (event) => {

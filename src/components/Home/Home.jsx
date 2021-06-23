@@ -1,9 +1,13 @@
 import React from 'react';
 import './Home.scss';
-import ReactPlayer from 'react-player';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import Button from '../UI/Button/Button';
+import PlayIcon from '../images/PlayIcon'
+import { Player, BigPlayButton } from 'video-react';
+import "video-react/dist/video-react.css";
+import video from '../../video/trailer_hd.mp4'
+
 
 const Home = () => {
   const {
@@ -21,6 +25,10 @@ const Home = () => {
           }
         }
       `);
+
+  const startVideo = () => {
+
+  }
 
   return (
     <div className="home">
@@ -52,19 +60,13 @@ const Home = () => {
           </ul>
         </div>
         <div className="home__video">
-          <ReactPlayer
-            width="100%"
-            min-height="100%"
-            url="https://www.youtube.com/watch?v=AifIhzNvLq0"
-            controls={true}
-            playIcon={true}
-            loop={false}
-            onReady={() => console.log('onReady callback')}
-            onStart={() => console.log('onStart callback')}
-            onPause={() => console.log('onPause callback')}
-            onEnded={() => console.log('onEnded callback')}
-            onError={() => console.log('onError callback')}
-          />
+          <Player
+            playsInline
+            poster="/assets/poster.png"
+            src={video}
+          >
+            <BigPlayButton position="center" className="home__video-play-button" />
+          </Player>
         </div>
       </div>
     </div>

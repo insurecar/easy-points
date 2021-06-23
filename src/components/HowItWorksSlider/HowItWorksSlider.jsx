@@ -51,7 +51,7 @@ const HowItWorksSlider = () => {
   const pagination = {
     clickable: true,
     renderBullet(index, className) {
-      return `<span class=\"${className}\">${index + 1}</span>`;
+      return `<span class=\"${className}\"></span>`;
     },
   };
 

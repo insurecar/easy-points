@@ -9,16 +9,10 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
 const Header = () => {
   const [navigationIsActive, setNavigationIsActive] = useState(false);
-  const body = document.querySelector('body');
-
 
   const [width, setWidth] = useState();
 
-  if (navigationIsActive) {
-    body.style.overflow = 'hidden';
-  } else {
-    body.style.overflow = 'visible';
-  }
+  
 
   const navigationWrapperClassName = classnames('header__navigation-wrapper', {
     'header__navigation-wrapper--active': navigationIsActive,
@@ -75,14 +69,22 @@ const Header = () => {
     setWindowWidth();
     window.addEventListener('resize', setWindowWidth);
 
-    body.style.overflow = navigationIsActive ? 'hidden' : 'visible';
 
     return () => {
       window.removeEventListener('resize', setWindowWidth);
     };
   }, []);
 
-  body.style.overflow = navigationIsActive && width < 1300 ? 'hidden' : 'visible';
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    if (navigationIsActive) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'visible';
+    }
+  
+  }, [navigationIsActive])
 
   return (
     <div className="header" >

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Accordion.scss';
 import AccordionItem from './AccordionItem';
 
-const Accordion = () => {
+const Accordion = ({data}) => {
   const [currentItem, setCurrentItem] = useState();
 
   const handleOpen = (title, close) => {
@@ -45,7 +45,7 @@ const Accordion = () => {
 
   return (
     <div className="accordion">
-      {arr.map((el) => (
+      {data.map((el) => (
         <AccordionItem
           key={Math.random()}
           el={el}

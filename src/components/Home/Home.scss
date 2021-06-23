@@ -5,6 +5,7 @@
 .home {
 	//   background: coral;
 	margin-top: 200px;
+
 	&__button {
 		margin-top: 20px;
 	}
@@ -95,5 +96,23 @@
 		background: $darkgray;
 		border-radius: 10px;
 		margin-bottom: 60px;
+	}
+
+	.video-react .video-react-big-play-button.video-react-big-play-button-center.home__video-play-button {
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 100px;
+		border-style: none;
+		height: 100px;
+		margin: 0;
+		transform: translate(-50%, -50%);
+		width: 100px;
+
+		&::before {
+			background-image: url("data:image/svg+xml,%3Csvg width='21' height='24' viewBox='0 0 21 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 10.268C21.3333 11.0378 21.3333 12.9623 20 13.7321L3.5 23.2583C2.16667 24.0281 0.5 23.0659 0.5 21.5263V2.47372C0.5 0.934118 2.16667 -0.0281308 3.5 0.74167L20 10.268Z' fill='%235936E3'/%3E%3C/svg%3E");
+			background-position: center;
+			background-repeat: no-repeat;
+			content: '';
+			margin-left: 3px;
+		}
 	}
 }
