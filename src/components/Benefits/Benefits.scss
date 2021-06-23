@@ -4,12 +4,12 @@
 
 .benefits {
 	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+
 	&__header {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		
 		max-width: 850px;
 		text-align: center;
 
@@ -69,7 +69,6 @@
 			}
 	
 			&-image {
-				
 				position: relative;
 				width: 50%;
 				@include tab() {
@@ -77,10 +76,18 @@
 					width: 75%;
 				}
 				
+				@include mob-tab() {
+					width: 95%;
+				}
+				
 				img {
 					height: auto;
 					margin-left: 30px;
 					width: calc(100% - 30px);
+					
+					@include mob(){
+						margin-left: 0;
+					}
 				}
 	
 				&::before {
@@ -95,6 +102,16 @@
 					top: -30px;
 					width: calc(100% - 70px);
 	
+
+					@include tab() {
+						top: -20px;
+					}
+
+					@include mob() {
+						left: 30px;
+						top: -20px;
+						width: calc(100% - 30px);
+					}
 				}
 			}
 	
@@ -106,12 +123,12 @@
 				width: 50%;
 	
 				@include tab() {
-					align-items: center;
+					// align-items: center;
 					display: flex;
 					flex-direction: column;
-					width: 95%;
+					width: 75%;
 				}
-				@include mob() {
+				@include mob-tab() {
 					width: 95%;
 					
 				}
@@ -161,8 +178,8 @@
 			flex-direction: column;
 			margin: auto;
 			max-width: 850px;
-			text-align: center;
 			padding-top: 230px;
+			text-align: center;
 			@include fluid-size('padding-top', $min-vw, $max-vw, 120px, 230px);
 			@include fluid-size('padding-bottom', $min-vw, $max-vw, 90px, 210px);
 
@@ -190,6 +207,12 @@
 	
 
 
+	}
+
+	&__main-block-image-picture {
+		width: 100%;
+
+		
 	}
 }
 

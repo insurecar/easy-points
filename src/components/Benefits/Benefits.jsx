@@ -56,7 +56,7 @@ const Benefits = () => {
 
             <div className="benefits__main-block" key={elem.title + elem.text}>
               <div className="benefits__main-block-image">
-                <GatsbyImage image={getImage(elem.img)} alt="graph" />
+                <GatsbyImage image={getImage(elem.img)} alt="graph" className = "benefits__main-block-image-picture" />
               </div>
               <div className="benefits__main-block-text">
                 <h3 className="benefits__main-block-text-title">{elem.title}</h3>

@@ -13,7 +13,7 @@ const Header = () => {
   const [width, setWidth] = useState();
 
   
-
+console.log("WIDTH", width)
   const navigationWrapperClassName = classnames('header__navigation-wrapper', {
     'header__navigation-wrapper--active': navigationIsActive,
   });
@@ -69,7 +69,6 @@ const Header = () => {
     setWindowWidth();
     window.addEventListener('resize', setWindowWidth);
 
-
     return () => {
       window.removeEventListener('resize', setWindowWidth);
     };
@@ -78,13 +77,13 @@ const Header = () => {
 
   useEffect(() => {
     const body = document.querySelector('body');
-    if (navigationIsActive) {
-      body.style.overflow = 'hidden';
-    } else {
+    if(width > 1400 || !navigationIsActive){
       body.style.overflow = 'visible';
+    } else {
+      body.style.overflow = 'hidden';
     }
   
-  }, [navigationIsActive])
+  }, [navigationIsActive, width])
 
   return (
     <div className="header" >

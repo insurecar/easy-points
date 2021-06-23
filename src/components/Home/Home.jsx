@@ -59,15 +59,15 @@ const Home = () => {
             ))}
           </ul>
         </div>
-        <div className="home__video">
-          <Player
+        {/* <div className="home__video"> */}
+          {/* <Player
             playsInline
             poster="/assets/poster.png"
             src={video}
           >
             <BigPlayButton position="center" className="home__video-play-button" />
-          </Player>
-        </div>
+          </Player> */}
+        {/* </div> */}
       </div>
     </div>
   );

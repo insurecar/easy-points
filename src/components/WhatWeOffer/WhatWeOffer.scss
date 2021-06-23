@@ -109,8 +109,8 @@
 			z-index: -1;
 
 			@include mob() {
-				left: 20px;
-				width: calc(100% - 40px);
+				left: 40px;
+				width: calc(100% - 80px);
 			}
 
 		}

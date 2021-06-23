@@ -80,11 +80,21 @@
 	line-height: 20px;
 	opacity: 1;
 	text-align: center;
+	visibility: hidden;
 	width: 12px;
+
+	@include mob-tab() {
+		visibility: visible;
+	}
+
 }
 
 .how-it-works .swiper-pagination-bullet-active {
-	background: $white;
+	@include mob-tab() {
+
+		background: $white;
+		
+	}
 }
 
 .how-it-works .swiper-slide:not(.swiper-slide-visible) {
