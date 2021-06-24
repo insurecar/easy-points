@@ -41,7 +41,7 @@ const Feedback = () => {
 
   const content = [
     {
-      brand: nodes[0].gatsbyImageData,
+      brand: nodes[1].gatsbyImageData,
       type: 'Fashion',
       raiting: '',
       text: 'Thank you. I gained 2500 users thanks to EasyPoints. People really like rewarding programs.',
@@ -68,7 +68,7 @@ const Feedback = () => {
       rating: 3,
     },
     {
-      brand: nodes[0].gatsbyImageData,
+      brand: nodes[1].gatsbyImageData,
       type: 'Fashion',
       text: 'Thank you. I gained 2500 users thanks to EasyPoints. People really like rewarding programs.',
       hours: '8:30 AM',
@@ -197,7 +197,7 @@ const Feedback = () => {
               <Button text="Read more" type="secondary" />
             </div>
             <div className="feedback__footer-content-phone">
-              <GatsbyImage image={nodes[1].gatsbyImageData} alt="phone" />
+              <GatsbyImage image={nodes[0].gatsbyImageData} alt="phone" />
             </div>
           </div>
 

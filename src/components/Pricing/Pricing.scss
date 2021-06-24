@@ -68,6 +68,10 @@
 		@include tab() {
 			flex-wrap: wrap;
 		}
+		
+		@include mob() {
+			justify-content: center;
+		}
 
 		&-block {
 			background: #1a1b1b;
@@ -205,12 +209,12 @@
 		@include fluid-size('padding-left', $min-vw, $max-vw, 55px, 110px);
 		@include fluid-size('padding-right', $min-vw, $max-vw, 55px, 110px);
 
-		@include tab(){
-			flex-wrap: wrap;
+		@include tab() {
+			align-items: flex-start;
 			flex-direction: column;
+			flex-wrap: wrap;
 			// column-gap: 50px;
 			row-gap: 20px;
-			align-items: flex-start;
 
 		}
 
@@ -229,9 +233,10 @@
 		&-defenition {
 			max-width: 70%;
 
-			@include tab(){
+			@include tab() {
 				max-width: 100%;
 			}
+
 			&-title {
 				@extend h3;
 				color: $white;
@@ -254,4 +259,10 @@
 .pricing__offer-wrapper {
 	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
 
+}
+
+.label:nth-child(3) {
+	@include mob() {
+		margin-top: 20px;
+	}
 }

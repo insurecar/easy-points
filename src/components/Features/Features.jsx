@@ -5,7 +5,7 @@ import FeaturesContent from '../FeaturesContent/FeaturesContent';
 const Features = () => (
   <div className="features" id = "features">
     <div className="container">
-      <div className="features__header">
+      <div className="features__header" data-aos="fade-right" >
         <p className="features__header-anchor">Features</p>
         <h2 className="features__header-title">
           Create a compelling rewards experience and help your business grow

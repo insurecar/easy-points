@@ -14,9 +14,32 @@
 	text-decoration: none;
 	width: fit-content;
 
+	@include mob() {
+		padding: 6px 9px;
+
+	}
+
 	&__text {
 		&-download {
 			color: $white;
+		}
+	}
+
+	&__icon {
+		@include mob() {
+			max-width: 22px;
+		}
+	}
+
+	&__text-download {
+		@include mob() {
+			font-size: 12px;
+		}
+	}
+
+	&__text-name {
+		@include mob() {
+			max-width: 80px;
 		}
 	}
 

@@ -4,9 +4,9 @@
 
 .footer-wraper {
 	background: black;
+	border-top: 2px solid rgba(0, 0, 0, 0.8);
 	@include fluid-size('padding-top', $min-vw, $max-vw, 60px, 80px);
 	@include fluid-size('padding-bottom', $min-vw, $max-vw, 45px, 60px);
-	border-top: 2px solid rgba(0, 0, 0, 0.8);
 
 }
 
@@ -122,6 +122,12 @@
 		&-logo {
 			justify-content: center;
 			text-align: center;
+
+			@include mob-tab() {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+			}
 		}
 	}
 

@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Home.scss';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import Button from '../UI/Button/Button';
-import PlayIcon from '../images/PlayIcon'
-import { Player, BigPlayButton } from 'video-react';
 import "video-react/dist/video-react.css";
-import video from '../../video/trailer_hd.mp4'
-
+import AOS from 'aos';
+import "aos/dist/aos.css";
+// AOS.init({
+//   duration: 1200,
+// })
 
 const Home = () => {
   const {
@@ -26,14 +27,19 @@ const Home = () => {
         }
       `);
 
-  const startVideo = () => {
-
-  }
+      useEffect(() => {
+        window.addEventListener('load', () => {
+          AOS.init({
+            duration: 1200,
+          })
+        })
+      },[])
+ 
 
   return (
     <div className="home">
       <div className="container">
-        <div className="home__header">
+        <div className="home__header"   >
           <h1 className="home__header-title-h1">
             Give your customers even
             {' '}
@@ -44,11 +50,15 @@ const Home = () => {
             With EasyPoints, encouraging your existing customers to spend more
             and more often has never been easier. Reward. Retain. Grow.
           </h2>
+          
+          <div data-aos="slide-up" >
           <Button
             text="Shopify App Store"
             type="primaryViolet"
             className="home__button"
           />
+          </div>
+          
         </div>
         <div className="home__brand">
           <ul className="home__brand--list">
@@ -59,15 +69,6 @@ const Home = () => {
             ))}
           </ul>
         </div>
-        {/* <div className="home__video"> */}
-          {/* <Player
-            playsInline
-            poster="/assets/poster.png"
-            src={video}
-          >
-            <BigPlayButton position="center" className="home__video-play-button" />
-          </Player> */}
-        {/* </div> */}
       </div>
     </div>
   );
