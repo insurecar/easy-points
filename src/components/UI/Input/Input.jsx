@@ -7,7 +7,7 @@ const Input = ({
 }) => {
   const classInput = classnames('input', { input__error: error });
   const classLabel = classnames('label', { label__error: error });
-  const classError = classnames({ error });
+  const classError = classnames("error__bottom-label",{error});
   const ref = useRef();
 
   return (

@@ -18,12 +18,13 @@
 	padding: 15px 18px;
 	resize: none;
 	width: 100%;
-	@extend .button-text;
+	@extend .text-secondary;
+	
 
 
 	&::placeholder {
 		color: $white05;
-		@extend .label-primary;
+	@extend .text-secondary;
 	}
 
 	&:focus,
@@ -38,7 +39,8 @@
 }
 
 .textarea-label {
-	@extend .label-primary;
+	@extend .text-secondary;
+
 	color: $white;
 	margin-bottom: 25px;
 

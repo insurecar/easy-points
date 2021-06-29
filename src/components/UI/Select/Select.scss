@@ -12,6 +12,19 @@
 	position: relative;
 	z-index: 1;
 
+	&__error{
+		background: rgba(211, 41, 72, 0.1);
+		border: 2px solid rgba(211, 41, 72, 0.4);
+
+		&__button{
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		.form-selector__button-arrow path{
+			fill: $red1;
+		}
+	}
+
 	&:hover {
 		background: rgba(255, 255, 255, 0.2);
 		border: 2px solid $white;
@@ -107,5 +120,11 @@
 		font-family: $f-semibold;
 		margin: 0 auto;
 		margin-top: 10px;
+	}
+
+	&__span-error{
+		color: $red1;
+		@extend .label-secondary;
+
 	}
 }

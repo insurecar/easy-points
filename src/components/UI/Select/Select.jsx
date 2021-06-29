@@ -3,13 +3,12 @@ import './Select.scss';
 import classnames from 'classnames';
 import ArrowFooter from "../../images/ArrowFooter"
 
-const Select = () => {
-  const languages = ['Google Search', 'Shopify Blog', 'Shopify App Store', 'Shopify Partner', 'News/Article', 'Other'];
-  const [language, setLanguage] = useState(languages[0]);
+const Select = ({options,placeholder, currentValue, error, setCurrentValue}) => {
   const [selectorIsVisible, setSelectorIsVisible] = useState(false);
+  const [selectOption, setOptionSelect] = useState(placeholder);
 
-  const languageSelectorClassName = classnames('form-selector', {
-    'form-selector--active': selectorIsVisible,
+  const selectorClassName = classnames('form-selector', {
+    'form-selector--active': selectorIsVisible, 'form-selector__error': error
   });
 
   const buttonArrow = classnames('form-selector__button-arrow', {
@@ -20,37 +19,42 @@ const Select = () => {
     'form-selector__list--active': selectorIsVisible,
   });
 
-  const handleLanguage = () => {
+  const handleSelector = () => {
     setSelectorIsVisible((prev) => !prev);
   };
 
-  const handleChooseLanguage = (lang) => {
-    setLanguage(lang);
+  const handleOption = (option) => {
     setSelectorIsVisible(false);
+    setOptionSelect(option);
+    setCurrentValue(option)
   };
 
-  const filteredLanguages = [...languages].filter((el) => el !== language);
+  console.log(currentValue)
 
   return (
-    <div className={languageSelectorClassName}>
-      <button type="button" onClick={handleLanguage} className="form-selector__button">
-        {language}
+    <>
+    <div className={selectorClassName}>
+      <button type="button" onClick={handleSelector} className="form-selector__button">
+        {/* {currentValue || placeholder} */}
+        {selectOption}
         <ArrowFooter className={buttonArrow} />
       </button>
       <ul className={listClassName}>
-        {filteredLanguages.map((lang) => (
+        {options.map((option) => (
           <li key={Math.random()} className="form-selector__list-item">
             <button
               type="button"
-              onClick={() => handleChooseLanguage(lang)}
+              onClick={() => handleOption(option)}
               className="form-selector__list-item-button"
-            >
-              {lang}
+              >
+              {option}
             </button>
           </li>
         ))}
       </ul>
     </div>
+    <span className = "form-selector__span-error">{error}</span>
+    </>
   );
 };
 

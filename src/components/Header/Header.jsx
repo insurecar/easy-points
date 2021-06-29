@@ -13,7 +13,6 @@ const Header = () => {
   const [width, setWidth] = useState();
 
   
-console.log("WIDTH", width)
   const navigationWrapperClassName = classnames('header__navigation-wrapper', {
     'header__navigation-wrapper--active': navigationIsActive,
   });

@@ -6,7 +6,9 @@ import validator from 'validator';
 import Input from '../UI/Input/Input';
 import Button from '../UI/Button/Button';
 import Textarea from '../UI/Textarea/Textarea';
-import Select from '../UI/Select/Select'
+import Select from '../UI/Select/Select';
+import classnames from 'classnames';
+
 
 const Form = () => {
   const data = {
@@ -24,69 +26,104 @@ const Form = () => {
   const [lastNameError, setLastNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [subjectError, setSubjectError] = useState('');
+  const [selectError, setSelectError] = useState('');
 
-  // const { imageSharp: { gatsbyImageData } } = useStaticQuery(graphql`
-  //   query Form {
-  //     imageSharp(fluid: { originalName: { eq: "feedBackPhone.png" } }) {
-  //       gatsbyImageData
-  //     }
-  //   }
-  // `);
+  const [selectClassNameAdd, setSelectClassNameAdd] = useState('')
+
+  const options = ['Google Search', 'Shopify Blog', 'Shopify App Store', 'Shopify Partner', 'News/Article', 'Other'];
+  const [currentValueSelect, setCurrentValueSelect] = useState();
 
   const {
     allImageSharp: { nodes },
   } = useStaticQuery(graphql`
-        query FormBackground {
-          allImageSharp(
-            filter: {
-              fluid: { originalName: { regex: "/.*(formBackground).*/" } }
-            }
-          ) {
-            nodes {
-              gatsbyImageData
-            }
-          }
+  query FormBackground {
+    allImageSharp(
+      filter: {
+        fluid: { originalName: { regex: "/.*(formBackground).*/" } }
+      }
+      ) {
+        nodes {
+          gatsbyImageData
         }
-      `);
+      }
+    }
+    `);
+    
+    const handleInput = (ref) => {
+      const newState = {
+        ...value,
+        [ref.current.id]: ref.current.value,
+      };
+      setValue(newState);
 
-  const handleInput = (ref) => {
-    const newState = {
-      ...value,
-      [ref.current.id]: ref.current.value,
+      console.log(ref.current.id);
+
+      if(ref.current.id === "firstName" && ref.current.value.trim()){
+        setFirstNameError("")
+        
+      }
+
+      if(ref.current.id === "lastName" && ref.current.value.trim()){
+        setLastNameError("")
+      }
+
+      console.log(0)
+
+      if(ref.current.id === 'email' && validator.isEmail(value.email)){
+        setEmailError('');
+      }
+
+      if(ref.current.id === "subject" && ref.current.value.trim()){
+        setSubjectError("");
+      }
     };
-    setValue(newState);
-  };
+    
+    const hadleSubmit = (event) => {
+      event.preventDefault();
+      
+      if (value.firstName) {
+        setFirstNameError('');
+      } else {
+        setFirstNameError('Please, input your First Name');
+      }
+      
+      if (value.lastName) {
+        setLastNameError('');
+      } else {
+        setLastNameError('Please, input your Last Name');
+      }
+      
+      if (!validator.isEmail(emailError)) {
+        setEmailError('Is not a valid email');
+      } else if (validator.isEmail(emailError)) {
+        setEmailError('');
+      }
+      
+      if (value.subject) {
+        setSubjectError('');
+      } else {
+        setSubjectError('Please input subject');
+      }
 
-  const hadleSubmit = (event) => {
-    event.preventDefault();
+      if (currentValueSelect) {
+        setSelectError('');
+      } else {
+        setSelectError('Please make your choise');
+        setSelectClassNameAdd('form__data-user-select-description-active')
+      }
 
-    if (!firstNameError) {
-      setFirstNameError('Please, input your First Name');
-    } else {
-      setFirstNameError('');
+    }; 
+
+    const handleSelectError = (option)=>{
+      console.log(option);
+      setSelectError('');
+      setSelectClassNameAdd('');
     }
 
-    if (!lastNameError) {
-      setLastNameError('Please, input your Last Name');
-    } else {
-      setLastNameError('');
-    }
+    const labelTopSelectClassName = classnames('form__data-user-select-description',selectClassNameAdd)
+    
 
-    if (!validator.isEmail(emailError)) {
-      setEmailError('Is not a valid email');
-    } else if (validator.isEmail(emailError)) {
-      setEmailError('');
-    }
-
-    if (!subjectError) {
-      setSubjectError('Please input subject');
-    } else {
-      setSubjectError('');
-    }
-  };
-
-
-
+  console.log('FORMASTATE', currentValueSelect)
   return (
     <div className="form">
       <GatsbyImage className="form__background" image={getImage(nodes[0].gatsbyImageData)} alt="background" />
@@ -147,8 +184,16 @@ const Form = () => {
               id="shopify"
               type="text"
             />
-            <span className = 'form__data-user-select-description' >How did you find out about us? *</span>
-            <Select />
+            <span className = {labelTopSelectClassName}>How did you find out about us? *</span>
+            <Select 
+              options = {options} 
+              placeholder = 'Select' 
+              currentValue ={currentValueSelect} 
+              setCurrentValue = {handleSelectError} 
+              error = {selectError}
+              setSelectError ={setSelectError}
+            />
+
           </div>
           <div className="form__button">
             <Button type="primaryViolet" text="Submit" typeOfButton="submit" />

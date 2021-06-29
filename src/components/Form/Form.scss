@@ -73,7 +73,6 @@
 	}
 
 	
-
 	&__data-user {
 		display: flex;
 		gap: 20px;
@@ -95,23 +94,31 @@
 	&__data-user-select-description {
 		color: $white;
 		display: block;
-		font-weight: 900;
 		padding-bottom: 3px;
 		@extend .text-secondary;
+
+		&-active {
+			color: $red1;
+		}
 	}
 
 	&__customer {
 		display: flex;
 		flex-direction: column;
+
+		@include mob() {
+			margin-top: 20px;
+		}
 	}
 
 	&__button {
 		display: flex;
 		justify-content: center;
 	}
-}
 
-// .form form {
-// 	margin: 0 auto;
-// 	width: 70%;
-// }
+	// .select-span {
+	// 	margin-top: 32px;
+	// 	color: coral;
+	// 	@extend .label-secondary;
+	// }
+}

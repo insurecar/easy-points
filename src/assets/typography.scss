@@ -61,3 +61,9 @@ h4 {
 	font-family: $f-bold;
 	line-height: 150%;
 }
+
+.label-form {
+	@include fluid-type($min-vw, $max-vw, 14px, 20px);
+	font-family: $f-regular;
+	line-height: 150%;
+}
