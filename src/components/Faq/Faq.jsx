@@ -156,11 +156,11 @@ const arr = [
   return <div className="faq__wrapper" id = 'faq'>
     <div className="container">
       <div className="faq">
-        <h2 className="faq__title">FAQ</h2>
+        <h2 className="faq__title" data-aos="fade-up" data-aos-delay="200">FAQ</h2>
         <div className="faq__navigation">
           <div className="faq__navigation-menu">
-            <Menu handleGetIndex = {handleGetIndex} data={arr} />
-            <div className="faq__navigation-menu-button">
+            <Menu handleGetIndex = {handleGetIndex} data={arr}  />
+            <div className="faq__navigation-menu-button" data-aos="fade-up" data-aos-delay="700">
               <Button text="Knowledge base" type="primaryViolet" className="faq__navigation-menu-button-btn" />
             </div>
           </div>

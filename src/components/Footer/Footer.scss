@@ -22,7 +22,12 @@
 			flex-direction: column;
 		}
 
-	
+		&-language{
+			@include mob(){
+				padding-left: 20%;
+				box-sizing: border-box;
+			}
+		}
 	}
 
 	&__top-data {
@@ -39,6 +44,17 @@
 			// box-sizing: border-box;
 		}
 		
+		@include mob() {
+			min-width: 95%;
+		}
+
+		&-location{
+			@include mob(){
+				padding-left: 20%;
+				box-sizing: border-box;
+			}
+		}
+
 	}
 
 	&__top-data-contact-write,
@@ -104,18 +120,21 @@
 
 		&-rights,
 		&-descriptions {
+			@extend .text-secondary;
 			@include mob-tab() {
 				width: 50%;
 			}
 			@include mob() {
-				justify-content: center;
+				justify-content: flex-start;
 				width: 100%;
+				margin-left: 5%;
 			}
 		}
 
 		&-rights {
 			@include mob() {
-				text-align: center;
+				// text-align: center;
+				margin-left: 5%;
 			}
 		}
 
@@ -135,6 +154,7 @@
 	&__top-language {
 		@include mob() {
 			align-items: center;
+			// margin-left: 5%;
 
 		
 			display: flex;

@@ -15,7 +15,7 @@ const HowItWorksGraph = () => {
   const image = getImage(data.imageSharp.gatsbyImageData);
 
   return (
-    <div className="how-it-works-graph">
+    <div className="how-it-works-graph" data-aos="zoom-out" data-aos-delay="250">
       <div className="how-it-works-graph__image">
         <GatsbyImage image={image} alt="graph" />
       </div>

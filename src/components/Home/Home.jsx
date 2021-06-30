@@ -30,7 +30,7 @@ const Home = () => {
       useEffect(() => {
         window.addEventListener('load', () => {
           AOS.init({
-            duration: 1200,
+            duration: 700,
           })
         })
       },[])
@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="container">
-        <div className="home__header"   >
+        <div className="home__header"  data-aos="fade-up">
           <h1 className="home__header-title-h1">
             Give your customers even
             {' '}
@@ -61,7 +61,7 @@ const Home = () => {
           
         </div>
         <div className="home__brand">
-          <ul className="home__brand--list">
+          <ul className="home__brand--list" data-aos="fade-up">
             {nodes.map((brand) => (
               <li className="home__brand--list-item" key={brand.gatsbyImageData.images.fallback.src}>
                 <GatsbyImage image={getImage(brand.gatsbyImageData)} alt="brand" />

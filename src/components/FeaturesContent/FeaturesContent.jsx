@@ -55,8 +55,8 @@ const FeaturesContent = () => {
 
   return (
     <div className="features__content">
-      {content.map((el) => (
-        <div className="features__content-block" key={el.text + el.title}>
+      {content.map((el, index) => (
+        <div className="features__content-block" key={el.text + el.title} data-aos="fade-up" data-aos-delay={100 * index} >
           <div className="features__content-block-image">
             <GatsbyImage image={getImage(el.img)} alt="img" />
           </div>

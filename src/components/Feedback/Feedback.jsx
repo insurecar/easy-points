@@ -99,11 +99,11 @@ const Feedback = () => {
     <div className="feedback" id="feedback">
       <div className="container">
         <div className="feedback__header">
-          <p className="feedback__header-anchor">Feedback</p>
-          <h2 className="feedback__header-title">
+          <p className="feedback__header-anchor"  data-aos="fade-up"  data-aos-delay="150" >Feedback</p>
+          <h2 className="feedback__header-title" data-aos="fade-up" data-aos-delay="200">
             What our users say
           </h2>
-          <p className="feedback__header-text">
+          <p className="feedback__header-text" data-aos="fade-up" data-aos-delay="250" >
             Every business is unique. No matter how big or small your business is, EasyPoints has a plan that suits your needs.
           </p>
         </div>
@@ -143,7 +143,7 @@ const Feedback = () => {
           >
             {content.map((slide) => (
               <SwiperSlide key={Math.random()}>
-                <div className="feedback__slider-block">
+                <div className="feedback__slider-block" data-aos="fade-up" data-aos-delay="200">
                   <div>
                     <div className="feedback__slider-block-logo">
                       <div className="feedback__slider-block-logo-img">
@@ -187,16 +187,16 @@ const Feedback = () => {
                 <Android />
                 <AppleLink />
               </div>
-              <h2 className="feedback__footer-content-title">
+              <h2 className="feedback__footer-content-title" data-aos="fade-up" data-aos-delay="200">
                 Rewarding your customers just got a whole lot easier with EasyPoints
               </h2>
-              <div className="feedback__footer-content-text">
+              <div className="feedback__footer-content-text" data-aos="fade-up" data-aos-delay="300">
                 EasyPoints introduces a foolproof point system that
                 turns points into discounts right from the checkout page. Earn points and spend points. It’s really that simple.
               </div>
               <Button text="Read more" type="secondary" />
             </div>
-            <div className="feedback__footer-content-phone">
+            <div className="feedback__footer-content-phone" data-aos="fade-up" data-aos-offset="500">
               <GatsbyImage image={nodes[0].gatsbyImageData} alt="phone" />
             </div>
           </div>

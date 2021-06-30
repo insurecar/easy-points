@@ -43,29 +43,28 @@ const Benefits = () => {
     <div className="benefits" id = "benefits">
       <div className="container">
         <div className="benefits__header">
-          <p className="benefits__header-anchor">Benefits</p>
-          <h2 className="benefits__header-title">
+          <p className="benefits__header-anchor" data-aos="fade-up"  data-aos-delay="150">Benefits</p>
+          <h2 className="benefits__header-title" data-aos="fade-up" data-aos-delay="200">
             Loyalty is essential for growth, but oftentimes hard to maintain
           </h2>
-          <p className="benefits__header-text">
+          <p className="benefits__header-text" data-aos="fade-up" data-aos-delay="250">
             Creating an effective, engaging loyalty program is our goal at EasyPoints, and with over 10 different features, you’ll be sure to build the perfect program for both you and your customers.
           </p>
         </div>
         <div className="benefits__main">
           {content.map((elem) => (
 
-            <div className="benefits__main-block" key={elem.title + elem.text}>
-              <div className="benefits__main-block-image">
+            <div className="benefits__main-block" key={elem.title + elem.text} >
+              <div className="benefits__main-block-image" data-aos="zoom-out"  data-aos-delay={200}>
                 <GatsbyImage image={getImage(elem.img)} alt="graph" className = "benefits__main-block-image-picture" />
               </div>
-              <div className="benefits__main-block-text">
+              <div className="benefits__main-block-text" data-aos="zoom-out"  data-aos-delay={400}>
                 <h3 className="benefits__main-block-text-title">{elem.title}</h3>
                 <p className="benefits__main-block-text-paragraph">{elem.text}</p>
               </div>
 
             </div>
           ))}
-
         </div>
       </div>
       <div className="benefits__footer">

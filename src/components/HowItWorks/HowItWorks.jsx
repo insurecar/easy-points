@@ -28,7 +28,7 @@ const HowItWorks = () => {
       />
 
       <div className="container">
-        <div className = "how-it-works__video" >
+        <div className = "how-it-works__video" data-aos="zoom-in-up" >
         <Player
             playsInline
             poster="/assets/poster.png"
@@ -39,11 +39,13 @@ const HowItWorks = () => {
         </div>
       
         <div className="how-it-works__header" >
-          <p className="how-it-works__header-anchor" id="how-it-work">How it works</p>
-          <h2 className="how-it-works__header-title">
+          <div id="how-it-work">
+          <p className="how-it-works__header-anchor"  data-aos="fade-up"  data-aos-offset="150">How it works</p>
+          </div>
+          <h2 className="how-it-works__header-title" data-aos="fade-up" data-aos-delay="200">
             EasyPoints offers a loyalty system that rewards customers
           </h2>
-          <p className="how-it-works__header-secondary-text">
+          <p className="how-it-works__header-secondary-text" data-aos="fade-up" data-aos-delay="250" >
             EasyPoints makes earning and spending points a complete breeze,
             allowing you to grow your ecommerce business.
           </p>

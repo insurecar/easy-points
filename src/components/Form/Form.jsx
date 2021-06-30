@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Form.scss';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -30,6 +30,8 @@ const Form = () => {
 
   const [selectClassNameAdd, setSelectClassNameAdd] = useState('')
 
+
+
   const options = ['Google Search', 'Shopify Blog', 'Shopify App Store', 'Shopify Partner', 'News/Article', 'Other'];
   const [currentValueSelect, setCurrentValueSelect] = useState();
 
@@ -48,6 +50,8 @@ const Form = () => {
       }
     }
     `);
+
+    
     
     const handleInput = (ref) => {
       const newState = {
@@ -56,18 +60,13 @@ const Form = () => {
       };
       setValue(newState);
 
-      console.log(ref.current.id);
-
       if(ref.current.id === "firstName" && ref.current.value.trim()){
-        setFirstNameError("")
-        
+        setFirstNameError("") 
       }
 
       if(ref.current.id === "lastName" && ref.current.value.trim()){
         setLastNameError("")
       }
-
-      console.log(0)
 
       if(ref.current.id === 'email' && validator.isEmail(value.email)){
         setEmailError('');
@@ -78,9 +77,15 @@ const Form = () => {
       }
     };
     
+    const handleSelectError = (option)=>{
+      setSelectError('');
+      setSelectClassNameAdd('');
+      setCurrentValueSelect(option)
+    }
+
     const hadleSubmit = (event) => {
       event.preventDefault();
-      
+ 
       if (value.firstName) {
         setFirstNameError('');
       } else {
@@ -93,10 +98,10 @@ const Form = () => {
         setLastNameError('Please, input your Last Name');
       }
       
-      if (!validator.isEmail(emailError)) {
-        setEmailError('Is not a valid email');
-      } else if (validator.isEmail(emailError)) {
+      if (validator.isEmail(value.email)) {
         setEmailError('');
+      } else {
+        setEmailError('Is not a valid email');
       }
       
       if (value.subject) {
@@ -111,27 +116,24 @@ const Form = () => {
         setSelectError('Please make your choise');
         setSelectClassNameAdd('form__data-user-select-description-active')
       }
-
+      
     }; 
-
-    const handleSelectError = (option)=>{
-      console.log(option);
-      setSelectError('');
-      setSelectClassNameAdd('');
-    }
+    
+    const allError = [firstNameError,lastNameError, emailError,subjectError, selectError];
+    // console.log('firstNameError', Boolean(firstNameError));
+    
 
     const labelTopSelectClassName = classnames('form__data-user-select-description',selectClassNameAdd)
     
 
-  console.log('FORMASTATE', currentValueSelect)
   return (
     <div className="form">
       <GatsbyImage className="form__background" image={getImage(nodes[0].gatsbyImageData)} alt="background" />
       <div className="container">
         <div className="form__header">
-          <p className="form__header-anchor">Pricing</p>
-          <h2 className="form__header-title">Four plans offered</h2>
-          <p className="form__header-text">
+          <p className="form__header-anchor" data-aos="fade-up"  data-aos-delay="150" >Contact</p>
+          <h2 className="form__header-title" data-aos="fade-up" data-aos-delay="200">Four plans offered</h2>
+          <p className="form__header-text" data-aos="fade-up" data-aos-delay="250">
             Every business is unique. No matter how big or small your business is, EasyPoints has a plan that suits your needs.
           </p>
         </div>

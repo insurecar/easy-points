@@ -74,15 +74,15 @@ const Pricing = () => {
       />
       <div className="container">
         <div className="pricing__header">
-          <p className="pricing__header-anchor">Pricing</p>
-          <h2 className="pricing__header-title">Four plans offered</h2>
-          <p className="pricing__header-text">
+          <p className="pricing__header-anchor" data-aos="fade-up"  data-aos-delay="150">Pricing</p>
+          <h2 className="pricing__header-title" data-aos="fade-up" data-aos-delay="200">Four plans offered</h2>
+          <p className="pricing__header-text"  data-aos="fade-up" data-aos-delay="250" >
             Every business is unique. No matter how big or small your business is, EasyPoints has a plan that suits your needs.
           </p>
         </div>
         <div className="pricing__content">
           {content.map((elem) => (
-            <div className={elem.active ? activeClass : blockClass} key={elem.name + elem.cost + elem.period}>
+            <div className={elem.active ? activeClass : blockClass} key={elem.name + elem.cost + elem.period} data-aos="fade-up" data-aos-delay={200}>
               <div className="pricing__content-block-name">
                 {elem.name}
               </div>

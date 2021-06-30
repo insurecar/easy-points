@@ -44,7 +44,7 @@ const Accordion = ({data}) => {
   ];
 
   return (
-    <div className="accordion">
+    <div className="accordion" data-aos="fade-up" data-aos-delay="600">
       {data.map((el) => (
         <AccordionItem
           key={Math.random()}

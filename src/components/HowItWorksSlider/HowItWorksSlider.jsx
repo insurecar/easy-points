@@ -81,9 +81,9 @@ const HowItWorksSlider = () => {
           }}
           className="mySwiper"
         >
-          {content.map((slide) => (
-            <SwiperSlide key={slide.text + slide.title}>
-              <div className="slide">
+          {content.map((slide, index) => (
+            <SwiperSlide key={slide.text + slide.title}  >
+              <div className="slide" data-aos="fade-up" data-aos-delay={350 * `${index}`}>
                 <div className="slide__image-wrapper">
                   <div className="slide__image">
                     <GatsbyImage image={getImage(slide.img)} alt="slide" />

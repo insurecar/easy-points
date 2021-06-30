@@ -29,7 +29,6 @@ const Select = ({options,placeholder, currentValue, error, setCurrentValue}) => 
     setCurrentValue(option)
   };
 
-  console.log(currentValue)
 
   return (
     <>

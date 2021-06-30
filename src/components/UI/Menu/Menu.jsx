@@ -19,7 +19,7 @@ const Menu = ({handleGetIndex, data}) => {
   });
 
   return (
-    <div className="menu">
+    <div className="menu" data-aos="fade-up" data-aos-delay="400">
       <ul className="menu-list">
         {data.map(({ title }, index) => (
           <li key={index} className={getListItemClass(index)}>
