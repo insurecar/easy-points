@@ -24,7 +24,8 @@
 	}
 
 	&__logo {
-		max-width: 30%;
+		@include fluid-size('width', $min-vw, $max-vw, 100px, 150px);
+
 		
 		img {
 			width: 100%;
