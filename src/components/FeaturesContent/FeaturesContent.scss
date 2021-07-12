@@ -43,7 +43,7 @@
 		}
 
 		&-text {
-			@extend .label-primary;
+			@extend .text-secondary;
 			color: $darkgray05;
 			margin-top: 10px;
 		}

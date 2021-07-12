@@ -6,9 +6,7 @@ import Button from '../UI/Button/Button';
 import "video-react/dist/video-react.css";
 import AOS from 'aos';
 import "aos/dist/aos.css";
-// AOS.init({
-//   duration: 1200,
-// })
+
 
 const Home = () => {
   const {
@@ -17,7 +15,7 @@ const Home = () => {
         query HomeBrand {
           allImageSharp(
             filter: {
-              fluid: { originalName: { regex: "/.*(brand2|brand3|brand4|brand5|brand6|brand7).*/" } }
+              fluid: { originalName: { regex: "/.*(brand7|brand2|brand3|brand4|brand5|brand6).*/" } }
             }
           ) {
             nodes {
@@ -43,7 +41,7 @@ const Home = () => {
           <h1 className="home__header-title-h1">
             Give your customers even
             {' '}
-            <span className="home__header-title-h1-mark">more reasons </span>
+            <span className="home__header-title-h1-mark">more reasons <br/> </span>
             to come back
           </h1>
           <h2 className="home__header-title-secondary-text">
@@ -62,7 +60,7 @@ const Home = () => {
         </div>
         <div className="home__brand">
           <ul className="home__brand--list" data-aos="fade-up">
-            {nodes.map((brand) => (
+            {nodes.reverse().map((brand) => (
               <li className="home__brand--list-item" key={brand.gatsbyImageData.images.fallback.src}>
                 <GatsbyImage image={getImage(brand.gatsbyImageData)} alt="brand" />
               </li>

@@ -30,18 +30,18 @@ const HowItWorksSlider = () => {
 
   const content = [
     {
-      img: nodes[0].gatsbyImageData,
+      img: nodes[1].gatsbyImageData,
       title: 'Attract customers',
       text:
         'When your customers purchase a product from your site, they’ll be able to earn points for their order.',
     },
     {
-      img: nodes[1].gatsbyImageData,
+      img: nodes[2].gatsbyImageData,
       title: 'Earn',
       text: 'Earn refferals, points and purchases. ',
     },
     {
-      img: nodes[2].gatsbyImageData,
+      img: nodes[0].gatsbyImageData,
       title: 'Spend',
       text:
         'Each point is worth a specified amount and can be used directly as a discount during checkout.',

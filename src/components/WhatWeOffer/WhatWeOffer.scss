@@ -6,6 +6,9 @@
 	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
 	position: relative;
 
+	svg {
+		flex: 0 0 auto;
+	}
 
 	&__background {
 		height: 100%;
@@ -114,7 +117,7 @@
 			}
 
 		}
-       
+
 	}
 
 	&__content-custom {
@@ -161,22 +164,31 @@
 		}
 
 		&-list-item {
+			svg {
+				height: 30px !important;
+				width: 30px !important;
+			}
 			align-items: center;
+			color: $white08;
 			display: flex;
 			margin-top: 15px;
-            color: $white08;
 
 			@include tab() {
+				margin-top: 0;
 				width: 45%;
+
 			}
-            @include mob() {
+			@include mob() {
 				width: 100%;
 			}
 
 			&-text {
 				@include fluid-size('margin-left', $min-vw, $max-vw, 10px, 15px);
+				@extend .text-main; 
 
 			}
+
+			
 		}
 		
 	}
@@ -196,3 +208,4 @@
 // 	flex: 25px 0 0;
 // 	height: 25px;
 // }
+

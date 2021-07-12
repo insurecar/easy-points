@@ -90,12 +90,10 @@ const Pricing = () => {
                 <h2 className="pricing__content-block-price-cost">
                   $
                   {elem.cost}
-                  {' '}
+                  
                 </h2>
 
-                <span className="pricing__content-block-price-period">
-                  /
-                  {elem.period}
+                <span className="pricing__content-block-price-period">/{elem.period}
                 </span>
               </div>
               <div className="pricing__content-block-description">

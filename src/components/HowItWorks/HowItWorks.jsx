@@ -4,20 +4,25 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import HowItWorksSlider from '../HowItWorksSlider/HowItWorksSlider';
 import HowItWorksGraph from '../HowItWorksGraph/HowItWorksGraph';
-import { Player, BigPlayButton } from 'video-react';
+import { Player, BigPlayButton, PosterImage } from 'video-react';
 import "video-react/dist/video-react.css";
 import video from '../../video/trailer_hd.mp4'
 
 const HowItWorks = () => {
   const data = useStaticQuery(graphql`
     query HowItWorks {
-      imageSharp(fluid: { originalName: { eq: "BG.png" } }) {
+      bg: imageSharp(fluid: { originalName: { eq: "BG.png" } }) {
+        gatsbyImageData
+      }
+      poster: imageSharp(fluid: { originalName: { eq: "poster-video.png" } }) {
         gatsbyImageData
       }
     }
   `);
 
-  const image = getImage(data.imageSharp.gatsbyImageData);
+  const image = getImage(data.bg.gatsbyImageData);
+  const poster = getImage(data.poster.gatsbyImageData);
+
   return (
     <div className="how-it-works" >
       <GatsbyImage
@@ -31,7 +36,7 @@ const HowItWorks = () => {
         <div className = "how-it-works__video" data-aos="zoom-in-up" >
         <Player
             playsInline
-            poster="/assets/poster.png"
+            poster={poster.images.fallback.src}
             src={video}
           >
             <BigPlayButton position="center" className="home__video-play-button" />

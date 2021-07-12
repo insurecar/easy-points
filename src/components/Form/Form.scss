@@ -8,7 +8,7 @@
 
 	form {
 		margin: 0 auto;
-		width: 70%;
+		max-width: 850px;
 
 		@include  mob() {
 			width: 100%;
@@ -75,7 +75,7 @@
 	
 	&__data-user {
 		display: flex;
-		gap: 20px;
+		gap: 30px;
 
 		@include mob() {
 			flex-wrap: wrap;

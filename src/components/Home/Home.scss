@@ -21,6 +21,7 @@
 
 	&__header-title-h1 {
 		@extend h1;
+		font-size: 80px;
 		text-align: center;
 
 		&-mark {
@@ -71,6 +72,10 @@
 		flex: 0 0 16.66666666%;
 		justify-content: center;
 		padding: 10px;
+
+		&:nth-child(1) img {
+			background: $main-background;
+		}
 
 		@include tab() {
 			box-sizing: border-box;
