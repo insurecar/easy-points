@@ -33,7 +33,8 @@ const HowItWorks = () => {
       />
 
       <div className="container">
-        <div className = "how-it-works__video" data-aos="zoom-in-up" >
+        <div className = "how-it-works__video" data-aos="fade-up" >
+
         <Player
             playsInline
             poster={poster.images.fallback.src}

@@ -65,7 +65,7 @@ const WhatWeOffer = () => {
           <DoubleButton />
         </div>
         <div className="what-we-offer__content">
-          <div className="what-we-offer__content-graph" data-aos="zoom-out" data-aos-delay="250">
+          <div className="what-we-offer__content-graph" data-aos="fade-up" data-aos-delay="250">
 
             <GatsbyImage
               image={getImage(data.image.gatsbyImageData)}
