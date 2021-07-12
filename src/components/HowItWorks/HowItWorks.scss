@@ -5,6 +5,8 @@
 .how-it-works {
 	// margin-top: -400px;
 	@include fluid-size('margin-top', $min-vw, $max-vw, 232px, 716px);
+	display: flex;
+	flex-direction: column;
 
 	position: relative;
 
@@ -57,7 +59,7 @@
 	}
 
 	&__video {
-		@include fluid-size('margin-top', $min-vw, $max-vw, -80px, -370px);
+		@include fluid-size('margin-top', $min-vw, $max-vw, -80px, -170px);
 		@include fluid-size('padding-top', $min-vw, $max-vw, 20px, 90px);
 		@include fluid-size('padding-right', $min-vw, $max-vw, 10px, 60px);
 		@include fluid-size('padding-bottom', $min-vw, $max-vw, 20px, 90px);
@@ -67,7 +69,7 @@
 		// margin-bottom: 60px;
 		position: relative;
 		// top: -270px;
-		@include fluid-size('top', $min-vw, $max-vw, -60px, -270px);
+		@include fluid-size('top', $min-vw, $max-vw, -60px, -100px);
 
 	}
 

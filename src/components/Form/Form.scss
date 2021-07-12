@@ -75,7 +75,15 @@
 	
 	&__data-user {
 		display: flex;
-		gap: 30px;
+		
+		label:first-child{
+			margin-right: 30px;
+
+			@include mob(){
+				margin-right: unset;
+				margin-bottom: 15px;
+			}
+		}
 
 		@include mob() {
 			flex-wrap: wrap;
