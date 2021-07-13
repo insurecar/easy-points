@@ -4,6 +4,7 @@
 
 .benefits {
 	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+	overflow: hidden;
 
 	&__header {
 		align-items: center;

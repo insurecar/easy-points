@@ -29,36 +29,36 @@ const Pricing = () => {
       benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
       active: false,
     },
-    {
-      name: 'Advanced',
-      cost: 100,
-      permonth: ' $0.25/customer ',
-      after: 'after 1,000',
-      currency: '$',
-      period: 'month',
-      benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
-      active: true,
-    },
-    {
-      name: 'Pro',
-      cost: 200,
-      permonth: ' $0.20/customer ',
-      after: 'after 2,000',
-      currency: '$',
-      period: 'month',
-      benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
-      active: false,
-    },
-    {
-      name: 'Enterprise',
-      cost: 425,
-      permonth: ' $0.17/customer ',
-      after: 'after 5,000',
-      currency: '$',
-      period: 'month',
-      benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
-      active: false,
-    },
+    // {
+    //   name: 'Advanced',
+    //   cost: 100,
+    //   permonth: ' $0.25/customer ',
+    //   after: 'after 1,000',
+    //   currency: '$',
+    //   period: 'month',
+    //   benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
+    //   active: true,
+    // },
+    // {
+    //   name: 'Pro',
+    //   cost: 200,
+    //   permonth: ' $0.20/customer ',
+    //   after: 'after 2,000',
+    //   currency: '$',
+    //   period: 'month',
+    //   benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
+    //   active: false,
+    // },
+    // {
+    //   name: 'Enterprise',
+    //   cost: 425,
+    //   permonth: ' $0.17/customer ',
+    //   after: 'after 5,000',
+    //   currency: '$',
+    //   period: 'month',
+    //   benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
+    //   active: false,
+    // },
   ];
 
   const blockClass = 'pricing__content-block';
@@ -82,8 +82,7 @@ const Pricing = () => {
         </div>
         <div className="pricing__content">
           {content.map((elem) => (
-            // <div className={elem.active ? activeClass : blockClass} key={elem.name + elem.cost + elem.period} data-aos="fade-up" data-aos-delay={200}>
-            <div className={elem.active ? activeClass : blockClass} key={elem.name + elem.cost + elem.period} >
+            <div className={elem.active ? activeClass : blockClass} key={elem.name + elem.cost + elem.period} data-aos="fade-up" data-aos-delay={200}>
               <div className="pricing__content-block-name">
                 {elem.name}
               </div>

@@ -41,7 +41,7 @@ const Feedback = () => {
 
   const content = [
     {
-      brand: nodes[1].gatsbyImageData,
+      brand: nodes[0].gatsbyImageData,
       type: 'Fashion',
       raiting: '',
       text: 'Thank you. I gained 2500 users thanks to EasyPoints. People really like rewarding programs.',
@@ -68,7 +68,7 @@ const Feedback = () => {
       rating: 3,
     },
     {
-      brand: nodes[1].gatsbyImageData,
+      brand: nodes[0].gatsbyImageData,
       type: 'Fashion',
       text: 'Thank you. I gained 2500 users thanks to EasyPoints. People really like rewarding programs.',
       hours: '8:30 AM',
@@ -103,7 +103,9 @@ const Feedback = () => {
           <h2 className="feedback__header-title" data-aos="fade-up" data-aos-delay="200">
             What our users say
           </h2>
-          <p className="feedback__header-text" data-aos="fade-up" data-aos-delay="250" >
+          {/* <p className="feedback__header-text" data-aos="fade-up" data-aos-delay="250" > */}
+          <p className="feedback__header-text"  >
+
             Every business is unique. No matter how big or small your business is, EasyPoints has a plan that suits your needs.
           </p>
         </div>
@@ -121,12 +123,13 @@ const Feedback = () => {
             a11y={{
               enabled: true,
             }}
+            
             breakpoints={{
               360: {
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
-              768: {
+              780: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
@@ -136,14 +139,12 @@ const Feedback = () => {
               },
             }}
 
-            // navigation={{
-            //   nextEl: '.swiper-button-next',
-            //   prevEl: '.swiper-button-prev',
-            // }}
+            navigation
           >
             {content.map((slide) => (
               <SwiperSlide key={Math.random()}>
-                <div className="feedback__slider-block" data-aos="fade-up" data-aos-delay="200">
+                {/* <div className="feedback__slider-block" data-aos="fade-up" data-aos-delay="200"> */}
+                <div className="feedback__slider-block">
                   <div>
                     <div className="feedback__slider-block-logo">
                       <div className="feedback__slider-block-logo-img">
@@ -197,7 +198,7 @@ const Feedback = () => {
               <Button text="Read more" type="secondary" />
             </div>
             <div className="feedback__footer-content-phone" data-aos="fade-up" data-aos-offset="500">
-              <GatsbyImage image={nodes[0].gatsbyImageData} alt="phone" />
+              <GatsbyImage image={nodes[1].gatsbyImageData} alt="phone" />
             </div>
           </div>
 

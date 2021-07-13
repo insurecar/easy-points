@@ -22,7 +22,7 @@
 .slide {
 
 	@include fluid-size('padding-top', $min-vw, $max-vw, 20px, 30px);
-	@include fluid-size('padding-bottom', $min-vw, $max-vw, 20px, 40px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 35px, 40px);
 	@include fluid-size('padding-right', $min-vw, $max-vw, 25px, 40px);
 	@include fluid-size('padding-left', $min-vw, $max-vw, 25px, 40px);
 	align-items: flex-start;
@@ -35,6 +35,10 @@
 
 	@include mob() {
 		flex-direction: row;
+	}
+
+	&__image-wrapper{
+		flex: 0 0 auto;
 	}
 
 	&__image {

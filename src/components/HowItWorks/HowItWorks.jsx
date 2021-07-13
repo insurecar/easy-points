@@ -33,7 +33,9 @@ const HowItWorks = () => {
       />
 
       <div className="container">
-        <div className = "how-it-works__video" data-aos="fade-up" >
+        {/* <div className = "how-it-works__video" data-aos="fade-up" > */}
+        <div className = "how-it-works__video"  >
+
 
         <Player
             playsInline
