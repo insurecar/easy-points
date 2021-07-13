@@ -21,7 +21,7 @@
 		box-sizing: border-box;
 		width: 30%;
 
-		@include response(max, 750) {
+		@include response(max, 780) {
 			box-sizing: border-box;
 			padding: 20px;
 			width: 48%;

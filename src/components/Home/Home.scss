@@ -21,6 +21,7 @@
 
 	&__header-title-h1 {
 		@extend h1;
+		@include fluid-type(320px, 1920px, 40px, 80px);
 		font-size: 80px;
 		text-align: center;
 

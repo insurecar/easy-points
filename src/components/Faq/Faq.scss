@@ -14,7 +14,17 @@
 
 	&__navigation {
 		display: flex;
-		gap: 30px;
+
+		&-menu{
+			margin-right: 30px;
+
+			@include mob-tab(){
+				margin-bottom: 20px;
+			}
+		}
+
+		
+
 		@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
 
 		@include mob-tab() {

@@ -30,18 +30,18 @@ const HowItWorksSlider = () => {
 
   const content = [
     {
-      img: nodes[1].gatsbyImageData,
+      img: nodes[0].gatsbyImageData,
       title: 'Attract customers',
       text:
         'When your customers purchase a product from your site, they’ll be able to earn points for their order.',
     },
     {
-      img: nodes[2].gatsbyImageData,
+      img: nodes[1].gatsbyImageData,
       title: 'Earn',
       text: 'Earn refferals, points and purchases. ',
     },
     {
-      img: nodes[0].gatsbyImageData,
+      img: nodes[2].gatsbyImageData,
       title: 'Spend',
       text:
         'Each point is worth a specified amount and can be used directly as a discount during checkout.',
@@ -50,6 +50,7 @@ const HowItWorksSlider = () => {
 
   const pagination = {
     clickable: true,
+    el: ".how-it-works .swiper-pagination",
     renderBullet(index, className) {
       return `<span class=\"${className}\"></span>`;
     },
@@ -81,12 +82,17 @@ const HowItWorksSlider = () => {
           }}
           className="mySwiper"
         >
+            <div className="swiper-pagination" />
+
           {content.map((slide, index) => (
-            <SwiperSlide key={slide.text + slide.title}  >
-              <div className="slide" data-aos="fade-up" data-aos-delay={350 * `${index}`}>
+            <SwiperSlide pagination = {true} key={slide.text + slide.title}  >
+              {/* <div className="slide" data-aos="fade-up" data-aos-delay={350 * `${index}`}> */}
+              <div className="slide">
+
                 <div className="slide__image-wrapper">
+                
                   <div className="slide__image">
-                    <GatsbyImage image={getImage(slide.img)} alt="slide" />
+                  <GatsbyImage image={getImage(slide.img)} alt="slide" />
                   </div>
                 </div>
                 <div className="slide__text-wrpper">
@@ -97,6 +103,10 @@ const HowItWorksSlider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div>
+  
+
       </div>
     </div>
   );

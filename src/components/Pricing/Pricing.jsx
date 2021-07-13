@@ -22,8 +22,8 @@ const Pricing = () => {
     {
       name: 'Basic',
       cost: 50,
-      permonth: ' $0.25/ customer ',
-      after: 'after500',
+      permonth: ' $0.25customer ',
+      after: 'after 500',
       currency: '$',
       period: 'month',
       benefits: ['Up to 500 active* customers', 'Setup included', 'Shopify integration', ' Shopify cart adjustment'],
@@ -32,7 +32,7 @@ const Pricing = () => {
     {
       name: 'Advanced',
       cost: 100,
-      permonth: ' $0.25/ customer ',
+      permonth: ' $0.25/customer ',
       after: 'after 1,000',
       currency: '$',
       period: 'month',

@@ -13,7 +13,7 @@
 .footer {
 	&__top {
 		align-items: center;
-		border-bottom: 2px solid $white;
+		border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 		display: flex;
 		justify-content: space-between;
 		padding-bottom: 40px;
@@ -22,10 +22,10 @@
 			flex-direction: column;
 		}
 
-		&-language{
-			@include mob(){
-				padding-left: 20%;
+		&-language {
+			@include mob() {
 				box-sizing: border-box;
+				padding-left: 20%;
 			}
 		}
 	}
@@ -39,19 +39,22 @@
 		@include tab() {
 			flex-wrap: wrap;
 			min-width: 41%;
-			row-gap: 20px;
-			// column-gap: 20px;
-			// box-sizing: border-box;
 		}
 		
+		&>div {
+			@include mob() {
+				margin-bottom: 20px;
+			}
+		}
+
 		@include mob() {
 			min-width: 95%;
 		}
 
-		&-location{
-			@include mob(){
-				padding-left: 20%;
+		&-location {
+			@include mob() {
 				box-sizing: border-box;
+				padding-left: 20%;
 			}
 		}
 
@@ -99,15 +102,34 @@
 		padding-top: 40px;
 		@extend .label-primary ;
 
+		
+
 		@include mob-tab() {
 			align-content: space-between;
 			flex-wrap: wrap;
-			row-gap: 40px;
+		}
+
+		&>div:first-child {
+			@include mob-tab() {
+				margin-bottom: 40px;
+			}
 		}
 
 		&-descriptions {
 			display: flex;
-			gap: 50px;
+
+			&>div:first-child {
+				margin-right: 50px;
+
+				@include tab() {
+					margin-right: 10px;
+				}
+
+				@include mob() {
+					margin-right: 50px;
+
+				}
+			}
 
 			@include mob-tab() {
 				justify-content: flex-end;
@@ -127,14 +149,14 @@
 			@include mob() {
 				justify-content: flex-start;
 				width: 100%;
-				margin-left: 5%;
+				// margin-left: 5%;
 			}
 		}
 
 		&-rights {
 			@include mob() {
 				// text-align: center;
-				margin-left: 5%;
+				// margin-left: 5%;
 			}
 		}
 
@@ -146,6 +168,10 @@
 				display: flex;
 				justify-content: center;
 				width: 100%;
+			}
+
+			@include mob() {
+				justify-content: flex-start;
 			}
 		}
 	}
