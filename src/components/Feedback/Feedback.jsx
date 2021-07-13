@@ -116,7 +116,7 @@ const Feedback = () => {
             grabCursor
             watchSlidesVisibility
             pagination={{
-              el: '.swiper-pagination',
+              el: '.feedback .swiper-pagination',
               type: 'bullets',
               clickable: true,
             }}
