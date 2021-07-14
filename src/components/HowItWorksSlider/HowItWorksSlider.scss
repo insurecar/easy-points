@@ -12,6 +12,8 @@
 	}
 }
 
+
+
 .how-it-works__slider {
 	@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
 	@include fluid-size('padding-bottom', $min-vw, $max-vw, 40px, 60px);
@@ -105,3 +107,13 @@
 	opacity: 1;
 }
 
+.how-it-works .slide{
+	@include mob(){
+		@include fluid-size('width', 320px, 579px, 270px, 450px);
+		margin: 0 auto;
+	}
+}
+
+.how-it-works .slide__image .gatsby-image-wrapper{
+	width: 20px;
+}
