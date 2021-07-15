@@ -1,9 +1,10 @@
-import React from 'react';
+import React,{ useRef, useEffect, useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import './FeaturesContent.scss';
 
 const FeaturesContent = () => {
+  const ref = useRef();
   const {
     allImageSharp: { nodes },
   } = useStaticQuery(graphql`
@@ -19,6 +20,27 @@ const FeaturesContent = () => {
           }
         }
       `);
+
+
+      const [hig, setHig]= useState('auto')
+
+        useEffect(() => {
+        //  console.log(ref);
+
+        setTimeout(()=>{
+          const arr = document.querySelectorAll('.features__content-block');
+          const arrSort = [...arr].sort((a,b)=>a.clientHeight - b.clientHeight).map(({clientHeight})=>clientHeight);
+          console.log(arrSort);
+          console.dir(arrSort[arrSort.length-1]);
+
+          setHig(arrSort[arrSort.length-1])
+        },1000)
+
+         
+
+        },[])
+
+        console.log(hig);
 
   const content = [
     {
@@ -56,7 +78,9 @@ const FeaturesContent = () => {
   return (
     <div className="features__content">
       {content.map((el, index) => (
-        <div className="features__content-block" key={el.text + el.title} data-aos="fade-up" data-aos-delay={100 * index} >
+        // <div className="features__content-block" key={el.text + el.title} data-aos="fade-up" data-aos-delay={100 * index} ref= {ref} >
+        <div className="features__content-block" key={el.text + el.title} data-aos="fade-up" data-aos-delay={100 * index}  ref= {ref} style={{height: hig}} >
+
           <div className="features__content-block-image">
             <GatsbyImage image={getImage(el.img)} alt="img" />
           </div>

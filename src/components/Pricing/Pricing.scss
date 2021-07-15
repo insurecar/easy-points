@@ -144,12 +144,11 @@
 			margin: 0;
 			margin-top: 25px;
 			padding: 0;
-			// row-gap: 15px;
 			@extend .text-secondary;
 
-			@include mob() {
-				row-gap: unset;
-			}
+			// @include mob() {
+			// 	row-gap: unset;
+			// }
 
 		}
 
@@ -252,7 +251,7 @@
 			flex-direction: column;
 			flex-wrap: wrap;
 			// column-gap: 50px;
-			row-gap: 30px;
+			// row-gap: 30px;
 
 		}
 

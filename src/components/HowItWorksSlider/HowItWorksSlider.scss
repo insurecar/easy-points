@@ -108,12 +108,22 @@
 }
 
 .how-it-works .slide{
+
 	@include mob(){
-		@include fluid-size('width', 320px, 579px, 270px, 450px);
+		@include fluid-size('width', 320px, 579px, 290px, 420px);
 		margin: 0 auto;
 	}
 }
 
-.how-it-works .slide__image .gatsby-image-wrapper{
-	width: 20px;
+.how-it-works .slide .gatsby-image-wrapper-constrained{
+	@include mob-tab(){
+		width: 20px;
+	}
+	@include mob(){
+		width: 20px;
+	}
+}
+
+.how-it-works .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: 25px;
 }
