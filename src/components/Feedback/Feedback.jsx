@@ -6,11 +6,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import 'swiper/swiper.min.css';
-import 'swiper/components/effect-flip/effect-flip.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-
 // import Swiper core and required modules
 import SwiperCore, {
   EffectFlip, Pagination, Navigation,
@@ -39,9 +34,22 @@ const Feedback = () => {
         }
       `);
 
+      const images = nodes.sort((a,b)=> a.gatsbyImageData.width - b.gatsbyImageData.width);
+
+      console.log(images);
+
+      // imageSharp(fluid: { originalName: { eq: "headerLogo.png" } }) {
+      //   gatsbyImageData
+      // }
+      // imageSharp(fluid: { originalName: { eq: "headerLogo.png" } }) {
+      //   gatsbyImageData
+      // }
+
+        console.log(nodes)
+
   const content = [
     {
-      brand: nodes[0].gatsbyImageData,
+      brand: images[1].gatsbyImageData,
       type: 'Fashion',
       raiting: '',
       text: 'Thank you. I gained 2500 users thanks to EasyPoints. People really like rewarding programs.',
@@ -50,7 +58,7 @@ const Feedback = () => {
       rating: 5,
     },
     {
-      brand: nodes[3].gatsbyImageData,
+      brand: images[0].gatsbyImageData,
       type: 'Shoes',
       raiting: '',
       text: '上のリワードポイントアプリを使用していたのですが、日本式のような「●円で1ポイント」といった使い方を指定できず困っておりました。こちらのアプリをド乳したことで、他社ECモールと同 ...',
@@ -59,7 +67,7 @@ const Feedback = () => {
       rating: 4,
     },
     {
-      brand: nodes[2].gatsbyImageData,
+      brand: images[2].gatsbyImageData,
       type: 'Cosmetics',
       raiting: '',
       text: 'のアプリにポイントを簡易的に実装するものがないので非常に使いやすいと思います（いくつか海外のアプリがあるが日本では馴染みのないシステムすぎて使いづらい）。管理も用意で、担当の方 ...',
@@ -68,7 +76,7 @@ const Feedback = () => {
       rating: 3,
     },
     {
-      brand: nodes[0].gatsbyImageData,
+      brand: images[1].gatsbyImageData,
       type: 'Fashion',
       text: 'Thank you. I gained 2500 users thanks to EasyPoints. People really like rewarding programs.',
       hours: '8:30 AM',
@@ -76,7 +84,7 @@ const Feedback = () => {
       rating: 1,
     },
     {
-      brand: nodes[3].gatsbyImageData,
+      brand: images[0].gatsbyImageData,
       type: 'Shoes',
       raiting: '',
       text: '上のリワードポイントアプリを使用していたのですが、日本式のような「●円で1ポイント」といった使い方を指定できず困っておりました。こちらのアプリをド乳したことで、他社ECモールと同 ...',
@@ -85,7 +93,7 @@ const Feedback = () => {
       rating: 4,
     },
     {
-      brand: nodes[2].gatsbyImageData,
+      brand: images[2].gatsbyImageData,
       type: 'Cosmetics',
       raiting: '',
       text: 'のアプリにポイントを簡易的に実装するものがないので非常に使いやすいと思います（いくつか海外のアプリがあるが日本では馴染みのないシステムすぎて使いづらい）。管理も用意で、担当の方 ...',
@@ -180,7 +188,7 @@ const Feedback = () => {
 
       </div>
       <div className="feedback__footer">
-        <GatsbyImage className="feedback__footer-background" image={getImage(nodes[4].gatsbyImageData)} alt="background" />
+        <GatsbyImage className="feedback__footer-background" image={getImage(images[4].gatsbyImageData)} alt="background" />
         <div className="container">
           <div className="feedback__footer-content">
             <div className="feedback__footer-content-link">
@@ -198,7 +206,7 @@ const Feedback = () => {
               <Button text="Read more" type="secondary" />
             </div>
             <div className="feedback__footer-content-phone" data-aos="fade-up" data-aos-offset="500">
-              <GatsbyImage image={nodes[1].gatsbyImageData} alt="phone" />
+              <GatsbyImage image={nodes[3].gatsbyImageData} alt="phone" />
             </div>
           </div>
 

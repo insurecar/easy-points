@@ -4,7 +4,7 @@
 
 .how-it-works {
 	// margin-top: -400px;
-	@include fluid-size('margin-top', $min-vw, $max-vw, 232px, 716px);
+	@include fluid-size('margin-top', $min-vw, $max-vw, 232px, 316px);
 	display: flex;
 	flex-direction: column;
 

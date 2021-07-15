@@ -85,7 +85,7 @@ const HowItWorksSlider = () => {
             <div className="swiper-pagination" />
 
           {content.map((slide, index) => (
-            <SwiperSlide pagination = {true} key={slide.text + slide.title}  >
+            <SwiperSlide pagination="true" key={slide.text + slide.title}  >
               {/* <div className="slide" data-aos="fade-up" data-aos-delay={350 * `${index}`}> */}
               <div className="slide">
 
