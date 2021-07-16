@@ -59,17 +59,12 @@
 
 	&__content {
 		display: flex;
-		// gap: 30px;
 		justify-content: space-between;
-
-		// @include tab-des() {
-		// 	gap: 25px;
-		// }
+		margin: 0 -20px;
+		padding: 0 -15px;
 
 		@include tab() {
 			flex-wrap: wrap;
-			gap: 0;
-			row-gap: 30px;
 		}
 		
 		@include mob() {
@@ -83,7 +78,9 @@
 			box-shadow: -20px 20px 60px #101112;
 			box-sizing: border-box;
 			padding: 40px;
+			padding-bottom: 45px;
 			width: 25%;
+			margin: 0 15px;
 			
 
 			&-description {
@@ -99,11 +96,16 @@
 				// width: 45%;
 				@include fluid-size('width', 577px, 960px, 260px, 450px);
 				padding: 40px;
+				padding-bottom: 89px;
+				margin-bottom: 30px;
+
 			}
 
 			@include mob() {
 				padding: 40px;
 				max-width: 98.5%;
+				@include fluid-size('width', 320px, 400px, 290px, 330px);
+
 			}
 		}
 
@@ -126,7 +128,7 @@
 				display: inline;
 				padding: 0;
 				@extend h2;
-				@include fluid-type( 577px, 720px, 40px, 60px);
+				@include fluid-type( 577px, 720px, 40px, 56px);
 
 			}
 
@@ -146,9 +148,6 @@
 			padding: 0;
 			@extend .text-secondary;
 
-			// @include mob() {
-			// 	row-gap: unset;
-			// }
 
 		}
 
@@ -161,13 +160,14 @@
 					height: 23px !important;
 					width: 23px !important;
 				}
+
 			}
 
 			&:not(:last-child) {
 				margin-bottom: 15px;
 				
 				@include tab() {
-					margin-bottom: 5px;
+					margin-bottom: 15px;
 					
 				}
 
