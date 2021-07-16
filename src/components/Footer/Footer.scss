@@ -67,6 +67,8 @@
 		@extend .text-secondary ;
 	}
 
+	
+
 	&__top-data-contact-email,
 	&__top-data-location-town,
 	&__top-data-our-site {
@@ -137,6 +139,7 @@
 
 			@include mob() {
 				order: -2;
+				margin-bottom: 30px;
 			}
 		}
 

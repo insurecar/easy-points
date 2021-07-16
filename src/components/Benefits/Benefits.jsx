@@ -55,10 +55,13 @@ const Benefits = () => {
           {content.map((elem) => (
 
             <div className="benefits__main-block" key={elem.title + elem.text} >
-              <div className="benefits__main-block-image" data-aos="zoom-out"  data-aos-delay={200}>
+              {/* <div className="benefits__main-block-image" data-aos="zoom-out"  data-aos-delay={200}> */}
+              <div className="benefits__main-block-image" data-aos="fade-up" data-aos-delay="250">
+
                 <GatsbyImage image={getImage(elem.img)} alt="graph" className = "benefits__main-block-image-picture" />
               </div>
-              <div className="benefits__main-block-text" data-aos="zoom-out"  data-aos-delay={400}>
+              {/* <div className="benefits__main-block-text" data-aos="zoom-out"  data-aos-delay={400}> */}
+              <div className="benefits__main-block-text" data-aos="fade-up" data-aos-delay="250">
                 <h3 className="benefits__main-block-text-title">{elem.title}</h3>
                 <p className="benefits__main-block-text-paragraph">{elem.text}</p>
               </div>
