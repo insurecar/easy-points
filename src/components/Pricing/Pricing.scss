@@ -75,10 +75,10 @@
       border-radius: 10px;
       box-shadow: -20px 20px 60px #101112;
       box-sizing: border-box;
+      margin: 0 15px;
       padding: 40px;
       padding-bottom: 45px;
       width: 25%;
-      margin: 0 15px;
 
       &-description {
         @extend .label-primary-price;
@@ -92,14 +92,14 @@
       @include tab() {
         // width: 45%;
         @include fluid-size("width", 577px, 960px, 260px, 450px);
+        margin-bottom: 30px;
         padding: 40px;
         padding-bottom: 89px;
-        margin-bottom: 30px;
       }
 
       @include mob() {
-        padding: 40px;
         max-width: 98.5%;
+        padding: 40px;
         @include fluid-size("width", 320px, 400px, 290px, 330px);
       }
     }

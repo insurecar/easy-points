@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Home from '../components/Home/Home';
 import HowItWorks from '../components/HowItWorks/HowItWorks';
@@ -10,10 +11,23 @@ import Feedback from '../components/Feedback/Feedback';
 import Faq from '../components/Faq/Faq';
 import Form from '../components/Form/Form';
 import Footer from '../components/Footer/Footer';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 
-const IndexPage = () => (
-  <div id="main">
+const IndexPage = () => {
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      console.log(111111111111111111);
+      AOS.init({
+        duration: 700,
+      })
+    })
+
+  },[])
+
+
+ return  <div id="main">
     <Header />
     <Home />
     <HowItWorks />
@@ -27,6 +41,6 @@ const IndexPage = () => (
     <Footer /> 
     
   </div>
-);
+};
 
 export default IndexPage;

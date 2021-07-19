@@ -4,8 +4,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import Button from '../UI/Button/Button';
 import "video-react/dist/video-react.css";
-import AOS from 'aos';
-import "aos/dist/aos.css";
+// import AOS from 'aos';
+// import "aos/dist/aos.css";
 
 
 const Home = () => {
@@ -25,13 +25,13 @@ const Home = () => {
         }
       `);
 
-      useEffect(() => {
-        window.addEventListener('load', () => {
-          AOS.init({
-            duration: 700,
-          })
-        })
-      },[])
+      // useEffect(() => {
+      //   window.addEventListener('load', () => {
+      //     AOS.init({
+      //       duration: 700,
+      //     })
+      //   })
+      // },[])
  
 
   return (
