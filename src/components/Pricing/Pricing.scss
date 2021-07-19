@@ -1,305 +1,285 @@
-@import '../../assets/variables.scss';
-@import '../../assets/mixins.scss';
-@import '../../assets/typography.scss';
+@import "../../assets/variables.scss";
+@import "../../assets/mixins.scss";
+@import "../../assets/typography.scss";
 
 .pricing {
-	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
-	position: relative;
+  @include fluid-size("padding-top", $min-vw, $max-vw, 80px, 140px);
+  position: relative;
 
+  &__background {
+    height: 100%;
+    left: 0;
+    position: absolute !important;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 
+    img {
+      object-position: top;
+    }
+  }
 
-	&__background {
-		height: 100%;
-		left: 0;
-		position: absolute !important;
-		top: 0;
-		width: 100%;
-		z-index: -1;
+  &__header {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 850px;
+    text-align: center;
 
-		img {
-			object-position: top;
-		}
-	}
+    &-anchor {
+      @extend .label-primary;
+      background: $dark01;
 
-	&__header {
-		align-items: center;
-		color: $white;
-		display: flex;
-		flex-direction: column;
-		margin: auto;
-		max-width: 850px;
-		text-align: center;
+      border-radius: 2px;
+      margin: 0;
+      padding: 4px 10px;
+    }
 
+    &-title {
+      @extend h2;
+      @include fluid-size("margin-top", $min-vw, $max-vw, 10px, 15px);
+      margin: 0;
+    }
 
-		&-anchor {
-			@extend .label-primary;
-			background: $dark01;
+    &-text {
+      @extend .text-main;
+      @include fluid-size("margin-top", $min-vw, $max-vw, 10px, 20px);
+      @include fluid-size("margin-bottom", $min-vw, $max-vw, 40px, 60px);
+      color: $white08;
+      margin: 0;
+      max-width: 630px;
+    }
+  }
 
-			border-radius: 2px;
-			margin: 0;
-			padding: 4px 10px;
-		}
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -20px;
+    padding: 0 -15px;
 
-		&-title {
-			@extend h2;
-			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
-			margin: 0;
+    @include tab() {
+      flex-wrap: wrap;
+    }
 
-		}
+    @include mob() {
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
 
-		&-text {
-			@extend .text-main;
-			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
-			@include fluid-size('margin-bottom', $min-vw, $max-vw, 40px, 60px);
-			color: $white08;
-			margin: 0;
-			max-width: 630px;
-		}
-	}
+    &-block {
+      background: #1a1b1b;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: -20px 20px 60px #101112;
+      box-sizing: border-box;
+      padding: 40px;
+      padding-bottom: 45px;
+      width: 25%;
+      margin: 0 15px;
 
-	&__content {
-		display: flex;
-		justify-content: space-between;
-		margin: 0 -20px;
-		padding: 0 -15px;
+      &-description {
+        @extend .label-primary-price;
+        color: $white05;
+      }
 
-		@include tab() {
-			flex-wrap: wrap;
-		}
-		
-		@include mob() {
-			justify-content: center;
-		}
+      @include tab-des() {
+        padding: 15px;
+      }
 
-		&-block {
-			background: #1a1b1b;
-			border: 1px solid rgba(255, 255, 255, 0.1);
-			border-radius: 10px;
-			box-shadow: -20px 20px 60px #101112;
-			box-sizing: border-box;
-			padding: 40px;
-			padding-bottom: 45px;
-			width: 25%;
-			margin: 0 15px;
-			
+      @include tab() {
+        // width: 45%;
+        @include fluid-size("width", 577px, 960px, 260px, 450px);
+        padding: 40px;
+        padding-bottom: 89px;
+        margin-bottom: 30px;
+      }
 
-			&-description {
-				@extend .label-primary-price;
-				color: $white05;
-			}
+      @include mob() {
+        padding: 40px;
+        max-width: 98.5%;
+        @include fluid-size("width", 320px, 400px, 290px, 330px);
+      }
+    }
 
-			@include tab-des() {
-				padding: 15px;
-			}
+    &-block-name {
+      @extend .text-secondary;
+      color: $white05;
+      // margin-top: 15px;
 
-			@include tab() {
-				// width: 45%;
-				@include fluid-size('width', 577px, 960px, 260px, 450px);
-				padding: 40px;
-				padding-bottom: 89px;
-				margin-bottom: 30px;
+      @include tab-des() {
+        margin-top: 0;
+      }
+    }
 
-			}
+    &-block-price {
+      margin-bottom: 10px;
+      margin-top: 15px;
 
-			@include mob() {
-				padding: 40px;
-				max-width: 98.5%;
-				@include fluid-size('width', 320px, 400px, 290px, 330px);
+      &-cost {
+        color: $white;
+        display: inline;
+        padding: 0;
+        @extend h2;
+        @include fluid-type(577px, 720px, 40px, 56px);
+      }
 
-			}
-		}
+      &-period {
+        @extend .text-main;
+        color: $white05;
+      }
+    }
 
-		&-block-name {
-			@extend .text-secondary;
-			color: $white05;
-			// margin-top: 15px;
+    &-block-list {
+      color: $white05;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      margin-top: 25px;
+      padding: 0;
+      @extend .text-secondary;
+    }
 
-			@include tab-des() {
-				margin-top: 0;
-			}
-		}
+    &-block-list-item {
+      align-items: flex-start;
+      display: flex;
 
-		&-block-price {
-			margin-bottom: 10px;
-			margin-top: 15px;
+      @include tab() {
+        svg {
+          height: 23px !important;
+          width: 23px !important;
+        }
+      }
 
-			&-cost {
-				color: $white;
-				display: inline;
-				padding: 0;
-				@extend h2;
-				@include fluid-type( 577px, 720px, 40px, 56px);
+      &:not(:last-child) {
+        margin-bottom: 15px;
 
-			}
+        @include tab() {
+          margin-bottom: 15px;
+        }
 
-			&-period {
-				@extend .text-main;
-				color: $white05;
-			}
-		}
+        @include mob() {
+          margin-bottom: 15px;
+        }
+      }
 
-		&-block-list {
-			color: $white05;
-			display: flex;
-			flex-direction: column;
-			list-style: none;
-			margin: 0;
-			margin-top: 25px;
-			padding: 0;
-			@extend .text-secondary;
+      &-text {
+        margin-left: 15px;
+      }
 
+      svg {
+        flex: 0 0 auto;
+        // @include tab() {
+        // 	height: 15px;
+        // 	width: 15px;
+        // }
 
-		}
+        // @include mob() {
+        // 	height: 25px;
+        // 	width: 25px;
+        // }
+      }
 
-		&-block-list-item {
-			align-items: flex-start;
-			display: flex;
+      &:last-child {
+        // margin-bottom: 30px;
 
-			@include tab() {
-				svg {
-					height: 23px !important;
-					width: 23px !important;
-				}
+        @include mob() {
+          margin-bottom: unset;
+        }
+      }
+    }
 
-			}
+    &-block-active {
+      // svg{
+      // 	width: 25px;
+      // 	height: 25px;
+      // }
+      background: $purple-main;
+      position: relative;
 
-			&:not(:last-child) {
-				margin-bottom: 15px;
-				
-				@include tab() {
-					margin-bottom: 15px;
-					
-				}
+      .pricing__content-block-name {
+        color: $white;
+      }
 
-				@include mob() {
-					margin-bottom: 15px;
-				}
-			}
+      .pricing__content-block-list {
+        color: $white08;
+      }
 
-			
+      &::before {
+        background-color: $white01;
+        color: $white;
+        content: "Most popular";
+        padding: 5px 10px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        @extend .label-secondary;
+      }
+    }
+  }
 
-			&-text {
-				margin-left: 15px;
-			}
+  &__offer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    position: relative;
+    @include fluid-size("padding-top", $min-vw, $max-vw, 40px, 70px);
+    @include fluid-size("padding-bottom", $min-vw, $max-vw, 40px, 70px);
+    @include fluid-size("padding-left", $min-vw, $max-vw, 55px, 110px);
+    @include fluid-size("padding-right", $min-vw, $max-vw, 55px, 110px);
 
-			svg {
-				flex: 0 0 auto;
-				// @include tab() {
-				// 	height: 15px;
-				// 	width: 15px;
-				// }
+    @include tab() {
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
 
-				// @include mob() {
-				// 	height: 25px;
-				// 	width: 25px;
-				// }
-			}
+    &-background {
+      background: #5936e3;
+      border-radius: 10px;
+      box-shadow: -20px 20px 60px #101112;
+      height: 100%;
+      left: 0;
+      position: absolute !important;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
 
-			&:last-child {
-				// margin-bottom: 30px;
+    &-defenition {
+      max-width: 70%;
 
-				@include mob(){
-					margin-bottom: unset;
-				}
+      @include tab() {
+        max-width: 100%;
+      }
 
-				
-			}
-		}
+      &-title {
+        @extend h3;
+        color: $white;
+        margin: 0;
+        max-width: 740px;
+      }
 
-		&-block-active {
-			// svg{
-			// 	width: 25px;
-			// 	height: 25px;
-			// }
-			background: $purple-main;
-			position: relative;
-
-			.pricing__content-block-name {
-				color: $white;
-			}
-
-			.pricing__content-block-list {
-				color: $white08;
-			}
-
-			&::before {
-				background-color: $white01;
-				color: $white;
-				content: 'Most popular';
-				padding: 5px 10px;
-				position: absolute;
-				right: 30px;
-				top: 30px;
-				@extend .label-secondary;
-			}
-		}
-	}
-
-	&__offer {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		margin-top: 70px;
-		position: relative;
-		@include fluid-size('padding-top', $min-vw, $max-vw, 40px, 70px);
-		@include fluid-size('padding-bottom', $min-vw, $max-vw, 40px, 70px);
-		@include fluid-size('padding-left', $min-vw, $max-vw, 55px, 110px);
-		@include fluid-size('padding-right', $min-vw, $max-vw, 55px, 110px);
-
-		@include tab() {
-			align-items: flex-start;
-			flex-direction: column;
-			flex-wrap: wrap;
-			// column-gap: 50px;
-			// row-gap: 30px;
-
-		}
-
-		&-background {
-			background: #5936e3;
-			border-radius: 10px;
-			box-shadow: -20px 20px 60px #101112;
-			height: 100%;
-			left: 0;
-			position: absolute !important;
-			top: 0;
-			width: 100%;
-			z-index: -1;
-		}
-
-		&-defenition {
-			max-width: 70%;
-
-			@include tab() {
-				max-width: 100%;
-			}
-
-			&-title {
-				@extend h3;
-				color: $white;
-				margin: 0;
-				max-width: 740px;
-			}
-
-			&-text {
-				@extend .text-main;
-				color: $white08;
-				margin: 0;
-				margin-top: 20px;
-			}
-		}
-	}
-
-	
+      &-text {
+        @extend .text-main;
+        color: $white08;
+        margin: 0;
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 .pricing__offer-wrapper {
-	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
-
+  @include fluid-size("padding-bottom", $min-vw, $max-vw, 80px, 140px);
 }
 
 .label:nth-child(3) {
-	@include mob() {
-		margin-top: 20px;
-	}
+  @include mob() {
+    margin-top: 20px;
+  }
 }

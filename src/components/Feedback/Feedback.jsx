@@ -193,8 +193,12 @@ const Feedback = () => {
           <div className="feedback__footer-content">
             <div className="feedback__footer-content-link">
               <div className="feedback__footer-content-link-icons">
-                <Android />
-                <AppleLink />
+                <div className = 'feedback__footer-content-link-icons-android'>
+                  <Android />
+                </div>
+                <div className = 'feedback__footer-content-link-icons-apple'>
+                  <AppleLink />
+                </div>
               </div>
               <h2 className="feedback__footer-content-title" data-aos="fade-up" data-aos-delay="200">
                 Rewarding your customers just got a whole lot easier with EasyPoints

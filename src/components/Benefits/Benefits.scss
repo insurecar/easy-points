@@ -5,7 +5,6 @@
 .benefits {
 	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
 	overflow: hidden;
-background-color: red;
 	&__header {
 		align-items: center;
 		display: flex;
@@ -13,7 +12,6 @@ background-color: red;
 		margin: auto;
 		max-width: 850px;
 		text-align: center;
-		background-color: coral;
 
 		&-anchor {
 			@extend .label-primary;

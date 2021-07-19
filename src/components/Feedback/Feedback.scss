@@ -134,7 +134,7 @@
 			@include mob-tab() {
 				align-items: center;
 				flex-direction: column;
-				gap: 60px;
+				// gap: 60px;
 			}
 		}
 	
@@ -149,7 +149,10 @@
 
 		&-content-link-icons {
 			display: flex;
-			gap: 30px;
+
+			&-android{
+				margin-right: 20px;
+			}
 		}
 
 		&-content-title {
