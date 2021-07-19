@@ -36,7 +36,6 @@ const Feedback = () => {
 
       const images = nodes.sort((a,b)=> a.gatsbyImageData.width - b.gatsbyImageData.width);
 
-      console.log(images);
 
       // imageSharp(fluid: { originalName: { eq: "headerLogo.png" } }) {
       //   gatsbyImageData
@@ -45,7 +44,6 @@ const Feedback = () => {
       //   gatsbyImageData
       // }
 
-        console.log(nodes)
 
   const content = [
     {
@@ -111,8 +109,7 @@ const Feedback = () => {
           <h2 className="feedback__header-title" data-aos="fade-up" data-aos-delay="200">
             What our users say
           </h2>
-          {/* <p className="feedback__header-text" data-aos="fade-up" data-aos-delay="250" > */}
-          <p className="feedback__header-text"  >
+          <p className="feedback__header-text" data-aos="fade-up" data-aos-delay="250" >
 
             Every business is unique. No matter how big or small your business is, EasyPoints has a plan that suits your needs.
           </p>

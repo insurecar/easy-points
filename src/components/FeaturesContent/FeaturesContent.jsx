@@ -25,14 +25,11 @@ const FeaturesContent = () => {
       const [hig, setHig]= useState('auto')
 
         useEffect(() => {
-        //  console.log(ref);
 
         setTimeout(()=>{
           const arr = document.querySelectorAll('.features__content-block');
           const arrSort = [...arr].sort((a,b)=>a.clientHeight - b.clientHeight).map(({clientHeight})=>clientHeight);
-          console.log(arrSort);
-          console.dir(arrSort[arrSort.length-1]);
-
+         
           setHig(arrSort[arrSort.length-1])
         },1000)
 
@@ -40,7 +37,6 @@ const FeaturesContent = () => {
 
         },[])
 
-        console.log(hig);
 
   const content = [
     {

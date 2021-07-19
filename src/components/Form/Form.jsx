@@ -120,7 +120,6 @@ const Form = () => {
     }; 
     
     const allError = [firstNameError,lastNameError, emailError,subjectError, selectError];
-    // console.log('firstNameError', Boolean(firstNameError));
     
 
     const labelTopSelectClassName = classnames('form__data-user-select-description',selectClassNameAdd)

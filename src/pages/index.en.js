@@ -18,7 +18,6 @@ import "aos/dist/aos.css";
 const IndexPage = () => {
   useEffect(() => {
     window.addEventListener('load', () => {
-      console.log(111111111111111111);
       AOS.init({
         duration: 700,
       })
