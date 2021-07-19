@@ -55,7 +55,7 @@
     }
 
     &-button {
-      @include fluid-size("margin-top", $min-vw, $max-vw, 40px, 50px);
+      @include fluid-size("margin-top", $min-vw, $max-vw, 50px, 60px);
       display: flex;
       justify-content: center;
     }
