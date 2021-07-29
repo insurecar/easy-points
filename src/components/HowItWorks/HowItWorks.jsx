@@ -7,6 +7,7 @@ import HowItWorksGraph from '../HowItWorksGraph/HowItWorksGraph';
 import { Player, BigPlayButton, PosterImage } from 'video-react';
 import "video-react/dist/video-react.css";
 import video from '../../video/trailer_hd.mp4'
+import { node } from 'prop-types';
 
 const HowItWorks = () => {
   const data = useStaticQuery(graphql`

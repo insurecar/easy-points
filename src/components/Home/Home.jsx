@@ -24,16 +24,7 @@ const Home = () => {
           }
         }
       `);
-
-      // useEffect(() => {
-      //   window.addEventListener('load', () => {
-      //     AOS.init({
-      //       duration: 700,
-      //     })
-      //   })
-      // },[])
  
-
   return (
     <div className="home">
       <div className="container">
