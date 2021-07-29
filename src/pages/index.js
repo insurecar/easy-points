@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useEffect } from 'react';
+import { graphql } from 'gatsby';
 import Header from '../components/Header/Header';
 import Home from '../components/Home/Home';
 import HowItWorks from '../components/HowItWorks/HowItWorks';
@@ -13,8 +14,6 @@ import Form from '../components/Form/Form';
 import Footer from '../components/Footer/Footer';
 import AOS from 'aos';
 import "aos/dist/aos.css";
-import { useStaticQuery, graphql } from 'gatsby';
-
 
 
 
@@ -44,3 +43,17 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

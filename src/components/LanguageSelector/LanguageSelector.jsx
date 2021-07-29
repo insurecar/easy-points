@@ -1,52 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import './LanguageSelector.scss';
 import classnames from 'classnames';
+import {Link, useI18next} from 'gatsby-plugin-react-i18next';
 import Arrow from '../images/Arrow';
 
-const LanguageSelector = () => {
-  const languages = ['Eng', 'JP'];
-  const [language, setLanguage] = useState(languages[0]);
-  const [selectorIsVisible, setSelectorIsVisible] = useState(false);
+const LanguageSelector = ({languages,className}) => {
+  const {originalPath, language} = useI18next();
 
-  const languageSelectorClassName = classnames('language-selector', {
-    'language-selector--active': selectorIsVisible,
+  const [toggle, setToggle] = useState(false);
+
+  const languageSelector = classnames(className, {
+    'language-selector--active': toggle,
   });
 
-  const buttonArrow = classnames('language-selector__button-arrow', {
-    'language-selector__button-arrow--active': !selectorIsVisible,
-  });
+  const activeLang = useMemo(() => {
+    return languages.filter((lang) => lang.lang_item_key === language)
+  },[language])
 
-  const listClassName = classnames('language-selector__list', {
-    'language-selector__list--active': selectorIsVisible,
-  });
-
-  const handleLanguage = () => {
-    setSelectorIsVisible((prev) => !prev);
-  };
-
-  const handleChooseLanguage = (lang) => {
-    setLanguage(lang);
-    setSelectorIsVisible(false);
-  };
-
-  const filteredLanguages = [...languages].filter((el) => el !== language);
+  const unactiveLang = useMemo(() => {
+    return languages.filter((lang) => lang.lang_item_key !== language)
+  },[language])
 
   return (
-    <div className={languageSelectorClassName}>
-      <button type="button" onClick={handleLanguage} className="language-selector__button">
-        {language}
-        <Arrow className={buttonArrow} />
+    <div className={languageSelector}>
+      <button type="button" onClick={() => setToggle(!toggle)} className="language-selector__button">
+        {activeLang[0].lang_item_txt}<Arrow className="language-selector__button-arrow" />
       </button>
-      <ul className={listClassName}>
-        {filteredLanguages.map((lang) => (
+      <ul className="language-selector__list">
+        {unactiveLang.map((lang,index) => (
           <li key={Math.random()} className="language-selector__list-item">
-            <button
-              type="button"
-              onClick={() => handleChooseLanguage(lang)}
+            <Link
+              to={originalPath}
+              language={lang.lang_item_key}
               className="language-selector__list-item-button"
             >
-              {lang}
-            </button>
+              {lang.lang_item_txt}
+            </Link>
           </li>
         ))}
       </ul>

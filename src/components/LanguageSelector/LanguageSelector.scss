@@ -3,6 +3,7 @@
 @import '../../assets/typography.scss';
 
 .language-selector {
+	$me: &;
 	box-sizing: border-box;
 	padding: 8px 20px;
 	position: relative;
@@ -14,13 +15,47 @@
 		border-radius: 10px;
 		padding: 8px 20px;
 
-		.language-selector__button {
+		#{$me}__button {
 			color: $white;
 		}
 
-		.language-selector__list-item {
+		#{$me}__list-item {
 			border-radius: 10px;
 			width: 100%;
+		}
+
+		#{$me}__button-arrow {
+			transform: none;
+
+			path {
+				fill: $white;
+			}
+		}
+
+		#{$me}__list {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&.footer_lang {
+			background-color: $darkgrayBtnLanguage;
+			border: 2px solid #fff;
+			box-sizing: border-box;
+	
+			#{$me}__button-arrow {
+				path {
+					fill: $white05;
+				}
+			}
+
+			#{$me}__list {
+				right: -2px;
+				left: -2px;
+			}
+
+			#{$me}__list-item-button {
+				color: $white;
+			}
 		}
 	}
 
@@ -36,9 +71,11 @@
 	&__button-arrow {
 		align-self: center;
 		margin-left: 10px;
+		transform: rotate(180deg);
+		transition: all 0.2s;
 
-		&--active {
-			transform: rotate(180deg);
+		path {
+			fill: black;
 		}
 	}
 
@@ -53,16 +90,11 @@
 		list-style: none;
 		margin: 0;
 		opacity: 0;
-		padding: 0;
+		padding: 0 0 10px;
 		position: absolute;
 		right: 0;
 		transition: all 0.3s;
 		visibility: hidden;
-
-		&--active {
-			opacity: 1;
-			visibility: visible;
-		}
 	}
 
 	&__list-item {
@@ -78,5 +110,22 @@
 		font-family: $f-semibold;
 		margin: 0 auto;
 		margin-top: 10px;
+		text-decoration: none;
+	}
+
+	&.footer_lang {
+		#{$me}__button {
+			color: $white08;
+		}
+
+		#{$me}__button-arrow {
+			path {
+				fill: $white05;
+			}
+		}
+		
+		#{$me}__list {
+			border-color: $white;
+		}
 	}
 }

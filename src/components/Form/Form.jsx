@@ -50,8 +50,6 @@ const Form = () => {
       }
     }
     `);
-
-    
     
     const handleInput = (ref) => {
       const newState = {

@@ -14,14 +14,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown`,
         path: `${__dirname}/content`,
-      },
+      }
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
@@ -35,21 +35,23 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/gatsby-icon.png`
+      }
     },
     {
-      resolve: "gatsby-plugin-i18n",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        langKeyForNull: "any",
-        langKeyDefault: "en",
-        useLangKeyLayout: true,
-        prefixDefault: false,
-      },
+        path: `${__dirname}/locales`,
+        name: `locale`
+      }
     },
-    // `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`en`, `jp`],
+        defaultLanguage: `en`
+      }
+    }
+  ]
 }

@@ -6,10 +6,12 @@ import BurgerButton from '../UI/BurgerButton/BurgerButton';
 import Button from '../UI/Button/Button';
 import './Header.scss';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 
 
 const Header = () => {
 
+  const {language} = useI18next()
   const [navigationIsActive, setNavigationIsActive] = useState(false);
 
   const [width, setWidth] = useState();
@@ -18,37 +20,6 @@ const Header = () => {
   const navigationWrapperClassName = classnames('header__navigation-wrapper', {
     'header__navigation-wrapper--active': navigationIsActive,
   });
-
-  const navigationList = [
-    {
-      title: 'How it works',
-      href: '#how-it-work',
-    },
-    {
-      title: 'Features',
-      href: '#features',
-    },
-    {
-      title: 'Benefits',
-      href: '#benefits',
-    },
-    {
-      title: 'Pricing',
-      href: '#pricing',
-    },
-    {
-      title: 'Feedback',
-      href: '#feedback',
-    },
-    {
-      title: 'FAQ',
-      href: '#faq',
-    },
-    {
-      title: 'Contact',
-      href: '#footer',
-    },
-  ];
 
   const {allMarkdownRemark:{edges:[{node:{frontmatter}}]}} = useStaticQuery(graphql`
     query Header {
@@ -126,28 +97,29 @@ const Header = () => {
     <div className="header" >
       {/* <Logo className="header__logo-height" /> */}
       <div className="header__logo">
-        {/* <GatsbyImage image={getImage(data.imageSharp.gatsbyImageData)} alt="brand" /> */}
+        {/* <img src={frontmatter[language].logo} alt="" /> */}
+        <GatsbyImage src="https://placekitten.com/800/600" alt="brand" />
       </div>
       <div className={navigationWrapperClassName}>
         <nav className="header__navigation">
           <ul className="header__navigation-list">
-            {navigationList.map(({ title, href }) => (
+            {frontmatter[language].navigation.map(({ nav_item_txt, nav_item_hash }) => (
               <li
-                key={title + href}
+                key={nav_item_txt + nav_item_hash}
                 className="header__navigation-list-item"
               >
                 <a
                   className="header__navigation-link"
-                  href={`${href}`}
+                  href={`${nav_item_hash}`}
                   onClick={() => setNavigationIsActive(!navigationIsActive)}
                 >
-                  {title}
+                  {nav_item_txt}
                 </a>
               </li>
             ))}
           </ul>
         </nav>
-        <LanguageSelector />
+        <LanguageSelector className="language-selector" languages = {frontmatter[language].languages} />
         <Button type="primaryViolet" text="Shopify App Store" href="#" />
         <Button type="secondary" text="Demo" />
       </div>
