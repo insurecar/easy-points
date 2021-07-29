@@ -13,9 +13,13 @@ import Form from '../components/Form/Form';
 import Footer from '../components/Footer/Footer';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { useStaticQuery, graphql } from 'gatsby';
+
+
 
 
 const IndexPage = () => {
+
   useEffect(() => {
     AOS.init({
         duration: 700,
@@ -24,7 +28,7 @@ const IndexPage = () => {
 
 
  return  <div id="main">
-    <Header />
+    <Header/>
     <Home />
     <HowItWorks />
     <Features />

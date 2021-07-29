@@ -7,7 +7,9 @@ import Button from '../UI/Button/Button';
 import './Header.scss';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 
+
 const Header = () => {
+
   const [navigationIsActive, setNavigationIsActive] = useState(false);
 
   const [width, setWidth] = useState();
@@ -48,10 +50,46 @@ const Header = () => {
     },
   ];
 
-  const data = useStaticQuery(graphql`
-    query HeaderLogo {
-      imageSharp(fluid: { originalName: { eq: "headerLogo.png" } }) {
-        gatsbyImageData
+  const {allMarkdownRemark:{edges:[{node:{frontmatter}}]}} = useStaticQuery(graphql`
+    query Header {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/header.md$/"}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              jp {
+                logo
+                demo_btn_url
+                demo_btn
+                shopify_btn_url
+                shopify_btn
+                languages {
+                  lang_item_key
+                  lang_item_txt
+                }
+                navigation {
+                  nav_item_hash
+                  nav_item_txt
+                }
+              }
+              en {
+                logo
+                demo_btn
+                demo_btn_url
+                shopify_btn
+                shopify_btn_url
+                languages {
+                  lang_item_key
+                  lang_item_txt
+                }
+                navigation {
+                  nav_item_hash
+                  nav_item_txt
+                }
+              }
+            }
+          }
+        }
       }
     }
   `);
@@ -88,7 +126,7 @@ const Header = () => {
     <div className="header" >
       {/* <Logo className="header__logo-height" /> */}
       <div className="header__logo">
-        <GatsbyImage image={getImage(data.imageSharp.gatsbyImageData)} alt="brand" />
+        {/* <GatsbyImage image={getImage(data.imageSharp.gatsbyImageData)} alt="brand" /> */}
       </div>
       <div className={navigationWrapperClassName}>
         <nav className="header__navigation">
