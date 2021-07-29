@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: insurecar/easy-points
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /img
+
+i18n:
+  structure: single_file
+  locales: [en, jp]
+
+collections:
+  - name: 'components'
+    label: 'Components'
+    i18n: true
+    files: 
+      - label: "Header"
+        name: "header"
+        file: "content/header.md"
+        i18n: true
+        fields: 
+          - {label: "Header Logo", name: "logo", widget: "image", i18n: duplicate}
+          - {label: "Shopify button text", name: "shopify_btn", widget: "string", i18n: true}
+          - {label: "Shopify button url", name: "shopify_btn_url", widget: "string", i18n: duplicate}
+          - {label: "Demo button text", name: "demo_btn", widget: "string", i18n: true}
+          - {label: "Demo button url", name: "demo_btn_url", widget: "string", i18n: duplicate}
+          - label: "Navigation"
+            name: "navigation"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Navigation item text", name: "nav_item_txt", widget: "string", i18n: true}
+              - {label: "Navigation item hash", name: "nav_item_hash", widget: "string", i18n: true}
+          - label: "Languages"
+            name: "languages"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Language item text", name: "lang_item_txt", widget: "string", i18n: true}
+              - {label: "Language item key", name: "lang_item_key", widget: "string", i18n: true}
+      - label: "How it work"
+        name: "how-it-work"
+        file: "content/how-it-work.md"
+        i18n: true
+        fields: 
+          - {label: "How it work video", name: "video", widget: "file", i18n: duplicate}
+
