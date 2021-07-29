@@ -3,8 +3,30 @@ import './Faq.scss';
 import Menu from '../UI/Menu/Menu';
 import Button from '../UI/Button/Button';
 import Accordion from '../UI/Accordion/Accordion';
+import { useStaticQuery, graphql } from 'gatsby';
+
 
 const Faq = () => {
+
+// const date = useStaticQuery(graphql`
+//   query try {
+//     allMarkdownRemark {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             description
+//             date
+//           }
+//         }
+//       }
+//     }
+//   }
+  
+// `)
+
+// console.log(date);
 
 const [currentIndex,setCurrentIndex] = useState(0)
 
