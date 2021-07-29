@@ -1,15 +1,18 @@
-import React from 'react';
-import './HowItWorksSlider.scss';
+import React from "react"
+import "./HowItWorksSlider.scss"
 
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { useStaticQuery, graphql } from "gatsby"
+import { Swiper, SwiperSlide } from "swiper/react"
+import HeartIcon from "../images/HeartIcon"
+import ArrowDownIcon from "../images/ArrowDownIcon"
+import EarnIcon from "../images/EarnIcon"
+import "swiper/swiper.min.css"
+import "swiper/components/pagination/pagination.min.css"
 
-import SwiperCore, { Pagination } from 'swiper/core';
+import SwiperCore, { Pagination } from "swiper/core"
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination])
 
 const HowItWorksSlider = () => {
   const {
@@ -26,35 +29,40 @@ const HowItWorksSlider = () => {
         }
       }
     }
-  `);
+  `)
 
   const content = [
     {
-      img: nodes[0].gatsbyImageData,
-      title: 'Attract customers',
+      // img: nodes[0].gatsbyImageData,
+      img: <HeartIcon />,
+      title: "Attract customers",
       text:
-        'When your customers purchase a product from your site, they’ll be able to earn points for their order.',
+        "When your customers purchase a product from your site, they’ll be able to earn points for their order.",
     },
     {
-      img: nodes[1].gatsbyImageData,
-      title: 'Earn',
-      text: 'Earn refferals, points and purchases. ',
+      // img: nodes[1].gatsbyImageData,
+      img: <ArrowDownIcon />,
+
+      title: "Earn",
+      text: "Earn refferals, points and purchases. ",
     },
     {
-      img: nodes[2].gatsbyImageData,
-      title: 'Spend',
+      // img: nodes[2].gatsbyImageData,
+      img: <EarnIcon />,
+
+      title: "Spend",
       text:
-        'Each point is worth a specified amount and can be used directly as a discount during checkout.',
+        "Each point is worth a specified amount and can be used directly as a discount during checkout.",
     },
-  ];
+  ]
 
   const pagination = {
     clickable: true,
     el: ".how-it-works .swiper-pagination",
     renderBullet(index, className) {
-      return `<span class=\"${className}\"></span>`;
+      return `<span class=\"${className}\"></span>`
     },
-  };
+  }
 
   return (
     <div className="how-it-works__slider">
@@ -82,17 +90,16 @@ const HowItWorksSlider = () => {
           }}
           className="mySwiper"
         >
-            <div className="swiper-pagination" />
+          <div className="swiper-pagination" />
 
           {content.map((slide, index) => (
-            <SwiperSlide pagination="true" key={slide.text + slide.title}  >
+            <SwiperSlide pagination="true" key={slide.text + slide.title}>
               {/* <div className="slide" data-aos="fade-up" data-aos-delay={350 * `${index}`}> */}
               <div className="slide">
-
                 <div className="slide__image-wrapper">
-                
                   <div className="slide__image">
-                  <GatsbyImage image={getImage(slide.img)} alt="slide" />
+                    {/* <GatsbyImage image={getImage(slide.img)} alt="slide" /> */}
+                    {slide.img}
                   </div>
                 </div>
                 <div className="slide__text-wrpper">
@@ -104,12 +111,9 @@ const HowItWorksSlider = () => {
           ))}
         </Swiper>
       </div>
-      <div>
-  
-
-      </div>
+      <div></div>
     </div>
-  );
-};
+  )
+}
 
-export default HowItWorksSlider;
+export default HowItWorksSlider

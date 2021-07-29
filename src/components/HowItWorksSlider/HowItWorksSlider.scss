@@ -12,17 +12,12 @@
 	}
 }
 
-
-
 .how-it-works__slider {
 	@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
 	@include fluid-size('padding-bottom', $min-vw, $max-vw, 40px, 60px);
-
-
 }
 
 .slide {
-
 	@include fluid-size('padding-top', $min-vw, $max-vw, 20px, 30px);
 	@include fluid-size('padding-bottom', $min-vw, $max-vw, 35px, 40px);
 	@include fluid-size('padding-right', $min-vw, $max-vw, 25px, 40px);
@@ -39,7 +34,7 @@
 		flex-direction: row;
 	}
 
-	&__image-wrapper{
+	&__image-wrapper {
 		flex: 0 0 auto;
 	}
 
@@ -49,10 +44,27 @@
 		@include fluid-size('padding-right', $min-vw, $max-vw, 12px, 20px);
 		@include fluid-size('padding-left', $min-vw, $max-vw, 12px, 20px);
 		align-items: center;
-		background: $dark01;
+		// background: $dark01;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
+
+		svg {
+			@include tab-des() {
+				height: 60px;
+				width: 60px;
+			}
+
+			@include tab() {
+				height: 50px;
+				width: 50px;
+			}
+
+			@include mob(){
+				width: 40px;
+				height: 40px;
+			}
+		}
 
 		@include mob() {
 			margin-right: 15px;
@@ -78,7 +90,6 @@
 	}
 }
 
-
 .how-it-works .swiper-pagination-bullet {
 	background: $white04;
 	font-size: 12px;
@@ -92,14 +103,11 @@
 	@include mob-tab() {
 		visibility: visible;
 	}
-
 }
 
 .how-it-works .swiper-pagination-bullet-active {
 	@include mob-tab() {
-
 		background: $white;
-		
 	}
 }
 
@@ -107,23 +115,24 @@
 	opacity: 1;
 }
 
-.how-it-works .slide{
-
-	@include mob(){
+.how-it-works .slide {
+	@include mob() {
 		@include fluid-size('width', 320px, 579px, 290px, 420px);
 		margin: 0 auto;
 	}
 }
 
-.how-it-works .slide .gatsby-image-wrapper-constrained{
-	@include mob-tab(){
+.how-it-works .slide .gatsby-image-wrapper-constrained {
+	@include mob-tab() {
 		width: 20px;
 	}
-	@include mob(){
+	@include mob() {
 		width: 20px;
 	}
 }
 
-.how-it-works .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+.how-it-works .swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
 	bottom: 25px;
 }
