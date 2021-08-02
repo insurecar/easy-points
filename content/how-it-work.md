@@ -19,6 +19,7 @@ en:
       title: Spend
       text: Each point is worth a specified amount and can be used directly  as a
         discount during checkout.
+  graph: /img/graph.png
 jp:
   anchor: 使い方
   title: EasyPointsは、顧客に報酬を与えるロイヤルティシステムを提供します
@@ -36,4 +37,5 @@ jp:
     - title: 費やす
       text: 各ポイントは指定された金額の価値があり、直接使用できます チェックアウト時の割引として。
       icon: /img/spend-icon.svg
+  graph: /img/graph.png
 ---
