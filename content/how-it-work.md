@@ -12,9 +12,13 @@ en:
       title: Attract customers
       text: When your customers purchase  a product from your site, they’ll be able to
         earn points for their order.
-    - icon: /img/spend-icon.svg
+    - icon: /img/earn-icon.svg
       title: Earn
       text: "Earn refferals, points and purchases. "
+    - icon: /img/spend-icon.svg
+      title: Spend
+      text: Each point is worth a specified amount and can be used directly  as a
+        discount during checkout.
 jp:
   anchor: 使い方
   title: EasyPointsは、顧客に報酬を与えるロイヤルティシステムを提供します
@@ -26,7 +30,10 @@ jp:
     - icon: /img/heart-icon.svg
       title: 顧客を引き付ける
       text: 顧客が購入するとき あなたのサイトからの製品、彼らは彼らの注文のためにポイントを獲得することができます。
-    - icon: /img/spend-icon.svg
-    - title: 得る
+    - icon: /img/earn-icon.svg
+      title: 得る
       text: 紹介、ポイント、購入を獲得できます。
+    - title: 費やす
+      text: 各ポイントは指定された金額の価値があり、直接使用できます チェックアウト時の割引として。
+      icon: /img/spend-icon.svg
 ---
