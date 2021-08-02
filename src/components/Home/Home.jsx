@@ -11,23 +11,6 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 
 const Home = () => {
   const { language } = useI18next()
-
-  // const {
-  //   allImageSharp: { nodes },
-  // } = useStaticQuery(graphql`
-  //       query HomeBrand {
-  //         allImageSharp(
-  //           filter: {
-  //             fluid: { originalName: { regex: "/.*(brand7|brand2|brand3|brand4|brand5|brand6).*/" } }
-  //           }
-  //         ) {
-  //           nodes {
-  //             gatsbyImageData
-  //           }
-  //         }
-  //       }
-  //     `);
-
   const {
     allMarkdownRemark: {
       edges: [
@@ -40,7 +23,7 @@ const Home = () => {
     query Home {
       allMarkdownRemark(
         filter: {
-          fileAbsolutePath: { regex: "/how-it-work.md$/" }
+          fileAbsolutePath: { regex: "/home.md$/" }
           frontmatter: { en: {} }
         }
       ) {
@@ -75,27 +58,26 @@ const Home = () => {
     }
   `)
 
-  console.log(frontmatter[language]);
+  console.log(frontmatter[language].home_brands);
 
   return (
     <div className="home">
       <div className="container">
         <div className="home__header" data-aos="fade-up">
           <h1 className="home__header-title-h1">
-            Give your customers even{" "}
+          {frontmatter[language].title_before}{" "}
             <span className="home__header-title-h1-mark">
-              more reasons <br />{" "}
+              {frontmatter[language].mark_text} <br />{" "}
             </span>
-            to come back
+            {frontmatter[language].title_after}
           </h1>
           <h2 className="home__header-title-secondary-text">
-            With EasyPoints, encouraging your existing customers to spend more
-            and more often has never been easier. Reward. Retain. Grow.
+            {frontmatter[language].subtitle}
           </h2>
 
           <div data-aos="slide-up">
             <Button
-              text="Shopify App Store"
+              text={frontmatter[language].button}
               type="primaryViolet"
               className="home__button"
             />
@@ -108,6 +90,11 @@ const Home = () => {
                 <GatsbyImage image={getImage(brand.gatsbyImageData)} alt="brand" />
               </li>
             ))} */}
+            {frontmatter[language].home_brands.map(({icon})=>
+            <li className = "home__brand--list-item" key = {icon} >
+              <img src = {icon} />
+            </li>
+            )}
           </ul>
         </div>
       </div>

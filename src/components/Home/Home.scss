@@ -68,19 +68,20 @@
 	&__brand--list-item {
 		align-items: center;
 		box-sizing: border-box;
-		// background: cornflowerblue;
 		display: flex;
 		flex: 0 0 16.66666666%;
 		justify-content: center;
 		padding: 10px;
 
-		&:nth-child(1) img {
-			background: $main-background;
-		}
-
 		@include tab() {
 			box-sizing: border-box;
 			flex: 0 0 33.333%;
+		}
+
+		img {
+			background: none;
+			height: 70%;
+			width: 70%;
 		}
 	}
 
