@@ -11,7 +11,7 @@
 	margin: -10px;
 	padding: 15px;
 
-	@include mob(){
+	@include mob() {
 		padding: 10px;
 	}
 
@@ -45,6 +45,12 @@
 		&-image {
 			@include fluid-size('max-width', $min-vw, $max-vw, 40px, 75px);
 			max-width: 40px;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
 		}
 
 		&-title {

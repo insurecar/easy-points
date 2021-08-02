@@ -79,4 +79,30 @@ collections:
               - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
               - {label: "Title", name: "title", widget: "string", i18n: true}
               - {label: "Text", name: "text", widget: "string", i18n: true}
-        
+      - label: "Features"
+        name: "features"
+        file: "content/features.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - label: "Features Blocks"
+            name: "features_block"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
+              - {label: "Title", name: "title", widget: "string", i18n: true}
+              - {label: "Text", name: "text", widget: "string", i18n: true}
+              - label: "Features Blocks"
+                name: "features_blocks"
+                widget: list
+                i18n: true
+                allow_add: true
+                fields:
+                  - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
+                  - {label: "Title", name: "title", widget: "string", i18n: true}
+                  - {label: "Text", name: "text", widget: "string", i18n: true}
+              

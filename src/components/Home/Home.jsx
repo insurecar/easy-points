@@ -58,7 +58,6 @@ const Home = () => {
     }
   `)
 
-  console.log(frontmatter[language].home_brands);
 
   return (
     <div className="home">
