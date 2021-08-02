@@ -65,7 +65,7 @@ const HowItWorks = () => {
   }
 `);
 
-console.log('HOW_IT_WORKS',frontmatter[language].graph);
+
 
   // const image = getImage(data.bg.gatsbyImageData);
   // const poster = getImage(data.poster.gatsbyImageData);

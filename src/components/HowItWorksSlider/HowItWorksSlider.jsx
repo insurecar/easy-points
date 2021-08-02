@@ -9,7 +9,6 @@ import ArrowDownIcon from "../images/ArrowDownIcon"
 import EarnIcon from "../images/EarnIcon"
 import "swiper/swiper.min.css"
 import "swiper/components/pagination/pagination.min.css"
-import { useI18next } from 'gatsby-plugin-react-i18next';
 
 
 import SwiperCore, { Pagination } from "swiper/core"
@@ -17,51 +16,6 @@ import SwiperCore, { Pagination } from "swiper/core"
 SwiperCore.use([Pagination])
 
 const HowItWorksSlider = ({frontmatter}) => {
-  const {language} = useI18next()
-
-console.log('SLIDER', frontmatter);
-
-  const {
-    allImageSharp: { nodes },
-  } = useStaticQuery(graphql`
-    query HowItWorksSlider {
-      allImageSharp(
-        filter: {
-          fluid: { originalName: { regex: "/.*(arrow|heart|money).*/" } }
-        }
-      ) {
-        nodes {
-          gatsbyImageData
-        }
-      }
-    }
-  `)
-
-  const content = [
-    {
-      // img: nodes[0].gatsbyImageData,
-      img: <HeartIcon />,
-      title: "Attract customers",
-      text:
-        "When your customers purchase a product from your site, they’ll be able to earn points for their order.",
-    },
-    {
-      // img: nodes[1].gatsbyImageData,
-      img: <ArrowDownIcon />,
-
-      title: "Earn",
-      text: "Earn refferals, points and purchases. ",
-    },
-    {
-      // img: nodes[2].gatsbyImageData,
-      img: <EarnIcon />,
-
-      title: "Spend",
-      text:
-        "Each point is worth a specified amount and can be used directly as a discount during checkout.",
-    },
-  ]
-
   const pagination = {
     clickable: true,
     el: ".how-it-works .swiper-pagination",

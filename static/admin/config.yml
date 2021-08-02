@@ -41,6 +41,23 @@ collections:
             fields:
               - {label: "Language item text", name: "lang_item_txt", widget: "string", i18n: true}
               - {label: "Language item key", name: "lang_item_key", widget: "string", i18n: true}
+      - label: "Home"
+        name: "home"
+        file: "content/home.md"
+        i18n: true
+        fields:
+              - {label: "Title before mark text", name: "title_before", widget: "string", i18n: true}
+              - {label: "Mark text", name: "mark_text", widget: "string", i18n: true}
+              - {label: "Title after mark text", name: "title_after", widget: "string", i18n: true}
+              - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+              - {label: "Home Button", name: "button", widget: "string", i18n: true}
+              - label: "Home brands"
+                name: "home_brands"
+                widget: list
+                i18n: true
+                allow_add: true
+                fields:
+                  - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
       - label: "How it work"
         name: "how-it-work"
         file: "content/how-it-work.md"
