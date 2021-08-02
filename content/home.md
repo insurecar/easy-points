@@ -4,6 +4,7 @@ en:
   title-after: to come back
   home_brands:
     - icon: /img/cobitto.svg
+    - icon: /img/holiday-logo.svg
   mark-text: more reasons
   button: Shopify App Store
   title-before: Give your customers even1
@@ -23,6 +24,7 @@ jp:
   title-after: 戻って来て
   home_brands:
     - icon: /img/cobitto.svg
+    - icon: /img/holiday-logo.svg
   mark-text: その他の理由
   button: Shopifyアプリストア
   title-before: あなたの顧客にさえ与える1
