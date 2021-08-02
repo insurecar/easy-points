@@ -8,6 +8,11 @@ en:
   button: Shopify App Store
   home_brands:
     - icon: /img/cobitto.svg
+    - icon: /img/holiday-logo.svg
+    - icon: /img/mamian-logo.svg
+    - icon: /img/baraille-garments-logo.svg
+    - icon: /img/euyira-logo.svg
+    - icon: /img/becos-logo.svg
 jp:
   title_before: あなたの顧客にさえ与える
   mark_text: その他の理由
@@ -16,4 +21,9 @@ jp:
   button: Shopifyアプリストア
   home_brands:
     - icon: /img/cobitto.svg
+    - icon: /img/holiday-logo.svg
+    - icon: /img/mamian-logo.svg
+    - icon: /img/baraille-garments-logo.svg
+    - icon: /img/euyira-logo.svg
+    - icon: /img/becos-logo.svg
 ---
