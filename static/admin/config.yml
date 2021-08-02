@@ -105,4 +105,26 @@ collections:
                   - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
                   - {label: "Title", name: "title", widget: "string", i18n: true}
                   - {label: "Text", name: "text", widget: "string", i18n: true}
-              
+      - label: "What we offer"
+        name: "what_we_offer"
+        file: "content/what-we-offer.md"
+        i18n: true
+        fields: 
+          - {label: "Background", name: "background", widget: "image", i18n: duplicate}
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "Double Button first text", name: "double_first", widget: "string", i18n: true}
+          - {label: "Double Button second text", name: "double_second", widget: "string", i18n: true}
+          - {label: "Graph", name: "graph", widget: "image", i18n: duplicate}
+          - {label: "List title", name: "list_title", widget: "string", i18n: true}
+          - label: "What we offer list item"
+            name: "list_item"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Item status", name: "status", widget: "boolean", i18n: true}
+              - {label: "Item content", name: "cont", widget: "string", i18n: true}
+          - {label: "Button text", name: "button", widget: "string", i18n: true}
+          

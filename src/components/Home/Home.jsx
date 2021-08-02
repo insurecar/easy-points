@@ -64,7 +64,7 @@ const Home = () => {
       <div className="container">
         <div className="home__header" data-aos="fade-up">
           <h1 className="home__header-title-h1">
-          {frontmatter[language].title_before}{" "}
+          {frontmatter[language].title_before}{" "}<br/>
             <span className="home__header-title-h1-mark">
               {frontmatter[language].mark_text} <br />{" "}
             </span>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import './DoubleButton.scss';
 
-const DoubleButton = () => {
+const DoubleButton = ({firstText, secondText}) => {
   const refSpan = useRef();
   const refButton1 = useRef();
   const refButton2 = useRef();
@@ -30,8 +30,8 @@ const DoubleButton = () => {
   return (
     <div className="switch">
       <span className="switch__wrapper" ref={refSpan} />
-      <button onClick={handleOneButton} ref={refButton1} className="double-button">Custom some integration</button>
-      <button onClick={handleTwoButton} ref={refButton2} className="double-button">Widget</button>
+      <button onClick={handleOneButton} ref={refButton1} className="double-button">{firstText}</button>
+      <button onClick={handleTwoButton} ref={refButton2} className="double-button">{secondText}</button>
     </div>
   );
 };
