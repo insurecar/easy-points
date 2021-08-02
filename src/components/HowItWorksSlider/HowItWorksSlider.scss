@@ -49,25 +49,30 @@
 		display: flex;
 		justify-content: center;
 
-		svg {
-			@include tab-des() {
-				height: 60px;
-				width: 60px;
-			}
+		
+		@include tab-des() {
+			height: 60px;
+			width: 60px;
+		}
 
-			@include tab() {
-				height: 50px;
-				width: 50px;
-			}
-
-			@include mob(){
-				width: 40px;
-				height: 40px;
-			}
+		@include tab() {
+			height: 50px;
+			width: 50px;
 		}
 
 		@include mob() {
+			height: 40px;
+			width: 40px;
+		}
+		
+
+		@include mob() {
 			margin-right: 15px;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
 		}
 	}
 

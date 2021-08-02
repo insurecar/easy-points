@@ -47,4 +47,18 @@ collections:
         i18n: true
         fields: 
           - {label: "How it work video", name: "video", widget: "file", i18n: duplicate}
-
+          - {label: "How it work anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "How it work title", name: "title", widget: "string", i18n: true}
+          - {label: "How it work subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "How it work background", name: "background", widget: "image", i18n: duplicate}
+          - {label: "How it work poster video", name: "poster", widget: "image", i18n: duplicate}
+          - {label: "How it work poster graph", name: "graph", widget: "image", i18n: duplicate}
+          - label: "How it works slider"
+            name: "how-it-works-slider"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
+              - {label: "Title", name: "title", widget: "string", i18n: true}
+              - {label: "Text", name: "text", widget: "string", i18n: true}

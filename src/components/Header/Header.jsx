@@ -97,8 +97,8 @@ const Header = () => {
     <div className="header" >
       {/* <Logo className="header__logo-height" /> */}
       <div className="header__logo">
-        {/* <img src={frontmatter[language].logo} alt="" /> */}
-        <GatsbyImage src="https://placekitten.com/800/600" alt="brand" />
+        <img src={frontmatter[language].logo} alt="" />
+        {/* <GatsbyImage src="https://placekitten.com/800/600" alt="brand" /> */}
       </div>
       <div className={navigationWrapperClassName}>
         <nav className="header__navigation">
@@ -121,11 +121,11 @@ const Header = () => {
         </nav>
         <LanguageSelector className="language-selector" languages = {frontmatter[language].languages} />
         <Button type="primaryViolet" text="Shopify App Store" href="#" />
-        <Button type="secondary" text="Demo" />
+        <Button type="secondary" text={frontmatter[language].demo_btn} href={frontmatter[language].demo_btn_url} />
       </div>
       <div className="header-link">
-        <Button type="primaryViolet" text="Shopify App Store" href="#" />
-        <Button type="secondary" text="Demo" />
+        <Button type="primaryViolet" text={frontmatter[language].shopify_btn} href={frontmatter[language].shopify_btn_url} />
+        <Button type="secondary" text={frontmatter[language].demo_btn} href={frontmatter[language].demo_btn_url} />
         <BurgerButton
           isActive={navigationIsActive}
           handleIsActive={handleIsActive}

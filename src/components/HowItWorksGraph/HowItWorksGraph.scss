@@ -9,7 +9,6 @@
 	&__image {
 		margin: auto;
 		margin-top: 80px;
-
 		position: relative;
 		width: calc(100% - 120px);
 		@include fluid-size('margin-bottom', $min-vw, $max-vw, 80px, 140px);
@@ -17,6 +16,11 @@
 		@include mob() {
 			width: calc(100% - 60px);
 
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
 		}
 
 		&::before {
@@ -29,6 +33,7 @@
 			position: absolute;
 			top: -30px;
 			width: calc(100% + 60px);
+			z-index: -1;
 
 
 			@include mob() {
@@ -50,7 +55,7 @@
 			position: absolute;
 			top: -60px;
 			width: calc(100% + 120px);
-			z-index: -1;
+			z-index: -2;
 
 			@include mob() {
 				display: none;

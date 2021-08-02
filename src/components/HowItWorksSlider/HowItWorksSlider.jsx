@@ -9,12 +9,18 @@ import ArrowDownIcon from "../images/ArrowDownIcon"
 import EarnIcon from "../images/EarnIcon"
 import "swiper/swiper.min.css"
 import "swiper/components/pagination/pagination.min.css"
+import { useI18next } from 'gatsby-plugin-react-i18next';
+
 
 import SwiperCore, { Pagination } from "swiper/core"
 
 SwiperCore.use([Pagination])
 
-const HowItWorksSlider = () => {
+const HowItWorksSlider = ({frontmatter}) => {
+  const {language} = useI18next()
+
+console.log('SLIDER', frontmatter);
+
   const {
     allImageSharp: { nodes },
   } = useStaticQuery(graphql`
@@ -92,14 +98,13 @@ const HowItWorksSlider = () => {
         >
           <div className="swiper-pagination" />
 
-          {content.map((slide, index) => (
+          {frontmatter.map((slide) => (
             <SwiperSlide pagination="true" key={slide.text + slide.title}>
               {/* <div className="slide" data-aos="fade-up" data-aos-delay={350 * `${index}`}> */}
               <div className="slide">
                 <div className="slide__image-wrapper">
                   <div className="slide__image">
-                    {/* <GatsbyImage image={getImage(slide.img)} alt="slide" /> */}
-                    {slide.img}
+                    <img src = {slide.icon}/>
                   </div>
                 </div>
                 <div className="slide__text-wrpper">
