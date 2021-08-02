@@ -4,6 +4,7 @@ en:
   double_first: Custom integration
   background: /img/whatweofferbackground.png
   graph: /img/whatweoffergraph.png
+  button: Try now
   list_item:
     - status: true
       cont: Customizable integrations with your shop’s branding
@@ -26,6 +27,7 @@ jp:
   double_first: カスタム統合
   background: /img/whatweofferbackground.png
   graph: /img/whatweoffergraph.png
+  button: 今すぐやってみて下さい
   list_item:
     - status: true
       cont: ショップのブランディングとのカスタマイズ可能な統合
