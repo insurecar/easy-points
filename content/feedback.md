@@ -9,7 +9,7 @@ en:
       type: xc
       text: sdfsdf
       hours: sdf
-      rating: "6"
+      rating: 3
       date: sfsdf
 jp:
   anchor: フィードバック
