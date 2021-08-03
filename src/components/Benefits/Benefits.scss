@@ -84,7 +84,6 @@
 					height: auto;
 					margin-left: 30px;
 					width: calc(100% - 30px);
-					
 					@include mob(){
 						margin-left: 0;
 					}
@@ -101,6 +100,7 @@
 					position: absolute;
 					top: -30px;
 					width: calc(100% - 40px);
+					z-index: -1;
 	
 
 					@include tab() {
