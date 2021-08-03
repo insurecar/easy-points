@@ -13,6 +13,18 @@ en:
         - benefits_item: Setup included
         - benefits_item: Shopify integration
         - benefits_item: Shopify cart adjustment
+    - pricing_benefits:
+        - benefits_item: Up to 500 active* customers
+        - benefits_item: Setup included
+        - benefits_item: Shopify integration
+        - benefits_item: " Shopify cart adjustment"
+      name: Advanced
+      cost: 100
+      permonth: " $0.25/customer "
+      after: after 1,000
+      currency: $
+      period: month
+      active: true
   benefits_block:
     - pricing_benefits:
         - benefits_item: Up to 500 active* customers
@@ -86,6 +98,18 @@ jp:
         - benefits_item: セットアップが含まれています
         - benefits_item: Shopifyの統合
         - benefits_item: Shopifyカートの調整
+    - pricing_benefits:
+        - benefits_item: 最大500人のアクティブ*顧客
+        - benefits_item: セットアップが含まれています
+        - benefits_item: Shopifyの統合
+        - benefits_item: Shopifyカートの調整
+      name: 高度
+      cost: 100
+      permonth: 0.25ドル/顧客
+      after: 1,000後
+      currency: $
+      active: true
+      period: 月
   benefits_block:
     - pricing_benefits:
         - benefits_item: 最大500人のアクティブ*顧客
