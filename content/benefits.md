@@ -25,6 +25,11 @@ en:
         of the cart, from liking your social media page to creating an account
         with your shop. Don’t just create loyal customers — create a loyal
         community!
+  benefit_bottom_title: EasyPoints offers a loyalty system that rewards customers
+  benefit_bottom_subtitle: EasyPoints makes earning and spending points  a
+    complete breeze, allowing you to grow your  ecommerce business.
+  button: Shopify App Store
+  background_bottom: /img/benefitsbackground.png
 jp:
   anchor: 利点
   title: 忠誠心は成長に不可欠ですが、維持するのが難しいことがよくあります
@@ -44,4 +49,8 @@ jp:
       title: 忘れないでください
       text: EasyPointsを使用すると、ソーシャルメディアページの評価からショップでのアカウントの作成まで、カート以外のさまざまなアクションに対して顧客に報酬を与えることができます。
         忠実な顧客を作成するだけでなく、忠実なコミュニティを作成してください。
+  benefit_bottom_title: EasyPointsは、顧客に報酬を与えるロイヤルティシステムを提供します
+  benefit_bottom_subtitle: EasyPointsはポイントの獲得と支出を行います 完全なそよ風、あなたのeコマースビジネスを成長させることができます。
+  button: Shopifyアプリストア
+  background_bottom: /img/benefitsbackground.png
 ---
