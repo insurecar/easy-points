@@ -21,6 +21,14 @@ en:
       hours: 2:20 PM
       date: Mar 19, 2021
       rating: 4
+    - brand: /img/euyira-logo.svg
+      type: Cosmetics
+      text: Thank you. I gained 2500 users thanks to EasyPoints. People really like
+        rewarding programs. Thank you. I gained 2500 users thanks to EasyPoints.
+        People really like rewarding programs.
+      hours: 10:13 PM
+      date: Aug 21, 2020
+      rating: 3
 jp:
   anchor: フィードバック
   title: ユーザーのコメント
@@ -40,4 +48,11 @@ jp:
       hours: 午後2時20分
       date: 2021年3月19日
       rating: 4
+    - brand: /img/euyira-logo.svg
+      type: 化粧品
+      text: ありがとうございました。 EasyPointsのおかげで2500人のユーザーを獲得しました。 人々は本当にやりがいのあるプログラムが好きです。
+        ありがとうございました。 EasyPointsのおかげで2500人のユーザーを獲得しました。 人々は本当にやりがいのあるプログラムが好きです。
+      hours: 10:13 PM
+      date: Aug 21, 2020
+      rating: 3
 ---
