@@ -1,9 +1,19 @@
 ---
 en:
+  button_url: https://otakoyi.com/
+  bottom_background: /img/feedbackfoterbackground.png
+  bottom_title: Rewarding your customers just got a whole lot easier with EasyPoints
+  bottom_image: /img/feedbackphone.png
+  bottom_subtitle: EasyPoints introduces a foolproof point system that  turns
+    points into discounts right from the checkout page. Earn points and spend
+    points. It’s really that simple.
+  apple_text: Download on the
+  button: Read more
+  google_text: GET IT ON
   anchor: Feedback
-  title: What our users say
   subtitle: Every business is unique. No matter how big or small your business is,
     EasyPoints has a plan that suits your needs.
+  title: What our users say
   feedback_slider:
     - brand: /img/cobitto.svg
       type: Fashion
@@ -54,9 +64,18 @@ en:
       date: Aug 21, 2020
       brand: /img/holiday-logo.svg
 jp:
+  button_url: https://otakoyi.com/
+  bottom_background: /img/feedbackfoterbackground.png
+  bottom_title: EasyPointsを使用すると、顧客への報酬が大幅に簡単になります。
+  bottom_image: /img/feedbackphone.png
+  bottom_subtitle: EasyPointsは、誰にでもできるポイントシステムを導入しています。
+    チェックアウトページから直接ポイントを割引に変えます。 ポイントを獲得し、ポイントを使います。 とても簡単です。
+  apple_text: でダウンロード
+  button: 続きを読む
+  google_text: 始めましょう
   anchor: フィードバック
-  title: ユーザーのコメント
   subtitle: すべてのビジネスはユニークです。 ビジネスの規模に関係なく、EasyPointsにはニーズに合ったプランがあります。
+  title: ユーザーのコメント
   feedback_slider:
     - brand: /img/cobitto.svg
       type: ファッション
