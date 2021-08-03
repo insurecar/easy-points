@@ -29,6 +29,30 @@ en:
       hours: 10:13 PM
       date: Aug 21, 2020
       rating: 3
+    - text: Thank you. I gained 2500 users thanks to EasyPoints. People really like
+        rewarding programs.Thank you. I gained 2500 users thanks to EasyPoints.
+        People really like rewarding programs.
+      type: Fashion
+      hours: 8:30 AM
+      date: Mar 20, 2021
+      rating: 5
+      brand: /img/baraille-garments-logo.svg
+    - text: Thank you. I gained 2500 users thanks to EasyPoints. People really like
+        rewarding programs.Thank you. I gained 2500 users thanks to EasyPoints.
+        People really like rewarding programs.
+      type: Shoes
+      hours: 2:20 PM
+      date: Mar 20, 2021
+      rating: 4
+      brand: /img/becos-logo.svg
+    - text: Thank you. I gained 2500 users thanks to EasyPoints. People really like
+        rewarding programs.Thank you. I gained 2500 users thanks to EasyPoints.
+        People really like rewarding programs.
+      type: Cosmetics
+      rating: 3
+      hours: 10:13 PM
+      date: Aug 21, 2020
+      brand: /img/holiday-logo.svg
 jp:
   anchor: フィードバック
   title: ユーザーのコメント
@@ -55,4 +79,28 @@ jp:
       hours: 10:13 PM
       date: Aug 21, 2020
       rating: 3
+    - text: ありがとうございました。 EasyPointsのおかげで2500人のユーザーを獲得しました。
+        人々は本当にやりがいのあるプログラムが好きです。ありがとう。 EasyPointsのおかげで2500人のユーザーを獲得しました。
+        人々は本当にやりがいのあるプログラムが好きです。
+      type: ファッション
+      hours: 午前8時30分
+      date: 2021年3月20日
+      rating: 5
+      brand: /img/baraille-garments-logo.svg
+    - text: ありがとうございました。 EasyPointsのおかげで2500人のユーザーを獲得しました。
+        人々は本当にやりがいのあるプログラムが好きです。ありがとう。 EasyPointsのおかげで2500人のユーザーを獲得しました。
+        人々は本当にやりがいのあるプログラムが好きです。
+      type: 靴
+      hours: 午後2時20分
+      date: 2021年3月20日
+      rating: 4
+      brand: /img/becos-logo.svg
+    - text: ありがとうございました。 EasyPointsのおかげで2500人のユーザーを獲得しました。
+        人々は本当にやりがいのあるプログラムが好きです。ありがとう。 EasyPointsのおかげで2500人のユーザーを獲得しました。
+        人々は本当にやりがいのあるプログラムが好きです。
+      type: 化粧品
+      rating: 3
+      hours: 午後10時13分
+      date: 2020年8月21日
+      brand: /img/holiday-logo.svg
 ---
