@@ -1,5 +1,18 @@
 ---
 en:
+  pricing_benefits_block:
+    - name: Basic
+      cost: 50
+      permonth: " $0.25customer "
+      after: after 500
+      currency: $
+      period: month
+      active: false
+      pricing_benefits:
+        - benefits_item: Up to 500 active* customers
+        - benefits_item: Setup included
+        - benefits_item: Shopify integration
+        - benefits_item: Shopify cart adjustment
   benefits_block:
     - pricing_benefits:
         - benefits_item: Up to 500 active* customers
@@ -57,8 +70,22 @@ en:
   subtitle: Every business is unique. No matter how big or small your business is,
     EasyPoints has a plan that suits your needs.
   title: Four plans offered
+  button_bottom: Shopify App Store
   background_bottom: /img/mask.png
 jp:
+  pricing_benefits_block:
+    - name: 基本
+      cost: 50
+      permonth: " 0.25ドルの顧客 "
+      after: 500後
+      currency: $
+      period: month
+      active: false
+      pricing_benefits:
+        - benefits_item: 最大500人のアクティブ*顧客
+        - benefits_item: セットアップが含まれています
+        - benefits_item: Shopifyの統合
+        - benefits_item: Shopifyカートの調整
   benefits_block:
     - pricing_benefits:
         - benefits_item: 最大500人のアクティブ*顧客
@@ -115,5 +142,6 @@ jp:
   anchor: 価格設定
   subtitle: すべてのビジネスはユニークです。 ビジネスの規模に関係なく、EasyPointsにはニーズに合ったプランがあります。
   title: 提供される4つのプラン
+  button_bottom: Shopifyアプリストア
   background_bottom: /img/mask.png
 ---
