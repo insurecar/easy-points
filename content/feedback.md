@@ -10,7 +10,7 @@ en:
       text: sdfsdf
       hours: sdf
       rating: 3
-      date: sfsdf
+      date: 2021-08-10T21:00:00.000Z
 jp:
   anchor: フィードバック
   title: ユーザーのコメント
