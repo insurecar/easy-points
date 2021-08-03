@@ -25,6 +25,18 @@ en:
       currency: $
       period: month
       active: true
+    - pricing_benefits:
+        - benefits_item: Up to 500 active* customers
+        - benefits_item: Setup included
+        - benefits_item: Shopify integration
+        - benefits_item: " Shopify cart adjustment"
+      name: Pro
+      cost: 200
+      currency: $
+      permonth: " $0.20/customer "
+      after: after 2,000
+      period: month
+      active: false
   benefits_block:
     - pricing_benefits:
         - benefits_item: Up to 500 active* customers
@@ -110,6 +122,18 @@ jp:
       currency: $
       active: true
       period: 月
+    - pricing_benefits:
+        - benefits_item: 最大500人のアクティブ*顧客
+        - benefits_item: セットアップが含まれています
+        - benefits_item: Shopifyの統合
+        - benefits_item: Shopifyカートの調整
+      name: プロ
+      cost: 200
+      currency: $
+      permonth: $ 0.20 /顧客
+      after: 2,000後
+      period: 月
+      active: false
   benefits_block:
     - pricing_benefits:
         - benefits_item: 最大500人のアクティブ*顧客
