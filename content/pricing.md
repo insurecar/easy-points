@@ -1,10 +1,5 @@
 ---
 en:
-  background: /img/pricingbackground.png
-  anchor: Pricing
-  title: Four plans offered
-  subtitle: Every business is unique. No matter how big or small your business is,
-    EasyPoints has a plan that suits your needs.
   benefits_block:
     - pricing_benefits:
         - benefits_item: Up to 500 active* customers
@@ -54,11 +49,16 @@ en:
       currency: $
       period: month
       active: false
-jp:
   background: /img/pricingbackground.png
-  anchor: 価格設定
-  title: 提供される4つのプラン
-  subtitle: すべてのビジネスはユニークです。 ビジネスの規模に関係なく、EasyPointsにはニーズに合ったプランがあります。
+  subtitle_bottom: EasyPoints offers a loyalty system that rewards customers plans offered
+  title_bottom: EasyPoints offers a loyalty system that rewards customers plans offered
+  button: Shopify App Store
+  anchor: Pricing
+  subtitle: Every business is unique. No matter how big or small your business is,
+    EasyPoints has a plan that suits your needs.
+  title: Four plans offered
+  background_bottom: /img/mask.png
+jp:
   benefits_block:
     - pricing_benefits:
         - benefits_item: 最大500人のアクティブ*顧客
@@ -108,4 +108,12 @@ jp:
       currency: $
       period: 月
       active: false
+  background: /img/pricingbackground.png
+  subtitle_bottom: EasyPointsは、提供された顧客プランに報いるロイヤルティシステムを提供します
+  title_bottom: EasyPointsは、提供された顧客プランに報いるロイヤルティシステムを提供します
+  button: Shopifyアプリストア
+  anchor: 価格設定
+  subtitle: すべてのビジネスはユニークです。 ビジネスの規模に関係なく、EasyPointsにはニーズに合ったプランがあります。
+  title: 提供される4つのプラン
+  background_bottom: /img/mask.png
 ---
