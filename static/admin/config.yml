@@ -181,4 +181,32 @@ collections:
           - {label: "Title Bottom", name: "title_bottom", widget: "string", i18n: true}
           - {label: "Subtitle Bottom", name: "subtitle_bottom", widget: "string", i18n: true}
           - {label: "Button Bottom", name: "button_bottom", widget: "string", i18n: true}
+      - label: "Feedback"
+        name: "feedback"
+        file: "content/feedback.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - label: "Feedback Slider"
+            name: "feedback_slider"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields: 
+              - {label: "Brand Image", name: "brand", widget: "image", i18n: true}
+              - {label: "Type", name: "type", widget: "string", i18n: true}
+              - {label: "Text", name: "text", widget: "string", i18n: true}
+              - {label: "Hour", name: "hours", widget: "string", i18n: true}
+              - {label: "Date", name: "date", widget: "string", i18n: true}
+              - {label: "Rating", name: "rating", widget: "number", i18n: true, min: 1, max: 5}
+          - {label: "Bottom background", name: "bottom_background", widget: "image", i18n: duplicate}
+          - {label: "Google Play text", name: "google_text", widget: "string", i18n: true}
+          - {label: "App Store text", name: "apple_text", widget: "string", i18n: true}
+          - {label: "Bottom title", name: "bottom_title", widget: "string", i18n: true}
+          - {label: "Bottom subtitle", name: "bottom_subtitle", widget: "string", i18n: true}
+          - {label: "Bottom button text", name: "button", widget: "string", i18n: true}
+          - {label: "Bottom button url", name: "button_url", widget: "string", i18n: duplicate}
+          - {label: "Bottom image", name: "bottom_image", widget: "image", i18n: duplicate}
           

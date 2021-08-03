@@ -115,7 +115,9 @@ const WhatWeOffer = () => {
               aria-hidden="true"
               alt = "icon"
             /> */}
-      <img src={  frontmatter[language].graph} alt="graph"  />
+            <div className="wrap">
+              <img src={  frontmatter[language].graph} alt="graph"  />
+            </div>
 
           </div>
 

@@ -185,7 +185,7 @@ const Feedback = () => {
 
       </div>
       <div className="feedback__footer">
-        <GatsbyImage className="feedback__footer-background" image={getImage(images[4].gatsbyImageData)} alt="background" />
+        {/* <GatsbyImage className="feedback__footer-background" image={getImage(images[4].gatsbyImageData)} alt="background" /> */}
         <div className="container">
           <div className="feedback__footer-content">
             <div className="feedback__footer-content-link">
@@ -207,7 +207,7 @@ const Feedback = () => {
               <Button text="Read more" type="secondary" />
             </div>
             <div className="feedback__footer-content-phone" data-aos="fade-up" data-aos-offset="500">
-              <GatsbyImage image={nodes[3].gatsbyImageData} alt="phone" />
+              {/* <GatsbyImage image={nodes[3].gatsbyImageData} alt="phone" /> */}
             </div>
           </div>
 
