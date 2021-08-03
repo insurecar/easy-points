@@ -37,6 +37,18 @@ en:
       after: after 2,000
       period: month
       active: false
+    - name: Enterprise
+      cost: 425
+      permonth: " $0.17/customer "
+      after: after 5,000
+      currency: $
+      period: month
+      active: false
+      pricing_benefits:
+        - benefits_item: Up to 500 active* customers
+        - benefits_item: Setup included
+        - benefits_item: Shopify integration
+        - benefits_item: " Shopify cart adjustment"
   benefits_block:
     - pricing_benefits:
         - benefits_item: Up to 500 active* customers
@@ -134,6 +146,18 @@ jp:
       after: 2,000後
       period: 月
       active: false
+    - name: 企業
+      cost: 425
+      permonth: $ 0.17 /顧客
+      after: 5,000後
+      currency: $
+      period: 月
+      active: false
+      pricing_benefits:
+        - benefits_item: 最大500人のアクティブ*顧客
+        - benefits_item: セットアップが含まれています
+        - benefits_item: Shopifyの統合
+        - benefits_item: Shopifyカートの調整
   benefits_block:
     - pricing_benefits:
         - benefits_item: 最大500人のアクティブ*顧客
