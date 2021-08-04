@@ -20,6 +20,7 @@ en:
       title: Pricing
   title: FAQ
   button: "Knowledge base "
+  button_url: https://otakoyi.com/
 jp:
   anchor: よくある質問
   faq_list:
@@ -37,4 +38,5 @@ jp:
       title: 価格設定
   title: よくある質問
   button: 知識ベース
+  button_url: https://otakoyi.com/
 ---
