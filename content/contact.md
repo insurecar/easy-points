@@ -12,6 +12,7 @@ en:
   label_email: Email Address
   input_select: Select
   input_message: example.myshopify.com
+  button: Submit
   anchor: Contact
   input_subject: "Subject "
   subtitle: Fill out the form below and we’ll get in touch  with you soon.
@@ -38,6 +39,7 @@ jp:
   label_email: 電子メールアドレス
   input_select: 選択する
   input_message: example.myshopify.com
+  button: 送信
   anchor: コンタクト
   input_subject: 主題
   subtitle: 以下のフォームにご記入ください。ご連絡いたします。 すぐにあなたと。
