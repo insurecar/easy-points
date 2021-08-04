@@ -7,6 +7,7 @@ en:
   input_email: example@easypoint.com
   label_last_name: Last Name
   label_shopify_url: Shopify URL
+  background: /img/formbackground.png
   input_first_name: "First Name "
   label_email: Email Address
   input_message: example.myshopify.com
@@ -31,6 +32,7 @@ jp:
   input_email: example@easypoint.com
   label_last_name: 苗字
   label_shopify_url: ShopifyのURL
+  background: /img/formbackground.png
   input_first_name: ファーストネーム
   label_email: 電子メールアドレス
   input_message: example.myshopify.com
