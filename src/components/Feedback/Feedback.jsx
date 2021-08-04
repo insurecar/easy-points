@@ -142,7 +142,7 @@ const Feedback = () => {
               },
               960: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 30,
               },
             }}
             navigation
@@ -151,6 +151,7 @@ const Feedback = () => {
              {frontmatter[language].feedback_slider.map((slide) => (
               <SwiperSlide key={Math.random()}>
                 <div className="feedback__slider-block" data-aos="fade-up" data-aos-delay="200">
+                  <div className="feedback__slider-wrap">
                   <div>
                     <div className="feedback__slider-block-logo">
                       <div className="feedback__slider-block-logo-img">
@@ -169,6 +170,7 @@ const Feedback = () => {
                   <div className="feedback__slider-block-date">
                     <span className="feedback__slider-block-date-hour">{slide.hours}</span>
                     <span className="feedback__slider-block-date-month">{slide.date}</span>
+                  </div>
                   </div>
                 </div>
               </SwiperSlide>

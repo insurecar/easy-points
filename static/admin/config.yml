@@ -234,4 +234,35 @@ collections:
                   - {label: "Subtitle Accordion", name: "content", widget: "string", i18n: true}
           - {label: "Button", name: "button", widget: "string", i18n: true}
           - {label: "Button", name: "button_url", widget: "string", i18n: true}
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "Background", name: "background", widget: "image", i18n: duplicate}
+          - {label: "Label First Name", name: "label_first_name", widget: "string", i18n: true}
+          - {label: "Input First Name", name: "input_first_name", widget: "string", i18n: true}
+          - {label: "Label Last Name", name: "label_last_name", widget: "string", i18n: true}
+          - {label: "Input Last Name", name: "input_last_name", widget: "string", i18n: true}
+          - {label: "Label Email", name: "label_email", widget: "string", i18n: true}
+          - {label: "Input Email", name: "input_email", widget: "string", i18n: true}
+          - {label: "Label Subject", name: "label_subject", widget: "string", i18n: true}
+          - {label: "Input Subject", name: "input_subject", widget: "string", i18n: true}
+          - {label: "Label Message", name: "label_message", widget: "string", i18n: true}
+          - {label: "Input Message", name: "input_message", widget: "string", i18n: true}
+          - {label: "Label Shopify URL", name: "label_shopify_url", widget: "string", i18n: true}
+          - {label: "Input EmaShopify URL", name: "input_shopify_url", widget: "string", i18n: duplicate}
+          - {label: "Label Select", name: "label_select", widget: "string", i18n: true}
+          - {label: "Label Input", name: "input_select", widget: "string", i18n: true}
+          - label: "Select Item"
+            name: "options"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields: 
+              - {label: "Option", name: "option", widget: "string", i18n: true}
+          - {label: "Submit button", name: "button", widget: "string", i18n: true}
           
