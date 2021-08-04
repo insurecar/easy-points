@@ -10,6 +10,7 @@ en:
   background: /img/formbackground.png
   input_first_name: "First Name "
   label_email: Email Address
+  input_select: Select
   input_message: example.myshopify.com
   anchor: Contact
   input_subject: "Subject "
@@ -35,6 +36,7 @@ jp:
   background: /img/formbackground.png
   input_first_name: ファーストネーム
   label_email: 電子メールアドレス
+  input_select: 選択する
   input_message: example.myshopify.com
   anchor: コンタクト
   input_subject: 主題
