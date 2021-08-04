@@ -189,6 +189,8 @@ collections:
           - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
           - {label: "Title", name: "title", widget: "string", i18n: true}
           - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "Button top", name: "button_top", widget: "string", i18n: true}
+          - {label: "Button top url", name: "button_top_url", widget: "string", i18n: duplicate}
           - label: "Feedback Slider"
             name: "feedback_slider"
             widget: list
