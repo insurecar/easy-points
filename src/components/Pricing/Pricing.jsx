@@ -118,9 +118,8 @@ const Pricing = () => {
           </p>
         </div>
         <div className="pricing__content">
-          {frontmatter[language].pricing_benefits_block.map(elem => {
-            console.log(elem);
-            return <div
+          {frontmatter[language].pricing_benefits_block.map(elem => (
+             <div
               className={elem.active ? activeClass : blockClass}
               key={elem.name + elem.cost + elem.period}
               data-aos="fade-up"
@@ -154,7 +153,7 @@ const Pricing = () => {
                 ))}
               </ul>
             </div>
-          })}
+          ))}
         </div>
         <div className="pricing__offer-wrapper">
           <div className="pricing__offer">

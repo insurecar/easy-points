@@ -265,4 +265,19 @@ collections:
             fields: 
               - {label: "Option", name: "option", widget: "string", i18n: true}
           - {label: "Submit button", name: "button", widget: "string", i18n: true}
-          
+      - label: "Footer"
+        name: "footer"
+        file: "content/footer.md"
+        i18n: true
+        fields: 
+          - {label: "Footer logo", name: "logo", widget: "image", i18n: true} 
+          - {label: "Write us", name: "write_us", widget: "string", i18n: true} 
+          - {label: "Write us email", name: "write_us_email", widget: "string", i18n: true} 
+          - {label: "Location", name: "location", widget: "string", i18n: true} 
+          - {label: "Location", name: "location_city", widget: "string", i18n: true} 
+          - {label: "Our Team", name: "our_team", widget: "string", i18n: true} 
+          - {label: "Our Team", name: "our_team_url", widget: "string", i18n: duplicate} 
+          - {label: "Rights", name: "rights", widget: "string", i18n: true} 
+          - {label: "Terms and Conditions", name: "terms", widget: "string", i18n: true} 
+          - {label: "Privacy policy", name: "privacy", widget: "string", i18n: true} 
+          - {label: "Otakoyi", name: "otakoyi", widget: "image", i18n: duplicate} 
