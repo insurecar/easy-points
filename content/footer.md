@@ -3,6 +3,7 @@ en:
   our_team_url: teamlunaris.com
   terms: Terms and Conditions
   privacy: Privacy policy
+  logo: /img/logofooter.png
   otakoyi: /img/otakoyi.png
   our_team: Our team
   location: Location
@@ -14,6 +15,7 @@ jp:
   our_team_url: teamlunaris.com
   terms: 規約と条件
   privacy: プライバシーポリシー
+  logo: /img/logofooter.png
   otakoyi: /img/otakoyi.png
   our_team: 私たちのチーム
   location: 位置
