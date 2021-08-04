@@ -13,6 +13,7 @@ en:
             account.
       title: Pricing
   title: FAQ
+  button: "Knowledge base "
 jp:
   anchor: よくある質問
   faq_list:
@@ -25,4 +26,5 @@ jp:
           content: アカウントのキャンセルをご希望の場合は、team @ lunaris.jpまでご連絡ください。
       title: 価格設定
   title: よくある質問
+  button: 知識ベース
 ---
