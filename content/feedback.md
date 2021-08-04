@@ -15,6 +15,7 @@ en:
   subtitle: Every business is unique. No matter how big or small your business is,
     EasyPoints has a plan that suits your needs.
   title: What our users say
+  button_top_url: https://otakoyi.com/
   feedback_slider:
     - brand: /img/cobitto.svg
       type: Fashion
@@ -78,6 +79,7 @@ jp:
   anchor: フィードバック
   subtitle: すべてのビジネスはユニークです。 ビジネスの規模に関係なく、EasyPointsにはニーズに合ったプランがあります。
   title: ユーザーのコメント
+  button_top_url: https://otakoyi.com/
   feedback_slider:
     - brand: /img/cobitto.svg
       type: ファッション
