@@ -4,6 +4,7 @@ en:
   bottom_background: /img/feedbackfoterbackground.png
   bottom_title: Rewarding your customers just got a whole lot easier with EasyPoints
   bottom_image: /img/feedbackphone.png
+  button_top: More feedbacks
   bottom_subtitle: EasyPoints introduces a foolproof point system that  turns
     points into discounts right from the checkout page. Earn points and spend
     points. It’s really that simple.
@@ -68,6 +69,7 @@ jp:
   bottom_background: /img/feedbackfoterbackground.png
   bottom_title: EasyPointsを使用すると、顧客への報酬が大幅に簡単になります。
   bottom_image: /img/feedbackphone.png
+  button_top: その他のフィードバック
   bottom_subtitle: EasyPointsは、誰にでもできるポイントシステムを導入しています。
     チェックアウトページから直接ポイントを割引に変えます。 ポイントを獲得し、ポイントを使います。 とても簡単です。
   apple_text: でダウンロード
