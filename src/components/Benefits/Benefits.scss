@@ -5,6 +5,7 @@
 .benefits {
 	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
 	overflow: hidden;
+
 	&__header {
 		align-items: center;
 		display: flex;
@@ -41,7 +42,8 @@
 
 	&__main {
 		@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
-	overflow: hidden;
+		overflow: hidden;
+
 		&-block {
 			@include fluid-size('margin-bottom', $min-vw, $max-vw, 80px, 100px);
 			box-sizing: border-box;
@@ -84,7 +86,7 @@
 					height: auto;
 					margin-left: 30px;
 					width: calc(100% - 30px);
-					@include mob(){
+					@include mob() {
 						margin-left: 0;
 					}
 				}

@@ -211,4 +211,27 @@ collections:
           - {label: "Bottom button text", name: "button", widget: "string", i18n: true}
           - {label: "Bottom button url", name: "button_url", widget: "string", i18n: duplicate}
           - {label: "Bottom image", name: "bottom_image", widget: "image", i18n: duplicate}
+      - label: "FAQ"
+        name: "faq"
+        file: "content/faq.md"
+        i18n: true
+        fields: 
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - label: "FAQ List Left"
+            name: "faq_list"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields: 
+              - {label: "Title Navigation Left", name: "title", widget: "string", i18n: true}
+              - label: "FAQ Accordion Right"
+                name: "children"
+                widget: list
+                i18n: true
+                allow_add: true
+                fields: 
+                  - {label: "Title Accordion", name: "title", widget: "string", i18n: true}
+                  - {label: "Subtitle Accordion", name: "content", widget: "string", i18n: true}
+          - {label: "Button", name: "button", widget: "string", i18n: true}
+          - {label: "Button", name: "button_url", widget: "string", i18n: true}
           

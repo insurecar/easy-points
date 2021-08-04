@@ -78,9 +78,15 @@
 		position: relative;
 		width: 100%;
 		z-index: 1;
-		
+
 		.wrap {
 			position: relative;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
 
 			&::after {
 				background: #232425;
@@ -88,17 +94,18 @@
 				box-shadow: -20px 20px 60px #101112;
 				content: '';
 				height: 100%;
-				left: 30px;
+				left: -30px;
 				position: absolute;
-				top: 30px;
-				width: calc(100% - 60px);
+				top: -30px;
+				width: calc(100% + 60px);
 				z-index: -1;
 	
 				@include mob() {
-					left: 40px;
-					width: calc(100% - 80px);
+					height: calc(100% + 40px);
+					left: -20px;
+					top: -20px;
+					width: calc(100% + 40px);
 				}
-	
 			}
 
 			&::before {
@@ -108,10 +115,10 @@
 				box-shadow: -20px 20px 60px #101112;
 				content: '';
 				height: 100%;
-				left: 0;
+				left: -60px;
 				position: absolute;
-				top: 0;
-				width: 100%;
+				top: -60px;
+				width: calc(100% + 120px);
 				z-index: -2;
 	
 				@include mob() {
