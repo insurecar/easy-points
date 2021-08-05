@@ -182,7 +182,7 @@ collections:
           - {label: "Title Bottom", name: "title_bottom", widget: "string", i18n: true}
           - {label: "Subtitle Bottom", name: "subtitle_bottom", widget: "string", i18n: true}
           - {label: "Button Bottom", name: "button_bottom", widget: "string", i18n: true}
-          - {label: "Button Bottom", name: "button_bottom_url", widget: "string", i18n: duplicate}
+          - {label: "Button Bottom url", name: "button_bottom_url", widget: "string", i18n: duplicate}
       - label: "Feedback"
         name: "feedback"
         file: "content/feedback.md"
