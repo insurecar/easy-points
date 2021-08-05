@@ -128,6 +128,7 @@ collections:
               - {label: "Item status", name: "status", widget: "boolean", i18n: true}
               - {label: "Item content", name: "cont", widget: "string", i18n: true}
           - {label: "Button text", name: "button", widget: "string", i18n: true}
+          - {label: "Button text url", name: "button_url", widget: "string", i18n: duplicate}
       - label: "Benefits"
         name: "benefits"
         file: "content/benefits.md"
