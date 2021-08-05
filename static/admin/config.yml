@@ -147,6 +147,7 @@ collections:
           - {label: "Benefit bottom title", name: "benefit_bottom_title", widget: "string", i18n: true}
           - {label: "Benefit bottom subtitle", name: "benefit_bottom_subtitle", widget: "string", i18n: true}
           - {label: "Benefit bottom button", name: "button", widget: "string", i18n: true}
+          - {label: "Benefit bottom button url", name: "button_url", widget: "string", i18n: duplicate}
           - {label: "Benefit bottom background", name: "background_bottom", widget: "image", i18n: duplicate}
       - label: "Pricing"
         name: "pricing"
