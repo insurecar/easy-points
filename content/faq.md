@@ -18,6 +18,11 @@ en:
           content: Please contact us at team@lunaris.jp to request a cancellation for your
             account.
       title: Pricing
+    - title: Integration
+      children:
+        - title: What is a mockup?
+          content: Please contact us at team@lunaris.jp to request a cancellation for your
+            account.
   title: FAQ
   button: "Knowledge base "
   button_url: https://otakoyi.com/
@@ -36,6 +41,10 @@ jp:
         - title: モックアップとは何ですか？
           content: アカウントのキャンセルをご希望の場合は、team @ lunaris.jpまでご連絡ください。
       title: 価格設定
+    - title: 統合
+      children:
+        - title: モックアップとは何ですか？
+          content: アカウントのキャンセルをご希望の場合は、team @ lunaris.jpまでご連絡ください。
   title: よくある質問
   button: 知識ベース
   button_url: https://otakoyi.com/
