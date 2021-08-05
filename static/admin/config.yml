@@ -235,7 +235,7 @@ collections:
                   - {label: "Title Accordion", name: "title", widget: "string", i18n: true}
                   - {label: "Subtitle Accordion", name: "content", widget: "string", i18n: true}
           - {label: "Button", name: "button", widget: "string", i18n: true}
-          - {label: "Button", name: "button_url", widget: "string", i18n: true}
+          - {label: "Button url", name: "button_url", widget: "string", i18n: duplicate}
       - label: "Contact"
         name: "contact"
         file: "content/contact.md"
